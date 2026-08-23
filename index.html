@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where We Impacted - Green Legacy</title>
+    <meta name="description" content="Discover the environmental, agricultural, and financial impacts of Green Legacy across Northern Nigeria and the Maradi Corridor.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- MapLibre GL CSS & JS -->
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Top Spacer so page can scroll -->
+    <div style="height: 8vh;"></div>
+
+    <!-- ================= STICKY AUTOMATIC SCROLL IMPACT SECTION ================= -->
+    <section class="impact-scroll-container" id="impactScrollContainer">
+        <div class="sticky-viewport" id="stickyViewport">
+            <!-- Background Ambient Glows -->
+            <div class="ambient-glow glow-1"></div>
+            <div class="ambient-glow glow-2"></div>
+
+            <div class="container main-content-container">
+                
+                <!-- FULL HEADER (Visible initially before scrolling) -->
+                <div class="full-header-content" id="fullHeaderContent">
+                    <!-- Header Grid: Title Left, Description Right -->
+                    <div class="impact-header">
+                        <div class="header-left">
+                            <span class="sub-heading">WHERE WE IMPACTED</span>
+                            <h2 class="main-heading">Discover the impacts of Green Legacy</h2>
+                        </div>
+                        <div class="header-right">
+                            <p class="description-text">
+                                Green Legacy was founded on a simple but powerful observation: Nigeria's rural north holds extraordinary potential fertile land, hardworking people, deep agricultural heritage but it is being held back by crumbling infrastructure, climate vulnerability, and systemic exclusion from finance and markets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Divider Line -->
+                    <div class="divider-container">
+                        <div class="divider-line"></div>
+                    </div>
+
+                    <!-- Impact Statistics Grid (5 Columns matching image) -->
+                    <div class="stats-container">
+                        <div class="stats-grid" id="stats-grid">
+                            <!-- Stat Card 1: Jigawa -->
+                            <div class="stat-card active" data-location="jigawa">
+                                <div class="card-indicator"></div>
+                                <h3 class="location-title">Jigawa</h3>
+                                <p class="stat-details">
+                                    <span class="highlight">5000 trees planted:</span> 400 mouringa trees, 1200 guava trees
+                                </p>
+                            </div>
+
+                            <!-- Stat Card 2: Kano -->
+                            <div class="stat-card" data-location="kano">
+                                <div class="card-indicator"></div>
+                                <h3 class="location-title">Kano</h3>
+                                <p class="stat-details">
+                                    <span class="highlight">5000 trees planted:</span> 400 mouringa trees, 1200 guava trees
+                                </p>
+                            </div>
+
+                            <!-- Stat Card 3: Katsina -->
+                            <div class="stat-card" data-location="katsina">
+                                <div class="card-indicator"></div>
+                                <h3 class="location-title">Katsina</h3>
+                                <p class="stat-details">
+                                    <span class="highlight">5000 trees planted:</span> 400 mouringa trees, 1200 guava trees
+                                </p>
+                            </div>
+
+                            <!-- Stat Card 4: Borno -->
+                            <div class="stat-card" data-location="borno">
+                                <div class="card-indicator"></div>
+                                <h3 class="location-title">Borno</h3>
+                                <p class="stat-details">
+                                    <span class="highlight">5000 trees planted:</span> 400 mouringa trees, 1200 guava trees
+                                </p>
+                            </div>
+
+                            <!-- Stat Card 5: Kaduna -->
+                            <div class="stat-card" data-location="kaduna">
+                                <div class="card-indicator"></div>
+                                <h3 class="location-title">Kaduna</h3>
+                                <p class="stat-details">
+                                    <span class="highlight">5000 trees planted:</span> 400 mouringa trees, 1200 guava trees
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scroll Prompt Arrow -->
+                    <div class="scroll-down-hint">
+                        <span>SCROLL TO COLLAPSE &amp; EXPAND MAP FOCUS</span>
+                        <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                            <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- COLLAPSED TOP BAR (ONLY appears AFTER scroll effect happens) -->
+                <div class="collapsed-top-bar" id="collapsedTopBar">
+                    <div class="collapsed-brand">
+                        <span class="pulse-dot"></span>
+                        <span class="collapsed-heading">Nigeria &amp; Maradi Corridor Map</span>
+                    </div>
+
+                    <!-- Compact Location Pills -->
+                    <div class="compact-pills-nav" id="compactPillsNav">
+                        <button class="pill-btn active" data-location="all">All Nigeria &amp; Maradi</button>
+                        <button class="pill-btn" data-location="jigawa">Jigawa</button>
+                        <button class="pill-btn" data-location="kano">Kano</button>
+                        <button class="pill-btn" data-location="katsina">Katsina</button>
+                        <button class="pill-btn" data-location="maradi">Maradi Corridor</button>
+                        <button class="pill-btn" data-location="borno">Borno</button>
+                        <button class="pill-btn" data-location="kaduna">Kaduna</button>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE MAP CONTAINER (Expands automatically on scroll) -->
+                <div class="map-section" id="mapSection">
+                    <!-- Map Overlay Header Controls -->
+                    <div class="map-header">
+                        <div class="map-title">
+                            <div class="eyebrow">NATIONAL &amp; CROSS-BORDER MAP</div>
+                            <h2 id="mapHeaderTitle">Nigeria &amp; Maradi Corridor Focus</h2>
+                        </div>
+
+                        <div class="map-controls">
+                            <!-- Style Switcher Buttons -->
+                            <div class="style-switcher" id="styleSwitcher"></div>
+
+                            <!-- Corridor Routes Toggle Button -->
+                            <button class="icon-btn active" id="routesBtn" title="Toggle corridor routes" aria-label="Toggle route lines">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <circle cx="5" cy="6" r="2" stroke="currentColor" stroke-width="1.7"/>
+                                    <circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/>
+                                    <path d="M5 8v3a4 4 0 0 0 4 4h6a4 4 0 0 1 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="2.2 2.6"/>
+                                </svg>
+                            </button>
+
+                            <!-- Recenter Button -->
+                            <button class="icon-btn" id="locateBtn" title="Reset focus to all Nigeria & Maradi" aria-label="Center map">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                                    <circle cx="12" cy="12" r="5.2" stroke="currentColor" stroke-width="1.7"/>
+                                </svg>
+                            </button>
+
+                            <!-- Fullscreen Toggle Button -->
+                            <button class="icon-btn" id="fullscreenBtn" title="View full screen" aria-label="Toggle full screen">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 9V5a1 1 0 0 1 1-1h4M20 9V5a1 1 0 0 0-1-1h-4M4 15v4a1 1 0 0 0 1 1h4M20 15v4a1 1 0 0 1-1 1h-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Map Canvas -->
+                    <div id="map"></div>
+
+                    <!-- Map Legend -->
+                    <div class="legend">
+                        <div class="legend-title">Legend &amp; Tree Density</div>
+                        <div class="legend-row">
+                            <div class="legend-swatch sw-tree">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2l4 6h-2.5l3.5 5h-3l3 5H7l3-5H7l3.5-5H8l4-6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <span>Tree Icon = <strong>200 Trees Planted</strong> (Zoom to multiply)</span>
+                        </div>
+                        <div class="legend-row">
+                            <div class="legend-swatch sw-car">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13M3 13v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-4M3 13h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="7.5" cy="17" r="1.3" fill="currentColor"/>
+                                    <circle cx="16.5" cy="17" r="1.3" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            Maradi &amp; Regional transport corridor
+                        </div>
+                        <div class="legend-row">
+                            <div class="legend-swatch sw-dot"></div>
+                            Financial access point
+                        </div>
+                    </div>
+
+                    <!-- Coordinates & Zoom Readout -->
+                    <div class="map-readout" id="coordReadout">
+                        LAT <span id="latVal">9.80</span> &nbsp; LNG <span id="lngVal">8.50</span> &nbsp; ZOOM <span id="zoomVal">5.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Spacer -->
+    <div style="height: 40vh; background: #04140e;"></div>
+
+    <!-- Map Logic Script -->
+    <script>
+        /* =====================================================================
+           1) DYNAMIC TREE PLOT GENERATOR (200 Trees Baseline per Icon)
+              Each 5,000-tree state gets 25 tree icons distributed across its region.
+              MinZoom thresholds: 2 at 5.5, +5 at 6.8, +8 at 7.6, +10 at 8.4
+        ===================================================================== */
+        const BASELINE_TREES_PER_ICON = 200;
+
+        function generateStateTreeFeatures(stateName, centerLng, centerLat, totalTrees, radiusDegree, townNames) {
+            const numIcons = Math.round(totalTrees / BASELINE_TREES_PER_ICON); // e.g. 5,000 / 200 = 25 icons
+            const features = [];
+
+            for (let i = 0; i < numIcons; i++) {
+                // Distribute points in a realistic geographical cluster around the state center
+                const angle = (i / numIcons) * 2 * Math.PI + (i % 3) * 0.4;
+                const dist = (0.08 + (i % 5) * 0.12 + Math.sin(i) * 0.05) * radiusDegree;
+                const lng = centerLng + Math.cos(angle) * dist;
+                const lat = centerLat + Math.sin(angle) * dist;
+
+                // Determine tree type (Moringa vs Guava)
+                const treeType = i % 3 === 0 ? 'Moringa' : 'Guava';
+                const town = townNames[i % townNames.length];
+
+                // Assign zoom threshold so tree icons multiply as you zoom in!
+                let minZoom = 5.5; // Always visible hubs
+                if (i >= 2 && i < 7) minZoom = 6.6;
+                else if (i >= 7 && i < 15) minZoom = 7.4;
+                else if (i >= 15) minZoom = 8.2;
+
+                features.push({
+                    type: 'Feature',
+                    geometry: { type: 'Point', coordinates: [parseFloat(lng.toFixed(4)), parseFloat(lat.toFixed(4))] },
+                    properties: {
+                        type: 'tree',
+                        title: `${stateName} — ${town} Plot #${i+1}`,
+                        detail: `200 ${treeType} trees planted · (Part of ${totalTrees.toLocaleString()} total trees)`,
+                        treeCount: 200,
+                        treeType: treeType,
+                        minZoom: minZoom
+                    }
+                });
+            }
+            return features;
+        }
+
+        // Generate 25 tree icons (200 trees each = 5,000 trees) for each state
+        const jigawaTrees  = generateStateTreeFeatures('Jigawa', 9.5616, 12.2280, 5000, 0.75, ['Dutse', 'Hadejia', 'Gumel', 'Ringim', 'Kazaure', 'Birnin Kudu']);
+        const kanoTrees    = generateStateTreeFeatures('Kano', 8.5920, 12.0022, 5000, 0.65, ['Central Kano', 'Wudil', 'Rano', 'Bichi', 'Dawakin Tofa', 'Gaya']);
+        const katsinaTrees = generateStateTreeFeatures('Katsina', 7.6171, 12.9855, 5000, 0.70, ['Katsina City', 'Daura', 'Funtua', 'Jibia Frontier', 'Malumfashi']);
+        const bornoTrees   = generateStateTreeFeatures('Borno', 13.1500, 11.8333, 5000, 0.90, ['Maiduguri', 'Biu', 'Bama', 'Monguno', 'Gwoza']);
+        const kadunaTrees  = generateStateTreeFeatures('Kaduna', 7.4165, 10.5105, 5000, 0.80, ['Kaduna North', 'Zaria', 'Kafanchan', 'Birnin Gwari']);
+        const maradiTrees  = generateStateTreeFeatures('Maradi (Niger)', 7.9811, 13.5000, 3000, 0.55, ['Maradi Central', 'Madarounfa', 'Guidan Roumdji']);
+
+        // Other Logistics Nodes & Financial Access Points
+        const OTHER_POINTS = [
+            { type: 'Feature', geometry: { type: 'Point', coordinates: [7.9811, 13.5000] }, properties: { type: 'car', title: 'Maradi Cross-Border Corridor Node (Niger)', detail: 'Key grain & seed transport node connecting Katsina/Kano', minZoom: 5.5 } },
+            { type: 'Feature', geometry: { type: 'Point', coordinates: [5.2476, 13.0059] }, properties: { type: 'car', title: 'Sokoto Logistics Hub', detail: 'Grain transport corridor · 4 depots', minZoom: 5.5 } },
+            { type: 'Feature', geometry: { type: 'Point', coordinates: [4.1975, 12.4535] }, properties: { type: 'car', title: 'Kebbi Input Delivery Hub', detail: 'Rice belt input distribution', minZoom: 5.5 } },
+            { type: 'Feature', geometry: { type: 'Point', coordinates: [9.8442, 10.3158] }, properties: { type: 'indicator', title: 'Bauchi Financial Access Point', detail: '980 smallholder accounts opened', minZoom: 5.5 } },
+            { type: 'Feature', geometry: { type: 'Point', coordinates: [6.5569, 9.6139] }, properties: { type: 'indicator', title: 'Niger State Financial Access Point', detail: '1,450 farmers onboarded to credit', minZoom: 5.5 } }
+        ];
+
+        const ALL_SITE_FEATURES = [
+            ...jigawaTrees,
+            ...kanoTrees,
+            ...katsinaTrees,
+            ...bornoTrees,
+            ...kadunaTrees,
+            ...maradiTrees,
+            ...OTHER_POINTS
+        ];
+
+        const siteGeoJSON = {
+            type: 'FeatureCollection',
+            features: ALL_SITE_FEATURES
+        };
+
+        /* Cross-Border & Regional Transport Corridors */
+        const ROUTE_DATA = [
+            ["maradi-katsina-kano", "#D9A441", [
+                [7.9811, 13.5000], [7.6800, 13.2500], [7.6171, 12.9855], [8.5920, 12.0022], [9.5616, 12.2280]
+            ]],
+            ["nw-corridor", "#34d399", [
+                [5.2476, 13.0059], [4.1975, 12.4535], [6.6641, 12.1704], [8.5920, 12.0022]
+            ]],
+            ["ne-corridor", "#10b981", [
+                [13.1500, 11.8333], [11.9608, 11.7469], [11.1673, 10.2897], [9.8442, 10.3158]
+            ]],
+            ["central-line", "#B4502A", [
+                [8.5920, 12.0022], [7.4165, 10.5105], [6.5569, 9.6139]
+            ]]
+        ];
+
+        /* State & Region Demarcations */
+        const STATE_DEMARCATIONS = {
+            type: 'FeatureCollection',
+            features: [
+                { type: 'Feature', properties: { id: 'jigawa', name: 'Jigawa State' }, geometry: { type: 'Polygon', coordinates: [[[8.6, 11.8], [10.4, 11.8], [10.4, 13.0], [8.6, 13.0], [8.6, 11.8]]] } },
+                { type: 'Feature', properties: { id: 'kano', name: 'Kano State' }, geometry: { type: 'Polygon', coordinates: [[[7.8, 11.2], [9.2, 11.2], [9.2, 12.6], [7.8, 12.6], [7.8, 11.2]]] } },
+                { type: 'Feature', properties: { id: 'katsina', name: 'Katsina State' }, geometry: { type: 'Polygon', coordinates: [[[6.9, 11.1], [8.5, 11.1], [8.5, 13.4], [6.9, 13.4], [6.9, 11.1]]] } },
+                { type: 'Feature', properties: { id: 'maradi', name: 'Maradi Corridor (Niger)' }, geometry: { type: 'Polygon', coordinates: [[[6.8, 13.2], [8.8, 13.2], [8.8, 14.2], [6.8, 14.2], [6.8, 13.2]]] } },
+                { type: 'Feature', properties: { id: 'borno', name: 'Borno State' }, geometry: { type: 'Polygon', coordinates: [[[11.5, 10.2], [14.8, 10.2], [14.8, 13.8], [11.5, 13.8], [11.5, 10.2]]] } },
+                { type: 'Feature', properties: { id: 'kaduna', name: 'Kaduna State' }, geometry: { type: 'Polygon', coordinates: [[[6.0, 9.0], [8.8, 9.0], [8.8, 11.6], [6.0, 9.0], [6.0, 9.0]]] } }
+            ]
+        };
+
+        function toLineFeatureCollection(rows) {
+            return {
+                type: 'FeatureCollection',
+                features: rows.map(([id, color, coords]) => ({
+                    type: 'Feature',
+                    geometry: { type: 'LineString', coordinates: coords },
+                    properties: { id, color }
+                }))
+            };
+        }
+
+        const routeGeoJSON = toLineFeatureCollection(ROUTE_DATA);
+
+        const TYPE_META = {
+            tree:      { color: '#10b981', label: '200 Trees Planted Plot' },
+            car:       { color: '#D9A441', label: 'Logistics Corridor' },
+            indicator: { color: '#B4502A', label: 'Finance Access Point' }
+        };
+
+        const STYLE_OPTIONS = [
+            { id: 'legacy',   label: 'Legacy',   url: 'https://demotiles.maplibre.org/style.json' },
+            { id: 'liberty',  label: 'Streets',  url: 'https://tiles.openfreemap.org/styles/liberty' },
+            { id: 'bright',   label: 'Bright',   url: 'https://tiles.openfreemap.org/styles/bright' },
+            { id: 'positron', label: 'Light',    url: 'https://tiles.openfreemap.org/styles/positron' }
+        ];
+
+        /* =====================================================================
+           2) INITIAL FOCUS — ALL OF NIGERIA & MARADI CORRIDOR
+        ===================================================================== */
+        // First Focus: All of Nigeria and Maradi Corridor [8.50, 9.80], Zoom 5.5
+        const ALL_NIGERIA_MARADI_CENTER = [8.50, 9.80];
+        let routesVisible = true;
+        let currentStyleId = STYLE_OPTIONS[0].id;
+        let hoverBound = false;
+
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: STYLE_OPTIONS[0].url,
+            center: ALL_NIGERIA_MARADI_CENTER,
+            zoom: 5.5,
+            pitch: 15,
+            attributionControl: true
+        });
+
+        // Add standard navigation controls
+        map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right');
+
+        // Scroll zoom disabled for comfortable web page scrolling
+        map.scrollZoom.disable();
+        map.doubleClickZoom.disable();
+
+        // Build SDF icons for canvas symbol rendering
+        function buildSdfIcon(pathD, px) {
+            const canvas = document.createElement('canvas');
+            canvas.width = px; canvas.height = px;
+            const ctx = canvas.getContext('2d');
+            ctx.scale(px / 24, px / 24);
+            ctx.fillStyle = '#fff';
+            ctx.fill(new Path2D(pathD));
+            return ctx.getImageData(0, 0, px, px);
+        }
+
+        const TREE_PATH = 'M12 2l4 6h-2.5l3.5 5h-3l3 5H7l3-5H7l3.5-5H8l4-6z';
+        const CAR_PATH  = 'M12 6c-3.9 0-6 3.4-6 6.5S9.4 20 12 20s6-3.4 6-6.5S15.9 6 12 6zm0 3.2a3.3 3.3 0 1 1 0 6.6 3.3 3.3 0 0 1 0-6.6zM4 11.5h1.6M18.4 11.5H20';
+
+        function renderData() {
+            if (!map.hasImage('icon-tree')) map.addImage('icon-tree', buildSdfIcon(TREE_PATH, 64), { sdf: true });
+            if (!map.hasImage('icon-car'))  map.addImage('icon-car',  buildSdfIcon(CAR_PATH,  64), { sdf: true });
+
+            if (!map.getSource('states-demarcation')) map.addSource('states-demarcation', { type: 'geojson', data: STATE_DEMARCATIONS });
+            if (!map.getSource('sites'))  map.addSource('sites',  { type: 'geojson', data: siteGeoJSON });
+            if (!map.getSource('routes')) map.addSource('routes', { type: 'geojson', data: routeGeoJSON });
+
+            /* ---- State Demarcation Lines ---- */
+            if (!map.getLayer('state-fill')) map.addLayer({
+                id: 'state-fill',
+                type: 'fill',
+                source: 'states-demarcation',
+                paint: {
+                    'fill-color': '#10b981',
+                    'fill-opacity': 0.05
+                }
+            });
+
+            if (!map.getLayer('state-borders')) map.addLayer({
+                id: 'state-borders',
+                type: 'line',
+                source: 'states-demarcation',
+                paint: {
+                    'line-color': '#10b981',
+                    'line-width': 1.6,
+                    'line-dasharray': [3, 2],
+                    'line-opacity': 0.7
+                }
+            });
+
+            /* ---- Corridor Route Lines (Glow + Dashed Line) ---- */
+            if (!map.getLayer('routes-glow')) map.addLayer({
+                id: 'routes-glow',
+                type: 'line',
+                source: 'routes',
+                layout: { 'line-cap': 'round', 'line-join': 'round' },
+                paint: {
+                    'line-color': ['get', 'color'],
+                    'line-width': 7,
+                    'line-opacity': 0.25,
+                    'line-blur': 3
+                }
+            });
+
+            if (!map.getLayer('routes-line')) map.addLayer({
+                id: 'routes-line',
+                type: 'line',
+                source: 'routes',
+                layout: { 'line-cap': 'round', 'line-join': 'round' },
+                paint: {
+                    'line-color': ['get', 'color'],
+                    'line-width': 2.5,
+                    'line-dasharray': [0.2, 1.6],
+                    'line-opacity': 0.95
+                }
+            });
+            setRoutesVisibility(routesVisible);
+
+            /* ---- DYNAMIC ZOOM-DEPENDENT TREE ICON LAYER ---- */
+            /* Filter points based on minZoom property so tree icons MULTIPLY as you zoom in! */
+            if (!map.getLayer('tree-circles')) map.addLayer({
+                id: 'tree-circles',
+                type: 'circle',
+                source: 'sites',
+                filter: ['<=', ['get', 'minZoom'], ['zoom']],
+                paint: {
+                    'circle-radius': ['match', ['get', 'type'],
+                        'tree', 14,
+                        'car', 16,
+                        10
+                    ],
+                    'circle-color': ['match', ['get', 'type'],
+                        'tree', '#10b981',
+                        'car',  '#D9A441',
+                        '#B4502A'
+                    ],
+                    'circle-stroke-width': 2,
+                    'circle-stroke-color': '#061d15'
+                }
+            });
+
+            if (!map.getLayer('tree-icons')) map.addLayer({
+                id: 'tree-icons',
+                type: 'symbol',
+                source: 'sites',
+                filter: ['all', ['<=', ['get', 'minZoom'], ['zoom']], ['in', ['get', 'type'], ['literal', ['tree', 'car']]]],
+                layout: {
+                    'icon-image': ['match', ['get', 'type'], 'tree', 'icon-tree', 'car', 'icon-car', 'icon-tree'],
+                    'icon-size': 0.38,
+                    'icon-allow-overlap': true
+                },
+                paint: { 'icon-color': '#061d15' }
+            });
+
+            /* ---- Pulsing Halo for Financial Access Points ---- */
+            if (!map.getLayer('site-pulse')) map.addLayer({
+                id: 'site-pulse',
+                type: 'circle',
+                source: 'sites',
+                filter: ['==', ['get', 'type'], 'indicator'],
+                paint: {
+                    'circle-radius': 8,
+                    'circle-color': TYPE_META.indicator.color,
+                    'circle-opacity': 0.6,
+                    'circle-stroke-width': 0
+                }
+            });
+
+            /* ---- Solid Financial Point Dot ---- */
+            if (!map.getLayer('site-indicator-dots')) map.addLayer({
+                id: 'site-indicator-dots',
+                type: 'circle',
+                source: 'sites',
+                filter: ['==', ['get', 'type'], 'indicator'],
+                paint: {
+                    'circle-radius': 6.5,
+                    'circle-color': TYPE_META.indicator.color,
+                    'circle-stroke-width': 2,
+                    'circle-stroke-color': '#f0f7f4'
+                }
+            });
+
+            /* ---- Shared Popup & Hover Listeners ---- */
+            if (!hoverBound) {
+                hoverBound = true;
+                const dataLayers = ['tree-circles', 'tree-icons', 'site-indicator-dots'];
+                const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 16 });
+
+                dataLayers.forEach(layerId => {
+                    map.on('mouseenter', layerId, (e) => {
+                        map.getCanvas().style.cursor = 'pointer';
+                        const f = e.features[0];
+                        const { type, title, detail } = f.properties;
+                        popup.setLngLat(f.geometry.coordinates)
+                            .setHTML(`
+                                <span class="popup-label">${TYPE_META[type] ? TYPE_META[type].label : '200 Trees Plot'}</span>
+                                <div class="popup-title">${title}</div>
+                                <div class="popup-detail">${detail}</div>
+                            `)
+                            .addTo(map);
+                    });
+                    map.on('mouseleave', layerId, () => {
+                        map.getCanvas().style.cursor = '';
+                        popup.remove();
+                    });
+                });
+            }
+        }
+
+        function setRoutesVisibility(visible) {
+            routesVisible = visible;
+            const v = visible ? 'visible' : 'none';
+            ['routes-glow', 'routes-line'].forEach(id => {
+                if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+            });
+        }
+
+        /* Animated Pulse Halo for Financial Points */
+        const PULSE_DURATION = 2200;
+        function animatePulse(ts) {
+            if (map.getLayer('site-pulse')) {
+                const t = (ts % PULSE_DURATION) / PULSE_DURATION;
+                map.setPaintProperty('site-pulse', 'circle-radius', 6 + t * 18);
+                map.setPaintProperty('site-pulse', 'circle-opacity', 0.6 * (1 - t));
+            }
+            requestAnimationFrame(animatePulse);
+        }
+
+        // Update layer filters dynamically on map zoom so icons multiply as you zoom in!
+        function updateZoomFilters() {
+            if (map.getLayer('tree-circles')) {
+                map.setFilter('tree-circles', ['<=', ['get', 'minZoom'], map.getZoom()]);
+            }
+            if (map.getLayer('tree-icons')) {
+                map.setFilter('tree-icons', ['all', ['<=', ['get', 'minZoom'], map.getZoom()], ['in', ['get', 'type'], ['literal', ['tree', 'car']]]]);
+            }
+        }
+
+        map.on('zoom', updateZoomFilters);
+
+        map.on('load', () => {
+            renderData();
+            requestAnimationFrame(animatePulse);
+            updateReadout();
+        });
+
+        /* ---------------------------------------------------------------------
+           STYLE SWITCHER CONTROLS
+        --------------------------------------------------------------------- */
+        const styleSwitcher = document.getElementById('styleSwitcher');
+        STYLE_OPTIONS.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'style-btn' + (opt.id === currentStyleId ? ' active' : '');
+            btn.textContent = opt.label;
+            btn.setAttribute('aria-label', 'Switch to ' + opt.label + ' map style');
+            btn.addEventListener('click', () => {
+                if (opt.id === currentStyleId) return;
+                currentStyleId = opt.id;
+                [...styleSwitcher.children].forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                map.once('style.load', renderData);
+                map.setStyle(opt.url, { diff: false });
+            });
+            styleSwitcher.appendChild(btn);
+        });
+
+        // Corridor Routes Button Toggle
+        const routesBtn = document.getElementById('routesBtn');
+        routesBtn.addEventListener('click', () => {
+            setRoutesVisibility(!routesVisible);
+            routesBtn.classList.toggle('active', routesVisible);
+        });
+
+        // Live Coordinate & Zoom Readout
+        const latVal = document.getElementById('latVal');
+        const lngVal = document.getElementById('lngVal');
+        const zoomVal = document.getElementById('zoomVal');
+        function updateReadout(){
+            const c = map.getCenter();
+            latVal.textContent = c.lat.toFixed(2);
+            lngVal.textContent = c.lng.toFixed(2);
+            zoomVal.textContent = map.getZoom().toFixed(1);
+        }
+        map.on('move', updateReadout);
+
+        // Reset to All Nigeria & Maradi Focus Button
+        document.getElementById('locateBtn').addEventListener('click', () => {
+            document.getElementById('mapHeaderTitle').textContent = "Nigeria & Maradi Corridor Focus";
+            document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.pill-btn').forEach(p => p.classList.remove('active'));
+            document.querySelector('.pill-btn[data-location="all"]')?.classList.add('active');
+            
+            map.flyTo({ center: ALL_NIGERIA_MARADI_CENTER, zoom: 5.5, pitch: 15, duration: 1400 });
+        });
+
+        // Fullscreen Toggle
+        const mapSection = document.getElementById('mapSection');
+        const fsBtn = document.getElementById('fullscreenBtn');
+        const expandIcon = '<svg viewBox="0 0 24 24" fill="none"><path d="M4 9V5a1 1 0 0 1 1-1h4M20 9V5a1 1 0 0 0-1-1h-4M4 15v4a1 1 0 0 0 1 1h4M20 15v4a1 1 0 0 1-1 1h-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        const collapseIcon = '<svg viewBox="0 0 24 24" fill="none"><path d="M9 4v4a1 1 0 0 1-1 1H4M15 4v4a1 1 0 0 0 1 1h4M9 20v-4a1 1 0 0 0-1-1H4M15 20v-4a1 1 0 0 1 1-1h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+        fsBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                mapSection.requestFullscreen?.() || mapSection.webkitRequestFullscreen?.();
+            } else {
+                document.exitFullscreen?.() || document.webkitExitFullscreen?.();
+            }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+            const isFull = !!document.fullscreenElement;
+            fsBtn.innerHTML = isFull ? collapseIcon : expandIcon;
+            fsBtn.title = isFull ? 'Exit full screen' : 'View full screen';
+            setTimeout(() => map.resize(), 150);
+        });
+
+        /* ---------------------------------------------------------------------
+           STATE DEMARCATION & ZOOM FOCUS NAVIGATION
+        --------------------------------------------------------------------- */
+        const popup = new maplibregl.Popup({ closeButton: true, offset: 16 });
+
+        const LOCATIONS_MAP = {
+            all:     { lat: 9.80, lng: 8.50, zoom: 5.5, pitch: 15, title: 'Nigeria & Maradi Corridor Focus', details: 'All 18 states & cross-border transport nodes' },
+            jigawa:  { lat: 12.2280, lng: 9.5616, zoom: 8.8, pitch: 35, title: 'Jigawa State Demarcation (5,000 Trees = 25 Plots)', details: '25 individual 200-tree plots populating across Dutse, Hadejia, Gumel & Kazaure' },
+            kano:    { lat: 12.0022, lng: 8.5920, zoom: 8.8, pitch: 35, title: 'Kano State Demarcation (5,000 Trees = 25 Plots)', details: '25 individual 200-tree plots populating across Wudil, Rano, Bichi & Gaya' },
+            katsina: { lat: 12.9855, lng: 7.6171, zoom: 8.8, pitch: 35, title: 'Katsina State Demarcation (5,000 Trees = 25 Plots)', details: '25 individual 200-tree plots populating across Jibia frontier, Daura & Funtua' },
+            maradi:  { lat: 13.5000, lng: 7.9811, zoom: 8.9, pitch: 35, title: 'Maradi Cross-Border Corridor Focus (Niger)', details: '15 individual 200-tree plots populating across Maradi south & Madarounfa lake' },
+            borno:   { lat: 11.8333, lng: 13.1500, zoom: 8.5, pitch: 35, title: 'Borno State Demarcation (5,000 Trees = 25 Plots)', details: '25 individual 200-tree plots populating across Maiduguri, Biu & Bama' },
+            kaduna:  { lat: 10.5105, lng: 7.4165, zoom: 8.6, pitch: 35, title: 'Kaduna State Demarcation (5,000 Trees = 25 Plots)', details: '25 individual 200-tree plots populating across Zaria & Kafanchan' }
+        };
+
+        function flyToLocation(locKey) {
+            const loc = LOCATIONS_MAP[locKey];
+            if (!loc) return;
+
+            // Update Header Title to reflect focused region
+            document.getElementById('mapHeaderTitle').textContent = loc.title;
+
+            // Highlight Cards & Compact Pills
+            document.querySelectorAll('.stat-card').forEach(c => {
+                c.classList.toggle('active', c.dataset.location === locKey);
+            });
+            document.querySelectorAll('.pill-btn').forEach(p => {
+                p.classList.toggle('active', p.dataset.location === locKey);
+            });
+
+            // Fly Map Camera to exact state demarcation & zoom level where tree icons MULTIPLY!
+            map.flyTo({
+                center: [loc.lng, loc.lat],
+                zoom: loc.zoom,
+                pitch: loc.pitch,
+                speed: 1.3,
+                curve: 1.4,
+                essential: true
+            });
+
+            popup.setLngLat([loc.lng, loc.lat])
+                .setHTML(`
+                    <span class="popup-label">STATE DEMARCATION FOCUS</span>
+                    <div class="popup-title">${loc.title}</div>
+                    <div class="popup-detail">${loc.details}</div>
+                `)
+                .addTo(map);
+        }
+
+        // Attach Card Clicks
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('click', () => {
+                flyToLocation(card.dataset.location);
+            });
+        });
+
+        // Attach Compact Pill Clicks
+        document.querySelectorAll('.pill-btn').forEach(pill => {
+            pill.addEventListener('click', () => {
+                flyToLocation(pill.dataset.location);
+            });
+        });
+
+        /* =====================================================================
+           3) AUTOMATIC STICKY SCROLL TRANSITION LOGIC
+        ===================================================================== */
+        const scrollContainer = document.getElementById('impactScrollContainer');
+        let isCollapsed = false;
+
+        function updateScrollTransition() {
+            const rect = scrollContainer.getBoundingClientRect();
+            const containerHeight = scrollContainer.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollDistance = containerHeight - windowHeight;
+
+            if (scrollDistance <= 0) return;
+
+            const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+
+            if (progress > 0.20) {
+                if (!isCollapsed) {
+                    isCollapsed = true;
+                    scrollContainer.classList.add('is-collapsed');
+                    setTimeout(() => map.resize(), 300);
+                }
+            } else {
+                if (isCollapsed) {
+                    isCollapsed = false;
+                    scrollContainer.classList.remove('is-collapsed');
+                    setTimeout(() => map.resize(), 300);
+                }
+            }
+        }
+
+        window.addEventListener('scroll', updateScrollTransition, { passive: true });
+        window.addEventListener('resize', updateScrollTransition, { passive: true });
+        updateScrollTransition();
+    </script>
+</body>
+</html>
