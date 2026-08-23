@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Legacy — Cultivating Resilience. Powering Rural Economies.</title>
+    <title>Green Legacy — Rebuilding Nigeria's Rural North</title>
     <meta name="description" content="Green Legacy connects reforestation, resilient infrastructure, and access to finance across Nigeria's rural north.">
     
     <!-- Google Fonts -->
@@ -18,15 +18,15 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="light-theme-page">
 
-    <!-- ================= 1. NAVIGATION BAR ================= -->
+    <!-- ================= 1. SITE HEADER ================= -->
     <header class="site-header" id="siteHeader">
         <div class="container nav-container">
             <!-- Brand Logo -->
             <a href="#" class="brand-logo" aria-label="Green Legacy Home">
                 <div class="logo-icon">
-                    <svg viewBox="0 0 24 24" fill="none" width="24" height="24">
+                    <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
                         <path d="M12 2L16 8H13.5L17 13H14L17 18H7L10 13H7L10.5 8H8L12 2Z" fill="currentColor"/>
                     </svg>
                 </div>
@@ -35,24 +35,23 @@
 
             <!-- Nav Links -->
             <nav class="nav-links" id="navLinks">
-                <a href="#aboutSection" class="nav-link">About</a>
-                <a href="#approachSection" class="nav-link">Approach</a>
+                <a href="#aboutSection" class="nav-link">ABOUT</a>
+                <a href="#approachSection" class="nav-link">DONATE</a>
                 <div class="nav-dropdown">
                     <a href="#impactReportsSection" class="nav-link dropdown-toggle">
-                        Our Impact
-                        <svg viewBox="0 0 24 24" fill="none" width="14" height="14">
+                        OUR IMPACT
+                        <svg viewBox="0 0 24 24" fill="none" width="12" height="12">
                             <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
                 </div>
-                <a href="#impactScrollContainer" class="nav-link">Field Map</a>
-                <a href="#faqSection" class="nav-link">FAQ</a>
+                <a href="#impactReportsSection" class="nav-link">PROJECTS</a>
             </nav>
 
             <!-- Nav CTAs -->
             <div class="nav-actions">
                 <a href="#contactSection" class="contact-link">Contact Us</a>
-                <a href="#contactSection" class="btn btn-primary-pill">Partner With Us</a>
+                <a href="#contactSection" class="btn btn-nav-pill">Partner With Us</a>
                 
                 <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
@@ -66,7 +65,6 @@
 
     <!-- ================= 2. HERO SECTION ================= -->
     <section class="hero-section" id="heroSection">
-        <div class="hero-backdrop"></div>
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-eyebrow">SUSTAINABLE AGRICULTURE &amp; FORESTRY</div>
@@ -79,15 +77,20 @@
                     <a href="#aboutSection" class="btn btn-hero-secondary">Read Our Story</a>
                 </div>
             </div>
+
+            <!-- Hero Field Image Banner -->
+            <div class="hero-image-banner">
+                <img src="assets/images/growing_tree.jpg" alt="Lush green rural farm field" />
+            </div>
         </div>
     </section>
 
     <!-- ================= 3. ABOUT US & KEY METRICS ================= -->
     <section class="about-section" id="aboutSection">
         <div class="container">
+            <span class="section-eyebrow">ABOUT US / WHO WE ARE</span>
             <div class="about-header-grid">
                 <div class="about-left">
-                    <span class="section-eyebrow">WHO WE ARE</span>
                     <h2 class="section-title">We don't just plant trees. We plant futures</h2>
                 </div>
                 <div class="about-right">
@@ -119,20 +122,18 @@
 
             <!-- Partner Logos Ticker -->
             <div class="partners-row">
-                <span class="partners-label">TRUSTED PARTNERS:</span>
-                <div class="partners-logos">
-                    <div class="partner-badge">IFAD</div>
-                    <div class="partner-badge">FAO</div>
-                    <div class="partner-badge">MINAG</div>
-                    <div class="partner-badge">BOI</div>
-                    <div class="partner-badge">USAID</div>
-                    <div class="partner-badge">AFDB</div>
-                </div>
+                <div class="partner-logo-item">IFAD</div>
+                <div class="partner-logo-item">FAO</div>
+                <div class="partner-logo-item">MINAG</div>
+                <div class="partner-logo-item">BOI</div>
+                <div class="partner-logo-item">USAID</div>
+                <div class="partner-logo-item">AFDB</div>
+                <div class="partner-logo-item">NIGERIA GOV</div>
             </div>
         </div>
     </section>
 
-    <!-- ================= 4. TOOLS FOR TRANSFORMATION (APPROACH) ================= -->
+    <!-- ================= 4. OUR APPROACH / TOOLS FOR TRANSFORMATION ================= -->
     <section class="approach-section" id="approachSection">
         <div class="container">
             <div class="approach-header">
@@ -147,31 +148,19 @@
                     <div class="transform-image-wrap">
                         <img src="assets/images/farmer_planting.jpg" alt="Farmer planting sapling" loading="lazy" />
                     </div>
-                    <div class="transform-card-content">
-                        <h3>Planting Resilience</h3>
-                        <p>Restoring degraded soil through targeted agroforestry &amp; community nurseries.</p>
-                    </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="transform-card">
                     <div class="transform-image-wrap">
-                        <img src="assets/images/hay_bales.jpg" alt="Hay harvest logistics" loading="lazy" />
-                    </div>
-                    <div class="transform-card-content">
-                        <h3>Harvest &amp; Logistics</h3>
-                        <p>Connecting rural harvests to grain depots and transport corridors.</p>
+                        <img src="assets/images/hay_bales.jpg" alt="Hay bales harvest" loading="lazy" />
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="transform-card">
                     <div class="transform-image-wrap">
-                        <img src="assets/images/growing_tree.jpg" alt="Agroforestry field sapling" loading="lazy" />
-                    </div>
-                    <div class="transform-card-content">
-                        <h3>Agroforestry Belts</h3>
-                        <p>Building shelterbelts to shield farmland against desert encroachment.</p>
+                        <img src="assets/images/growing_tree.jpg" alt="Agroforestry tree plot" loading="lazy" />
                     </div>
                 </div>
 
@@ -180,20 +169,16 @@
                     <div class="transform-image-wrap">
                         <img src="assets/images/elders_tech.jpg" alt="Elders using smartphone for farming" loading="lazy" />
                     </div>
-                    <div class="transform-card-content">
-                        <h3>Digital &amp; Financial Inclusion</h3>
-                        <p>Onboarding smallholder farmers to micro-credit and mobile market updates.</p>
-                    </div>
                 </div>
             </div>
 
             <div class="approach-action">
-                <a href="#aboutSection" class="btn btn-green-action">Our Approach &rarr;</a>
+                <a href="#aboutSection" class="btn btn-green-pill">Our Approach</a>
             </div>
         </div>
     </section>
 
-    <!-- ================= 5. IMPACT REPORTS SECTION ================= -->
+    <!-- ================= 5. OUR IMPACT / IMPACT REPORTS ================= -->
     <section class="impact-reports-section" id="impactReportsSection">
         <div class="container">
             <div class="reports-header">
@@ -202,66 +187,54 @@
                 <p class="section-subtitle">Read our comprehensive reports from the field.</p>
             </div>
 
-            <!-- 3 Columns Reports Cards -->
+            <!-- 3 Image Cards Row -->
             <div class="reports-grid">
-                <!-- Report 1 -->
+                <!-- Card 1 -->
                 <div class="report-card">
                     <div class="report-image-wrap">
                         <img src="assets/images/report_planting.jpg" alt="Reforestation report" loading="lazy" />
                     </div>
-                    <div class="report-card-body">
-                        <span class="report-date">Annual Field Study 2026</span>
-                        <h4>Reforestation &amp; Soil Health Impact Report</h4>
-                        <p>Comprehensive evaluation of 200,000+ restored hectares across Northern Nigeria.</p>
-                        <a href="#" class="report-link">Read report &rarr;</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="report-card">
+                    <div class="report-image-wrap">
+                        <img src="assets/images/report_marketplace.jpg" alt="Marketplace project report" loading="lazy" />
                     </div>
                 </div>
 
-                <!-- Report 2 -->
+                <!-- Card 3 -->
                 <div class="report-card">
                     <div class="report-image-wrap">
-                        <img src="assets/images/report_marketplace.jpg" alt="Market access report" loading="lazy" />
-                    </div>
-                    <div class="report-card-body">
-                        <span class="report-date">Supply Chain Audit</span>
-                        <h4>Rural Market Access &amp; Transport Corridor Study</h4>
-                        <p>How grain transport corridors increased farmer revenues by 38% in Maradi &amp; Kano.</p>
-                        <a href="#" class="report-link">Read report &rarr;</a>
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" alt="Youth community project" loading="lazy" />
                     </div>
                 </div>
+            </div>
 
-                <!-- Report 3 -->
-                <div class="report-card">
-                    <div class="report-image-wrap">
-                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" alt="Youth and women farmer inclusion" loading="lazy" />
-                    </div>
-                    <div class="report-card-body">
-                        <span class="report-date">Community Report</span>
-                        <h4>Youth &amp; Women Micro-Credit Access</h4>
-                        <p>Empowering 92,000+ smallholder farmers with direct financial inclusion.</p>
-                        <a href="#" class="report-link">Read report &rarr;</a>
-                    </div>
-                </div>
+            <div class="reports-action">
+                <a href="#" class="btn btn-outline-pill">Read report &rarr;</a>
             </div>
         </div>
     </section>
 
-    <!-- ================= 6. JOIN THE MOVEMENT CTA BANNER ================= -->
+    <!-- ================= 6. JOIN THE MOVEMENT / CTA BANNER ================= -->
     <section class="cta-movement-section">
         <div class="container">
             <div class="cta-movement-card">
-                <div class="avatar-cluster">
-                    <div class="avatar-dot">🌱</div>
-                    <div class="avatar-dot">🌾</div>
-                    <div class="avatar-dot">🌳</div>
+                <!-- Photo Cluster Illustration -->
+                <div class="photo-cluster-graphic">
+                    <div class="mini-photo-card"><img src="assets/images/farmer_planting.jpg" alt="Project thumb" /></div>
+                    <div class="mini-photo-card"><img src="assets/images/hay_bales.jpg" alt="Project thumb" /></div>
+                    <div class="mini-photo-card"><img src="assets/images/elders_tech.jpg" alt="Project thumb" /></div>
                 </div>
+
                 <span class="cta-eyebrow">JOIN THE MOVEMENT</span>
                 <h2 class="cta-title">Ready to leave a Green Legacy</h2>
                 <p class="cta-subtitle">
                     Partner with us, fund a corridor, or bring your organization into the field.
                 </p>
                 <div class="cta-btn-wrap">
-                    <a href="#contactSection" class="btn btn-cta-pill">Partner With Us &rarr;</a>
+                    <a href="#contactSection" class="btn btn-green-pill">Partner With Us &rarr;</a>
                 </div>
                 <div class="cta-footer-note">
                     Join over 10,000+ farmers, researchers, and partners rebuilding rural Nigeria.
@@ -270,7 +243,7 @@
         </div>
     </section>
 
-    <!-- ================= 7. INTERACTIVE MAP SECTION (WITH AUTOMATIC SCROLL TRANSITION) ================= -->
+    <!-- ================= 7. DISCOVER THE IMPACTS MAP SECTION (EXACT INDEX.HTML LOGIC) ================= -->
     <section class="impact-scroll-container" id="impactScrollContainer">
         <div class="sticky-viewport" id="stickyViewport">
             <div class="ambient-glow glow-1"></div>
@@ -507,7 +480,7 @@
                     <!-- Item 4 -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <span>Is Green Legacy a charity or a social business?</span>
+                            <span>Is Green Legacy a charity or a business?</span>
                             <svg class="accordion-arrow" viewBox="0 0 24 24" fill="none" width="18" height="18">
                                 <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
@@ -523,7 +496,7 @@
         </div>
     </section>
 
-    <!-- ================= 9. CONTACT US SECTION ================= -->
+    <!-- ================= 9. REACH OUT TO THE TEAM (CONTACT) ================= -->
     <section class="contact-section" id="contactSection">
         <div class="container contact-container">
             <div class="contact-left">
@@ -568,14 +541,14 @@
                         <label for="message">Message</label>
                         <textarea id="message" rows="4" placeholder="Tell us how you would like to collaborate..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-submit-form">Submit Message &rarr;</button>
+                    <button type="submit" class="btn btn-green-pill btn-full-width">Submit Message &rarr;</button>
                     <div class="form-success-msg" id="formSuccessMsg">Thank you! Your message has been sent to our team.</div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- ================= 10. FOOTER ================= -->
+    <!-- ================= 10. SITE FOOTER ================= -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-grid">
@@ -603,38 +576,40 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Approach</h4>
+                    <h4>Explore</h4>
                     <ul>
-                        <li><a href="#approachSection">Soil Restoration</a></li>
-                        <li><a href="#approachSection">Logistics Corridors</a></li>
-                        <li><a href="#approachSection">Financial Access</a></li>
+                        <li><a href="#aboutSection">Our approach</a></li>
+                        <li><a href="#impactScrollContainer">Field map</a></li>
+                        <li><a href="#impactReportsSection">Impact reports</a></li>
+                        <li><a href="#impactReportsSection">Stories from the field</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Impact</h4>
+                    <h4>Get involved</h4>
                     <ul>
-                        <li><a href="#impactReportsSection">Impact Reports</a></li>
-                        <li><a href="#impactScrollContainer">Field Map</a></li>
-                        <li><a href="#aboutSection">Key Metrics</a></li>
+                        <li><a href="#contactSection">Partner with us</a></li>
+                        <li><a href="#impactScrollContainer">Fund a corridor</a></li>
+                        <li><a href="#contactSection">Careers</a></li>
+                        <li><a href="#contactSection">Volunteer</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
+                        <li>12 Aminu Kano Crescent</li>
+                        <li>Wuse II, Abuja, Nigeria</li>
                         <li><a href="mailto:hello@greenlegacy.org">hello@greenlegacy.org</a></li>
-                        <li><a href="#contactSection">Wuse II, Abuja, Nigeria</a></li>
-                        <li><a href="#contactSection">Partner Portal</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom-bar">
-                <span>&copy; 2026 Green Legacy. All rights reserved. Rebuilding the rural north.</span>
+                <span>&copy; 2026 Green Legacy. Rebuilding the rural north, together.</span>
                 <div class="footer-legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
                 </div>
             </div>
         </div>
@@ -643,7 +618,7 @@
     <!-- Script for Map, FAQ Accordion, Scroll Observer & Mobile Menu -->
     <script>
         /* =====================================================================
-           1) MAP DATA & TREE MULTIPLICATION
+           1) MAP DATA & TREE MULTIPLICATION (200 Trees Baseline)
         ===================================================================== */
         const BASELINE_TREES_PER_ICON = 200;
 
