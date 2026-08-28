@@ -2,14 +2,11 @@
  * Kuri'a Design System — GTC CSS Custom Properties
  * Loaded from the shared design-system directory.
  * All --global-*, --token-*, --component-* variables are available.
- * Must be imported BEFORE Tailwind so @import rules in design-system.css
- * (Google Fonts) precede generated rules.
  */
 @import "../../design-system/design-system.css";
 
 /*
  * Leaflet CSS — required for map rendering.
- * Imported from node_modules at build time.
  */
 @import "leaflet/dist/leaflet.css";
 
@@ -18,52 +15,53 @@
 /*
  * Tailwind v4 theme configuration.
  * Maps Kuria design tokens to Tailwind utility classes via @theme.
+ * Direct hex fallbacks provided for robust initial rendering.
  */
 @theme {
-  /* — Colors: mapped from Kuria semantic tokens — */
-  --color-kuria-page: var(--token-color-bg-page);
-  --color-kuria-surface: var(--token-color-bg-surface);
-  --color-kuria-surface-raised: var(--token-color-bg-surface-raised);
-  --color-kuria-muted: var(--token-color-bg-muted);
-  --color-kuria-subtle: var(--token-color-bg-subtle);
+  /* — Colors: mapped from Kuria semantic tokens with hex fallbacks — */
+  --color-kuria-page: var(--token-color-bg-page, #FAFAFA);
+  --color-kuria-surface: var(--token-color-bg-surface, #FFFFFF);
+  --color-kuria-surface-raised: var(--token-color-bg-surface-raised, #FFFFFF);
+  --color-kuria-muted: var(--token-color-bg-muted, #F5F5F5);
+  --color-kuria-subtle: var(--token-color-bg-subtle, #FAFAFA);
 
-  --color-kuria-primary: var(--global-color-primary-700);
-  --color-kuria-primary-hover: var(--global-color-primary-800);
-  --color-kuria-primary-active: var(--global-color-primary-900);
-  --color-kuria-primary-subtle: var(--global-color-primary-50);
+  --color-kuria-primary: var(--global-color-primary-700, #2E7D32);
+  --color-kuria-primary-hover: var(--global-color-primary-800, #1B5E20);
+  --color-kuria-primary-active: var(--global-color-primary-900, #0D3B1E);
+  --color-kuria-primary-subtle: var(--global-color-primary-50, #E8F5E9);
 
-  --color-kuria-error: var(--global-color-error-600);
-  --color-kuria-error-subtle: var(--global-color-error-50);
-  --color-kuria-warning: var(--global-color-warning-500);
-  --color-kuria-warning-subtle: var(--global-color-warning-50);
-  --color-kuria-info: var(--global-color-info-600);
-  --color-kuria-info-subtle: var(--global-color-info-50);
-  --color-kuria-success: var(--global-color-success-600);
-  --color-kuria-success-subtle: var(--global-color-success-50);
+  --color-kuria-error: var(--global-color-error-600, #D32F2F);
+  --color-kuria-error-subtle: var(--global-color-error-50, #FFEBEE);
+  --color-kuria-warning: var(--global-color-warning-500, #FF9800);
+  --color-kuria-warning-subtle: var(--global-color-warning-50, #FFF3E0);
+  --color-kuria-info: var(--global-color-info-600, #1E88E5);
+  --color-kuria-info-subtle: var(--global-color-info-50, #E3F2FD);
+  --color-kuria-success: var(--global-color-success-600, #00897B);
+  --color-kuria-success-subtle: var(--global-color-success-50, #E0F2F1);
 
-  --color-kuria-disabled: var(--token-color-bg-disabled);
+  --color-kuria-disabled: var(--token-color-bg-disabled, #F5F5F5);
 
   /* Text colors */
-  --color-kuria-text: var(--token-color-text-primary);
-  --color-kuria-text-secondary: var(--token-color-text-secondary);
-  --color-kuria-text-tertiary: var(--token-color-text-tertiary);
-  --color-kuria-text-disabled: var(--token-color-text-disabled);
-  --color-kuria-text-inverse: var(--token-color-text-inverse);
-  --color-kuria-text-heading: var(--token-color-text-heading);
-  --color-kuria-text-link: var(--token-color-text-link);
-  --color-kuria-text-error: var(--token-color-text-error);
-  --color-kuria-text-warning: var(--token-color-text-warning);
-  --color-kuria-text-success: var(--token-color-text-success);
-  --color-kuria-text-info: var(--token-color-text-info);
-  --color-kuria-text-on-primary: var(--token-color-text-on-primary);
+  --color-kuria-text: var(--token-color-text-primary, #1A1A1A);
+  --color-kuria-text-secondary: var(--token-color-text-secondary, #616161);
+  --color-kuria-text-tertiary: var(--token-color-text-tertiary, #757575);
+  --color-kuria-text-disabled: var(--token-color-text-disabled, #9E9E9E);
+  --color-kuria-text-inverse: var(--token-color-text-inverse, #FFFFFF);
+  --color-kuria-text-heading: var(--token-color-text-heading, #1A1A1A);
+  --color-kuria-text-link: var(--token-color-text-link, #2E7D32);
+  --color-kuria-text-error: var(--token-color-text-error, #C62828);
+  --color-kuria-text-warning: var(--token-color-text-warning, #E65100);
+  --color-kuria-text-success: var(--token-color-text-success, #00796B);
+  --color-kuria-text-info: var(--token-color-text-info, #1565C0);
+  --color-kuria-text-on-primary: var(--token-color-text-on-primary, #FFFFFF);
 
   /* Border colors */
-  --color-kuria-border: var(--token-color-border-default);
-  --color-kuria-border-strong: var(--token-color-border-strong);
-  --color-kuria-border-subtle: var(--token-color-border-subtle);
-  --color-kuria-border-focus: var(--token-color-border-focus);
-  --color-kuria-border-error: var(--token-color-border-error);
-  --color-kuria-border-primary: var(--token-color-border-primary);
+  --color-kuria-border: var(--token-color-border-default, #E0E0E0);
+  --color-kuria-border-strong: var(--token-color-border-strong, #BDBDBD);
+  --color-kuria-border-subtle: var(--token-color-border-subtle, #F5F5F5);
+  --color-kuria-border-focus: var(--token-color-border-focus, #4CAF50);
+  --color-kuria-border-error: var(--token-color-border-error, #EF5350);
+  --color-kuria-border-primary: var(--token-color-border-primary, #2E7D32);
 
   /* — Typography — */
   --font-heading: 'Outfit', sans-serif;
@@ -71,22 +69,22 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* — Border Radius — */
-  --radius-kuria-none: var(--global-border-radius-none);
-  --radius-kuria-sm: var(--global-border-radius-sm);
-  --radius-kuria-md: var(--global-border-radius-md);
-  --radius-kuria-lg: var(--global-border-radius-lg);
-  --radius-kuria-xl: var(--global-border-radius-xl);
-  --radius-kuria-full: var(--global-border-radius-full);
+  --radius-kuria-none: 0px;
+  --radius-kuria-sm: var(--global-border-radius-sm, 4px);
+  --radius-kuria-md: var(--global-border-radius-md, 8px);
+  --radius-kuria-lg: var(--global-border-radius-lg, 12px);
+  --radius-kuria-xl: var(--global-border-radius-xl, 16px);
+  --radius-kuria-full: var(--global-border-radius-full, 9999px);
 
   /* — Shadows — */
-  --shadow-kuria-card: var(--global-elevation-sm);
-  --shadow-kuria-dropdown: var(--global-elevation-md);
-  --shadow-kuria-sticky: var(--global-elevation-sm);
-  --shadow-kuria-modal: var(--global-elevation-xl);
-  --shadow-kuria-button: var(--global-elevation-xs);
-  --shadow-kuria-button-hover: var(--global-elevation-sm);
-  --shadow-kuria-focus: var(--global-elevation-focus-ring);
-  --shadow-kuria-focus-error: var(--global-elevation-focus-ring-error);
+  --shadow-kuria-card: var(--global-elevation-sm, 0 1px 3px 0 rgba(0, 0, 0, 0.1));
+  --shadow-kuria-dropdown: var(--global-elevation-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+  --shadow-kuria-sticky: var(--global-elevation-sm, 0 1px 3px 0 rgba(0, 0, 0, 0.1));
+  --shadow-kuria-modal: var(--global-elevation-xl, 0 20px 25px -5px rgba(0, 0, 0, 0.1));
+  --shadow-kuria-button: var(--global-elevation-xs, 0 1px 2px 0 rgba(0, 0, 0, 0.05));
+  --shadow-kuria-button-hover: var(--global-elevation-sm, 0 1px 3px 0 rgba(0, 0, 0, 0.1));
+  --shadow-kuria-focus: var(--global-elevation-focus-ring, 0 0 0 3px rgba(76, 175, 80, 0.4));
+  --shadow-kuria-focus-error: var(--global-elevation-focus-ring-error, 0 0 0 3px rgba(229, 57, 53, 0.4));
 }
 
 /* Base resets using Kuria tokens */
