@@ -1,9 +1,9 @@
-@import "tailwindcss";
-
 /*
  * Kuri'a Design System — GTC CSS Custom Properties
  * Loaded from the shared design-system directory.
  * All --global-*, --token-*, --component-* variables are available.
+ * Must be imported BEFORE Tailwind so @import rules in design-system.css
+ * (Google Fonts) precede generated rules.
  */
 @import "../../design-system/design-system.css";
 
@@ -12,6 +12,8 @@
  * Imported from node_modules at build time.
  */
 @import "leaflet/dist/leaflet.css";
+
+@import "tailwindcss";
 
 /*
  * Tailwind v4 theme configuration.
