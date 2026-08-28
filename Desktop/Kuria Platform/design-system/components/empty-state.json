@@ -1,0 +1,40 @@
+{
+  "component": {
+    "empty-state": {
+      "_meta": { "description": "Empty state component — placeholder for empty tables, lists, search results" },
+      "padding":           "{token.spacing.layout.2xl}",
+      "text-align":        "center",
+      "max-width":         "480px",
+      "illustration": {
+        "size":            "120px",
+        "margin-bottom":   "{token.spacing.stack.md}",
+        "opacity":         "{global.opacity.60}"
+      },
+      "title": {
+        "font":            "{token.typography.heading.sm}",
+        "color":           "{token.color.text.heading}",
+        "margin-bottom":   "{token.spacing.stack.xs}"
+      },
+      "description": {
+        "font":            "{token.typography.body.md}",
+        "color":           "{token.color.text.secondary}",
+        "margin-bottom":   "{token.spacing.stack.lg}"
+      },
+      "action": {
+        "margin-top":      "{token.spacing.stack.md}"
+      },
+      "variant": {
+        "no-data": {
+          "icon-color":    "{token.color.icon.secondary}"
+        },
+        "no-results": {
+          "icon-color":    "{token.color.icon.secondary}"
+        },
+        "error": {
+          "icon-color":    "{token.color.icon.error}",
+          "title-color":   "{token.color.text.error}"
+        }
+      }
+    }
+  }
+}

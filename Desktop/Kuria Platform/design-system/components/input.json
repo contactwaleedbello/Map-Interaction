@@ -1,0 +1,84 @@
+{
+  "component": {
+    "input": {
+      "_meta": { "description": "Text input and textarea component tokens" },
+      "bg":                "{token.color.bg.surface}",
+      "text":              "{token.color.text.primary}",
+      "placeholder":       "{token.color.text.tertiary}",
+      "border":            "{token.color.border.default}",
+      "border-width":      "{global.border.width.thin}",
+      "border-radius":     "{token.radius.md}",
+      "font-family":       "{global.typography.fontFamily.body}",
+      "font-weight":       "{global.typography.fontWeight.regular}",
+      "transition": {
+        "duration":        "{global.motion.duration.fast}",
+        "easing":          "{global.motion.easing.ease-in-out}"
+      },
+      "size": {
+        "sm": {
+          "height":        "32px",
+          "padding-x":     "{token.spacing.component.sm}",
+          "padding-y":     "{token.spacing.component.xs}",
+          "font-size":     "{global.typography.fontSize.sm}"
+        },
+        "md": {
+          "height":        "40px",
+          "padding-x":     "{token.spacing.component.sm}",
+          "padding-y":     "{token.spacing.component.xs}",
+          "font-size":     "{global.typography.fontSize.md}"
+        },
+        "lg": {
+          "height":        "48px",
+          "padding-x":     "{token.spacing.component.md}",
+          "padding-y":     "{token.spacing.component.sm}",
+          "font-size":     "{global.typography.fontSize.md}"
+        }
+      },
+      "state": {
+        "hover": {
+          "border":        "{token.color.border.strong}"
+        },
+        "focus": {
+          "border":        "{token.color.border.focus}",
+          "shadow":        "{token.elevation.input-focus}",
+          "outline":       "none"
+        },
+        "error": {
+          "border":        "{token.color.border.error}",
+          "shadow":        "{token.elevation.input-error}",
+          "text":          "{token.color.text.error}"
+        },
+        "disabled": {
+          "bg":            "{token.color.bg.disabled}",
+          "text":          "{token.color.text.disabled}",
+          "border":        "{token.color.border.disabled}",
+          "cursor":        "not-allowed"
+        },
+        "readonly": {
+          "bg":            "{token.color.bg.muted}",
+          "cursor":        "default"
+        }
+      },
+      "label": {
+        "font":            "{token.typography.label.md}",
+        "color":           "{token.color.text.primary}",
+        "margin-bottom":   "{token.spacing.inline.xs}"
+      },
+      "helper-text": {
+        "font":            "{token.typography.caption}",
+        "color":           "{token.color.text.secondary}",
+        "margin-top":      "{token.spacing.inline.xs}"
+      },
+      "error-text": {
+        "font":            "{token.typography.caption}",
+        "color":           "{token.color.text.error}",
+        "margin-top":      "{token.spacing.inline.xs}"
+      },
+      "icon": {
+        "color":           "{token.color.icon.secondary}",
+        "size":            "20px",
+        "gap":             "{token.spacing.inline.sm}"
+      }
+    }
+  }
+}

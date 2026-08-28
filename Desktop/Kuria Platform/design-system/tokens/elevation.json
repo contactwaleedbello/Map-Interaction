@@ -1,0 +1,27 @@
+{
+  "token": {
+    "elevation": {
+      "none":       { "value": "{global.elevation.none}",       "description": "Flat — no elevation" },
+      "card":       { "value": "{global.elevation.sm}",         "description": "Cards, tiles" },
+      "dropdown":   { "value": "{global.elevation.md}",         "description": "Dropdowns, selects, popovers" },
+      "sticky":     { "value": "{global.elevation.sm}",         "description": "Sticky headers, fixed bars" },
+      "modal":      { "value": "{global.elevation.xl}",         "description": "Modals, dialogs" },
+      "drawer":     { "value": "{global.elevation.lg}",         "description": "Sidebar drawers, sheets" },
+      "toast":      { "value": "{global.elevation.lg}",         "description": "Toast notifications" },
+      "tooltip":    { "value": "{global.elevation.md}",         "description": "Tooltips" },
+      "button":     { "value": "{global.elevation.xs}",         "description": "Buttons at rest" },
+      "button-hover": { "value": "{global.elevation.sm}",       "description": "Buttons on hover" },
+      "input-focus": { "value": "{global.elevation.focus-ring}", "description": "Input focus ring" },
+      "input-error": { "value": "{global.elevation.focus-ring-error}", "description": "Input error focus ring" },
+      "pressed":    { "value": "{global.elevation.inner}",      "description": "Pressed / active states" }
+    },
+    "radius": {
+      "none":       { "value": "{global.border.radius.none}",   "description": "No rounding" },
+      "sm":         { "value": "{global.border.radius.sm}",     "description": "Subtle — badges, chips" },
+      "md":         { "value": "{global.border.radius.md}",     "description": "Default — buttons, inputs" },
+      "lg":         { "value": "{global.border.radius.lg}",     "description": "Cards, modals" },
+      "xl":         { "value": "{global.border.radius.xl}",     "description": "Featured cards, banners" },
+      "full":       { "value": "{global.border.radius.full}",   "description": "Pill — avatars, toggles" }
+    }
+  }
+}

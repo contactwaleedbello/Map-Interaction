@@ -1,0 +1,63 @@
+{
+  "component": {
+    "modal": {
+      "_meta": { "description": "Modal dialog for admin confirmations, forms, and detail views" },
+      "backdrop": {
+        "bg":            "{token.color.bg.surface-overlay}",
+        "z-index":       "{global.zIndex.modal-backdrop}"
+      },
+      "container": {
+        "bg":            "{token.color.bg.surface}",
+        "border-radius": "{token.radius.lg}",
+        "shadow":        "{token.elevation.modal}",
+        "z-index":       "{global.zIndex.modal}",
+        "border":        "{token.color.border.subtle}",
+        "border-width":  "{global.border.width.thin}"
+      },
+      "size": {
+        "sm":            { "width": "400px", "max-height": "80vh" },
+        "md":            { "width": "560px", "max-height": "85vh" },
+        "lg":            { "width": "720px", "max-height": "90vh" },
+        "xl":            { "width": "960px", "max-height": "90vh" },
+        "full":          { "width": "100vw", "height": "100vh", "border-radius": "0" }
+      },
+      "responsive": {
+        "mobile": {
+          "width":       "calc(100vw - 32px)",
+          "margin":      "{token.spacing.component.md}"
+        }
+      },
+      "header": {
+        "padding":       "{token.spacing.component.lg}",
+        "padding-bottom": "{token.spacing.component.md}",
+        "title-font":    "{token.typography.heading.xs}",
+        "title-color":   "{token.color.text.heading}",
+        "border-bottom": "{token.color.border.subtle}",
+        "close-button": {
+          "size":        "32px",
+          "color":       "{token.color.icon.secondary}",
+          "color-hover": "{token.color.icon.primary}",
+          "bg-hover":    "{token.color.bg.muted}",
+          "border-radius": "{token.radius.md}"
+        }
+      },
+      "body": {
+        "padding":       "{token.spacing.component.lg}",
+        "font":          "{token.typography.body.md}",
+        "color":         "{token.color.text.primary}",
+        "overflow":      "auto"
+      },
+      "footer": {
+        "padding":       "{token.spacing.component.lg}",
+        "padding-top":   "{token.spacing.component.md}",
+        "border-top":    "{token.color.border.subtle}",
+        "gap":           "{token.spacing.inline.sm}",
+        "justify":       "flex-end"
+      },
+      "transition": {
+        "duration":      "{global.motion.duration.normal}",
+        "easing":        "{global.motion.easing.ease-out}"
+      }
+    }
+  }
+}

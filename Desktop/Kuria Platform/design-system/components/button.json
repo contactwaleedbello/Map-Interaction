@@ -1,0 +1,100 @@
+{
+  "component": {
+    "button": {
+      "_meta": { "description": "Button component tokens — all variants, sizes, and states" },
+      "variant": {
+        "primary": {
+          "bg":            "{token.color.bg.primary}",
+          "bg-hover":      "{token.color.bg.primary-hover}",
+          "bg-active":     "{token.color.bg.primary-active}",
+          "text":          "{token.color.text.on-primary}",
+          "border":        "transparent",
+          "shadow":        "{token.elevation.button}",
+          "shadow-hover":  "{token.elevation.button-hover}"
+        },
+        "secondary": {
+          "bg":            "{token.color.bg.surface}",
+          "bg-hover":      "{token.color.bg.secondary-hover}",
+          "bg-active":     "{token.color.bg.secondary}",
+          "text":          "{token.color.text.primary}",
+          "border":        "{token.color.border.default}",
+          "shadow":        "{token.elevation.none}",
+          "shadow-hover":  "{token.elevation.button}"
+        },
+        "ghost": {
+          "bg":            "transparent",
+          "bg-hover":      "{token.color.bg.muted}",
+          "bg-active":     "{token.color.bg.secondary}",
+          "text":          "{token.color.text.primary}",
+          "border":        "transparent",
+          "shadow":        "{token.elevation.none}",
+          "shadow-hover":  "{token.elevation.none}"
+        },
+        "danger": {
+          "bg":            "{token.color.bg.error}",
+          "bg-hover":      "{global.color.error.700}",
+          "bg-active":     "{global.color.error.800}",
+          "text":          "{token.color.text.on-error}",
+          "border":        "transparent",
+          "shadow":        "{token.elevation.button}",
+          "shadow-hover":  "{token.elevation.button-hover}"
+        },
+        "link": {
+          "bg":            "transparent",
+          "bg-hover":      "transparent",
+          "text":          "{token.color.text.link}",
+          "text-hover":    "{token.color.text.link-hover}",
+          "border":        "transparent",
+          "shadow":        "{token.elevation.none}"
+        }
+      },
+      "size": {
+        "sm": {
+          "height":       "32px",
+          "padding-x":    "{token.spacing.component.sm}",
+          "padding-y":    "{token.spacing.component.xs}",
+          "font-size":    "{global.typography.fontSize.sm}",
+          "border-radius": "{token.radius.md}",
+          "icon-size":    "16px",
+          "gap":          "{token.spacing.inline.xs}"
+        },
+        "md": {
+          "height":       "40px",
+          "padding-x":    "{token.spacing.component.md}",
+          "padding-y":    "{token.spacing.component.sm}",
+          "font-size":    "{global.typography.fontSize.md}",
+          "border-radius": "{token.radius.md}",
+          "icon-size":    "20px",
+          "gap":          "{token.spacing.inline.sm}"
+        },
+        "lg": {
+          "height":       "48px",
+          "padding-x":    "{token.spacing.component.lg}",
+          "padding-y":    "{token.spacing.component.sm}",
+          "font-size":    "{global.typography.fontSize.lg}",
+          "border-radius": "{token.radius.md}",
+          "icon-size":    "24px",
+          "gap":          "{token.spacing.inline.sm}"
+        }
+      },
+      "state": {
+        "disabled": {
+          "bg":      "{token.color.bg.disabled}",
+          "text":    "{token.color.text.disabled}",
+          "border":  "{token.color.border.disabled}",
+          "opacity": "{global.opacity.50}",
+          "cursor":  "not-allowed"
+        },
+        "loading": {
+          "opacity": "{global.opacity.70}",
+          "cursor":  "wait"
+        }
+      },
+      "transition": {
+        "duration": "{global.motion.duration.fast}",
+        "easing":   "{global.motion.easing.ease-in-out}"
+      },
+      "font-weight": "{global.typography.fontWeight.semibold}"
+    }
+  }
+}

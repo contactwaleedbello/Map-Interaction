@@ -1,0 +1,67 @@
+{
+  "token": {
+    "_meta": {
+      "mode": "dark",
+      "description": "Dark mode overrides — only tokens that differ from light mode. Inherits all other values from tokens/color.json."
+    },
+    "color": {
+      "bg": {
+        "page":              { "value": "{global.color.neutral.950}",  "description": "Dark page background" },
+        "surface":           { "value": "{global.color.neutral.900}",  "description": "Dark cards, panels" },
+        "surface-raised":    { "value": "{global.color.neutral.800}",  "description": "Elevated dark surfaces" },
+        "surface-overlay":   { "value": "rgba(0, 0, 0, 0.7)",         "description": "Darker modal backdrop" },
+        "muted":             { "value": "{global.color.neutral.800}",  "description": "Subtle dark backgrounds" },
+        "subtle":            { "value": "{global.color.neutral.900}",  "description": "Alternate row dark" },
+
+        "primary":           { "value": "{global.color.primary.600}",  "description": "Primary slightly lighter in dark mode" },
+        "primary-hover":     { "value": "{global.color.primary.500}",  "description": "Primary hover — lighter in dark" },
+        "primary-active":    { "value": "{global.color.primary.700}",  "description": "Primary active in dark" },
+        "primary-subtle":    { "value": "rgba(76, 175, 80, 0.15)",     "description": "Transparent primary tint for dark" },
+
+        "secondary":         { "value": "{global.color.neutral.700}",  "description": "Dark secondary bg" },
+        "secondary-hover":   { "value": "{global.color.neutral.600}",  "description": "Dark secondary hover" },
+
+        "error":             { "value": "{global.color.error.500}",    "description": "Error bg in dark" },
+        "error-subtle":      { "value": "rgba(229, 57, 53, 0.15)",    "description": "Transparent error tint" },
+        "warning":           { "value": "{global.color.warning.600}",  "description": "Warning bg in dark" },
+        "warning-subtle":    { "value": "rgba(255, 152, 0, 0.15)",    "description": "Transparent warning tint" },
+        "info":              { "value": "{global.color.info.500}",     "description": "Info bg in dark" },
+        "info-subtle":       { "value": "rgba(33, 150, 243, 0.15)",   "description": "Transparent info tint" },
+        "success":           { "value": "{global.color.success.500}",  "description": "Success bg in dark" },
+        "success-subtle":    { "value": "rgba(0, 150, 136, 0.15)",    "description": "Transparent success tint" },
+
+        "disabled":          { "value": "{global.color.neutral.800}",  "description": "Dark disabled bg" }
+      },
+      "text": {
+        "primary":           { "value": "{global.color.neutral.50}",   "description": "Light text on dark bg" },
+        "secondary":         { "value": "{global.color.neutral.400}",  "description": "Muted text on dark bg" },
+        "tertiary":          { "value": "{global.color.neutral.500}",  "description": "Placeholder on dark bg" },
+        "disabled":          { "value": "{global.color.neutral.600}",  "description": "Disabled text on dark bg" },
+        "inverse":           { "value": "{global.color.neutral.900}",  "description": "Text on light surfaces in dark mode" },
+
+        "link":              { "value": "{global.color.primary.400}",  "description": "Lighter link in dark mode" },
+        "link-hover":        { "value": "{global.color.primary.300}",  "description": "Lighter hovered link in dark" },
+        "link-visited":      { "value": "{global.color.primary.500}",  "description": "Visited link in dark" },
+
+        "error":             { "value": "{global.color.error.400}",    "description": "Lighter error text in dark" },
+        "warning":           { "value": "{global.color.warning.400}",  "description": "Lighter warning text in dark" },
+        "info":              { "value": "{global.color.info.400}",     "description": "Lighter info text in dark" },
+        "success":           { "value": "{global.color.success.400}",  "description": "Lighter success text in dark" },
+
+        "heading":           { "value": "{global.color.neutral.0}",    "description": "White headings in dark mode" }
+      },
+      "border": {
+        "default":           { "value": "{global.color.neutral.700}",  "description": "Dark mode default borders" },
+        "strong":            { "value": "{global.color.neutral.600}",  "description": "Dark emphasized borders" },
+        "subtle":            { "value": "{global.color.neutral.800}",  "description": "Dark subtle dividers" },
+        "disabled":          { "value": "{global.color.neutral.700}",  "description": "Dark disabled borders" }
+      },
+      "icon": {
+        "primary":           { "value": "{global.color.neutral.300}",  "description": "Light icons on dark bg" },
+        "secondary":         { "value": "{global.color.neutral.500}",  "description": "Muted icons on dark bg" },
+        "disabled":          { "value": "{global.color.neutral.600}",  "description": "Disabled icons on dark bg" },
+        "inverse":           { "value": "{global.color.neutral.900}",  "description": "Dark icons on light surfaces" }
+      }
+    }
+  }
+}

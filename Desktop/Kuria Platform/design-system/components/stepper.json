@@ -1,0 +1,63 @@
+{
+  "component": {
+    "stepper": {
+      "_meta": { "description": "Stepper/Wizard component — multi-step process indicator" },
+      "gap":               "{token.spacing.inline.md}",
+      "connector": {
+        "height":          "2px",
+        "bg":              "{token.color.bg.secondary}",
+        "bg-complete":     "{token.color.bg.primary}",
+        "transition": {
+          "duration":      "{global.motion.duration.normal}",
+          "easing":        "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "step": {
+        "size":            "32px",
+        "border-radius":   "{token.radius.full}",
+        "font":            "{token.typography.label.sm}",
+        "font-weight":     "{global.typography.fontWeight.semibold}",
+        "incomplete": {
+          "bg":            "{token.color.bg.surface}",
+          "border":        "{token.color.border.default}",
+          "text":          "{token.color.text.secondary}"
+        },
+        "active": {
+          "bg":            "{token.color.bg.primary}",
+          "border":        "{token.color.bg.primary}",
+          "text":          "{token.color.text.on-primary}",
+          "shadow":        "0 0 0 4px {global.color.primary.100}"
+        },
+        "complete": {
+          "bg":            "{token.color.bg.primary}",
+          "border":        "{token.color.bg.primary}",
+          "text":          "{token.color.text.on-primary}",
+          "icon":          "✓"
+        },
+        "error": {
+          "bg":            "{token.color.bg.error}",
+          "border":        "{token.color.bg.error}",
+          "text":          "{token.color.text.on-error}",
+          "icon":          "✕"
+        }
+      },
+      "label": {
+        "font":            "{token.typography.label.sm}",
+        "color":           "{token.color.text.secondary}",
+        "color-active":    "{token.color.text.primary}",
+        "margin-top":      "{token.spacing.inline.xs}"
+      },
+      "description": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.tertiary}"
+      },
+      "orientation": {
+        "vertical": {
+          "connector-width":  "2px",
+          "connector-height": "24px",
+          "margin-left":      "15px"
+        }
+      }
+    }
+  }
+}

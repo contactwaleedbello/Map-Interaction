@@ -1,0 +1,49 @@
+{
+  "component": {
+    "badge": {
+      "_meta": { "description": "Badge component — status indicators, counts, labels" },
+      "font":            "{token.typography.label.sm}",
+      "font-weight":     "{global.typography.fontWeight.medium}",
+      "border-radius":   "{token.radius.full}",
+      "padding-x":       "{token.spacing.component.sm}",
+      "padding-y":       "2px",
+      "variant": {
+        "default": {
+          "bg":          "{token.color.bg.muted}",
+          "text":        "{token.color.text.secondary}"
+        },
+        "primary": {
+          "bg":          "{token.color.bg.primary-subtle}",
+          "text":        "{global.color.primary.700}"
+        },
+        "success": {
+          "bg":          "{token.color.bg.success-subtle}",
+          "text":        "{token.color.text.success}"
+        },
+        "warning": {
+          "bg":          "{token.color.bg.warning-subtle}",
+          "text":        "{token.color.text.warning}"
+        },
+        "error": {
+          "bg":          "{token.color.bg.error-subtle}",
+          "text":        "{token.color.text.error}"
+        },
+        "info": {
+          "bg":          "{token.color.bg.info-subtle}",
+          "text":        "{token.color.text.info}"
+        }
+      },
+      "dot": {
+        "size":          "8px",
+        "border-radius": "{token.radius.full}"
+      },
+      "count": {
+        "min-width":     "20px",
+        "height":        "20px",
+        "font-size":     "{global.typography.fontSize.xs}",
+        "bg":            "{token.color.bg.error}",
+        "text":          "{token.color.text.on-error}"
+      }
+    }
+  }
+}

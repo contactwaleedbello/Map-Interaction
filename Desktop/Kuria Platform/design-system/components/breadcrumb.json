@@ -1,0 +1,34 @@
+{
+  "component": {
+    "breadcrumb": {
+      "_meta": { "description": "Breadcrumb component — hierarchical navigation path" },
+      "gap":             "{token.spacing.inline.xs}",
+      "font":            "{token.typography.body.sm}",
+      "item": {
+        "color":         "{token.color.text.secondary}",
+        "color-hover":   "{token.color.text.primary}",
+        "color-current": "{token.color.text.primary}",
+        "font-weight-current": "{global.typography.fontWeight.medium}",
+        "transition": {
+          "duration":    "{global.motion.duration.fast}",
+          "easing":      "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "separator": {
+        "color":         "{token.color.text.tertiary}",
+        "content":       "/",
+        "margin-x":      "{token.spacing.inline.xs}"
+      },
+      "icon": {
+        "size":          "16px",
+        "color":         "{token.color.icon.secondary}",
+        "gap":           "{token.spacing.inline.xs}"
+      },
+      "truncation": {
+        "max-items":     "4",
+        "ellipsis-bg":   "{token.color.bg.muted}",
+        "ellipsis-radius": "{token.radius.sm}"
+      }
+    }
+  }
+}

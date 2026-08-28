@@ -1,0 +1,54 @@
+{
+  "component": {
+    "toast": {
+      "_meta": { "description": "Toast/Snackbar component — ephemeral notifications" },
+      "bg":              "{token.color.bg.surface}",
+      "border":          "{token.color.border.default}",
+      "border-radius":   "{token.radius.lg}",
+      "shadow":          "{token.elevation.modal}",
+      "padding":         "{token.spacing.component.md}",
+      "gap":             "{token.spacing.inline.sm}",
+      "min-width":       "320px",
+      "max-width":       "480px",
+      "z-index":         "{global.zIndex.toast}",
+      "font":            "{token.typography.body.sm}",
+      "title-font":      "{token.typography.label.md}",
+      "transition": {
+        "duration":      "{global.motion.duration.normal}",
+        "easing":        "{global.motion.easing.ease-out}"
+      },
+      "variant": {
+        "success": {
+          "accent":      "{token.color.bg.success}",
+          "icon":        "{token.color.icon.success}"
+        },
+        "error": {
+          "accent":      "{token.color.bg.error}",
+          "icon":        "{token.color.icon.error}"
+        },
+        "warning": {
+          "accent":      "{token.color.bg.warning}",
+          "icon":        "{token.color.icon.warning}"
+        },
+        "info": {
+          "accent":      "{token.color.bg.info}",
+          "icon":        "{token.color.icon.info}"
+        }
+      },
+      "close-button": {
+        "size":          "20px",
+        "color":         "{token.color.icon.secondary}",
+        "color-hover":   "{token.color.icon.primary}"
+      },
+      "progress-bar": {
+        "height":        "3px",
+        "bg":            "{token.color.bg.muted}",
+        "fill":          "currentAccentColor"
+      },
+      "position": {
+        "offset":        "{token.spacing.layout.md}",
+        "stack-gap":     "{token.spacing.stack.sm}"
+      }
+    }
+  }
+}

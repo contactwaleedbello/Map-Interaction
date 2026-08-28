@@ -1,0 +1,29 @@
+{
+  "breakpoints": {
+    "mobile": {
+      "max": "639px",
+      "label": "Mobile",
+      "columns": 4,
+      "gutter": "{global.spacing.2}"
+    },
+    "tablet": {
+      "min": "640px",
+      "max": "1023px",
+      "label": "Tablet",
+      "columns": 8,
+      "gutter": "{global.spacing.3}"
+    },
+    "desktop": {
+      "min": "1024px",
+      "label": "Desktop",
+      "columns": 12,
+      "gutter": "{global.spacing.4}"
+    },
+    "wide": {
+      "min": "1440px",
+      "label": "Wide Desktop",
+      "columns": 12,
+      "gutter": "{global.spacing.5}"
+    }
+  }
+}

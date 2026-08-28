@@ -1,0 +1,53 @@
+{
+  "component": {
+    "card": {
+      "_meta": { "description": "Card component tokens for admin dashboard panels and content containers" },
+      "bg":             "{token.color.bg.surface}",
+      "border":         "{token.color.border.default}",
+      "border-width":   "{global.border.width.thin}",
+      "border-radius":  "{token.radius.lg}",
+      "shadow":         "{token.elevation.card}",
+      "shadow-hover":   "{token.elevation.dropdown}",
+      "transition": {
+        "duration":     "{global.motion.duration.normal}",
+        "easing":       "{global.motion.easing.ease-in-out}"
+      },
+      "padding": {
+        "default":      "{token.spacing.component.lg}",
+        "responsive": {
+          "mobile":     "{token.spacing.component.md}"
+        }
+      },
+      "header": {
+        "font":         "{token.typography.heading.xs}",
+        "color":        "{token.color.text.heading}",
+        "padding-bottom": "{token.spacing.component.sm}",
+        "border-bottom":  "{token.color.border.subtle}"
+      },
+      "body": {
+        "font":         "{token.typography.body.md}",
+        "color":        "{token.color.text.primary}",
+        "gap":          "{token.spacing.stack.md}"
+      },
+      "footer": {
+        "padding-top":  "{token.spacing.component.sm}",
+        "border-top":   "{token.color.border.subtle}"
+      },
+      "variant": {
+        "interactive": {
+          "cursor":     "pointer",
+          "hover-transform": "translateY(-2px)"
+        },
+        "outlined": {
+          "shadow":     "{token.elevation.none}",
+          "border":     "{token.color.border.strong}"
+        },
+        "filled": {
+          "bg":         "{token.color.bg.muted}",
+          "border":     "transparent",
+          "shadow":     "{token.elevation.none}"
+        }
+      }
+    }
+  }
+}

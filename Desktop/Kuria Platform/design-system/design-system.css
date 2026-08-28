@@ -1,0 +1,1411 @@
+/**
+ * Kuri'a Design System — Generated CSS Custom Properties
+ * Generated: 2026-08-25T19:21:43.931Z
+ *
+ * Architecture: GTC (Globals → Tokens → Components)
+ * Fonts: Inter (body) + Outfit (headings)
+ * Spacing: 8px base unit
+ * DO NOT EDIT — regenerate with: node build.js
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ═══════════════════════════════════════════════════════════
+   Layer 1: Global Primitives
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* — global.border — */
+  --global-border-radius-none: 0px;
+  --global-border-radius-sm: 4px;  /* Subtle rounding — badges, chips */
+  --global-border-radius-md: 8px;  /* Default rounding — buttons, inputs, cards */
+  --global-border-radius-lg: 12px;  /* Prominent rounding — modals, panels */
+  --global-border-radius-xl: 16px;  /* Large rounding — featured cards */
+  --global-border-radius-2xl: 24px;  /* Extra large rounding — banners */
+  --global-border-radius-full: 9999px;  /* Pill shape — avatars, toggles, tags */
+  --global-border-width-none: 0px;
+  --global-border-width-thin: 1px;  /* Default border — inputs, cards, dividers */
+  --global-border-width-medium: 2px;  /* Emphasized border — active tabs, focus */
+  --global-border-width-thick: 4px;  /* Heavy border — sidebar indicators */
+  --global-border-style-solid: solid;
+  --global-border-style-dashed: dashed;  /* Upload zones, optional borders */
+  --global-border-style-dotted: dotted;
+
+  /* — global.color — */
+  --global-color-primary-50: #E8F5E9;  /* Lightest primary tint */
+  --global-color-primary-100: #C8E6C9;  /* Light primary tint */
+  --global-color-primary-200: #A5D6A7;  /* Soft primary */
+  --global-color-primary-300: #81C784;  /* Medium-light primary */
+  --global-color-primary-400: #66BB6A;  /* Medium primary */
+  --global-color-primary-500: #4CAF50;  /* Base primary */
+  --global-color-primary-600: #388E3C;  /* Medium-dark primary */
+  --global-color-primary-700: #2E7D32;  /* Dark primary — AA on white */
+  --global-color-primary-800: #1B5E20;  /* Darker primary */
+  --global-color-primary-900: #0D3B1E;  /* Deep primary */
+  --global-color-primary-950: #062E14;  /* Deepest primary */
+  --global-color-neutral-0: #FFFFFF;  /* Pure white */
+  --global-color-neutral-50: #FAFAFA;  /* Near white */
+  --global-color-neutral-100: #F5F5F5;  /* Lightest gray */
+  --global-color-neutral-200: #E0E0E0;  /* Light gray */
+  --global-color-neutral-300: #BDBDBD;  /* Medium-light gray */
+  --global-color-neutral-400: #9E9E9E;  /* Medium gray */
+  --global-color-neutral-500: #757575;  /* Base gray */
+  --global-color-neutral-600: #616161;  /* Medium-dark gray */
+  --global-color-neutral-700: #424242;  /* Dark gray */
+  --global-color-neutral-800: #2D2D2D;  /* Darker gray */
+  --global-color-neutral-900: #1A1A1A;  /* Near black */
+  --global-color-neutral-950: #0F0F0F;  /* Deepest gray */
+  --global-color-neutral-1000: #000000;  /* Pure black */
+  --global-color-error-50: #FFEBEE;
+  --global-color-error-100: #FFCDD2;
+  --global-color-error-200: #EF9A9A;
+  --global-color-error-300: #E57373;
+  --global-color-error-400: #EF5350;
+  --global-color-error-500: #E53935;
+  --global-color-error-600: #D32F2F;
+  --global-color-error-700: #C62828;
+  --global-color-error-800: #B71C1C;
+  --global-color-error-900: #7F0000;
+  --global-color-error-950: #5D0000;
+  --global-color-warning-50: #FFF3E0;
+  --global-color-warning-100: #FFE0B2;
+  --global-color-warning-200: #FFCC80;
+  --global-color-warning-300: #FFB74D;
+  --global-color-warning-400: #FFA726;
+  --global-color-warning-500: #FF9800;
+  --global-color-warning-600: #FB8C00;
+  --global-color-warning-700: #F57C00;
+  --global-color-warning-800: #E65100;
+  --global-color-warning-900: #BF360C;
+  --global-color-warning-950: #8D2400;
+  --global-color-info-50: #E3F2FD;
+  --global-color-info-100: #BBDEFB;
+  --global-color-info-200: #90CAF9;
+  --global-color-info-300: #64B5F6;
+  --global-color-info-400: #42A5F5;
+  --global-color-info-500: #2196F3;
+  --global-color-info-600: #1E88E5;
+  --global-color-info-700: #1565C0;
+  --global-color-info-800: #0D47A1;
+  --global-color-info-900: #0A3A84;
+  --global-color-info-950: #062A61;
+  --global-color-success-50: #E0F2F1;
+  --global-color-success-100: #B2DFDB;
+  --global-color-success-200: #80CBC4;
+  --global-color-success-300: #4DB6AC;
+  --global-color-success-400: #26A69A;
+  --global-color-success-500: #009688;
+  --global-color-success-600: #00897B;
+  --global-color-success-700: #00796B;
+  --global-color-success-800: #00695C;
+  --global-color-success-900: #004D40;
+  --global-color-success-950: #003730;
+
+  /* — global.elevation — */
+  --global-elevation-none: none;  /* No shadow */
+  --global-elevation-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);  /* Subtle lift — buttons at rest */
+  --global-elevation-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);  /* Light shadow — cards, inputs */
+  --global-elevation-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);  /* Medium shadow — dropdowns, popovers */
+  --global-elevation-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);  /* Large shadow — modals, sheets */
+  --global-elevation-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);  /* Extra large — floating panels */
+  --global-elevation-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);  /* Dramatic — hero elements */
+  --global-elevation-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);  /* Inset shadow — pressed states, wells */
+  --global-elevation-focus-ring: 0 0 0 3px rgba(76, 175, 80, 0.4);  /* Focus indicator ring — primary color */
+  --global-elevation-focus-ring-error: 0 0 0 3px rgba(229, 57, 53, 0.4);  /* Focus indicator ring — error color */
+
+  /* — global.motion — */
+  --global-motion-duration-instant: 0ms;  /* No transition */
+  --global-motion-duration-fastest: 50ms;  /* Micro-interactions — toggles, checkboxes */
+  --global-motion-duration-fast: 150ms;  /* Quick feedback — hover, focus */
+  --global-motion-duration-normal: 300ms;  /* Standard transitions — menus, accordions */
+  --global-motion-duration-slow: 500ms;  /* Deliberate motion — modals, drawers */
+  --global-motion-duration-slower: 700ms;  /* Emphasized motion — page transitions */
+  --global-motion-duration-slowest: 1000ms;  /* Dramatic — skeleton loading loops */
+  --global-motion-easing-linear: linear;
+  --global-motion-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);  /* Accelerate — elements leaving */
+  --global-motion-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);  /* Decelerate — elements entering */
+  --global-motion-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);  /* Standard — most transitions */
+  --global-motion-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);  /* Bouncy — playful emphasis */
+  --global-motion-easing-sharp: cubic-bezier(0.4, 0, 0.6, 1);  /* Snappy — admin interactions */
+
+  /* — global.opacity — */
+  --global-opacity-0: 0;  /* Invisible */
+  --global-opacity-5: 0.05;  /* Barely visible — subtle overlays */
+  --global-opacity-10: 0.1;  /* Very faint — hover tints */
+  --global-opacity-20: 0.2;  /* Faint — backdrop hints */
+  --global-opacity-30: 0.3;  /* Light — disabled icons */
+  --global-opacity-40: 0.4;  /* Medium-light — placeholder text */
+  --global-opacity-50: 0.5;  /* Half — modal backdrops */
+  --global-opacity-60: 0.6;  /* Medium — overlay panels */
+  --global-opacity-70: 0.7;  /* Medium-strong */
+  --global-opacity-80: 0.8;  /* Strong — heavy overlays */
+  --global-opacity-90: 0.9;  /* Near-opaque */
+  --global-opacity-100: 1;  /* Fully opaque */
+
+  /* — global.spacing — */
+  --global-spacing-0: 0px;
+  --global-spacing-1: 8px;
+  --global-spacing-2: 16px;
+  --global-spacing-3: 24px;
+  --global-spacing-4: 32px;
+  --global-spacing-5: 40px;
+  --global-spacing-6: 48px;
+  --global-spacing-7: 56px;
+  --global-spacing-8: 64px;
+  --global-spacing-9: 72px;
+  --global-spacing-10: 80px;
+  --global-spacing-12: 96px;
+  --global-spacing-14: 112px;
+  --global-spacing-16: 128px;
+  --global-spacing-20: 160px;
+  --global-spacing-24: 192px;
+  --global-spacing-px: 1px;  /* Hairline — borders only */
+  --global-spacing-0-5: 4px;  /* Half step — tight padding */
+  --global-spacing-1-5: 12px;
+  --global-spacing-2-5: 20px;
+
+  /* — global.typography — */
+  --global-typography-fontFamily-heading: 'Outfit', sans-serif;  /* Headings and display text */
+  --global-typography-fontFamily-body: 'Inter', sans-serif;  /* Body text and UI elements */
+  --global-typography-fontFamily-mono: 'JetBrains Mono', 'Fira Code', monospace;  /* Code and data */
+  --global-typography-fontSize-xs: 0.75rem;  /* Extra small — captions, badges */
+  --global-typography-fontSize-sm: 0.875rem;  /* Small — secondary text, labels */
+  --global-typography-fontSize-md: 1rem;  /* Medium — base body text */
+  --global-typography-fontSize-lg: 1.125rem;  /* Large — emphasized body */
+  --global-typography-fontSize-xl: 1.25rem;  /* Extra large — subheadings */
+  --global-typography-fontSize-2xl: 1.5rem;  /* Heading 4 */
+  --global-typography-fontSize-3xl: 1.875rem;  /* Heading 3 */
+  --global-typography-fontSize-4xl: 2.25rem;  /* Heading 2 */
+  --global-typography-fontSize-5xl: 3rem;  /* Heading 1 */
+  --global-typography-fontSize-6xl: 3.75rem;  /* Display / Hero */
+  --global-typography-fontWeight-regular: 400;
+  --global-typography-fontWeight-medium: 500;
+  --global-typography-fontWeight-semibold: 600;
+  --global-typography-fontWeight-bold: 700;
+  --global-typography-fontWeight-extrabold: 800;
+  --global-typography-lineHeight-none: 1;  /* No extra leading */
+  --global-typography-lineHeight-tight: 1.25;  /* Headings */
+  --global-typography-lineHeight-snug: 1.375;  /* Compact body */
+  --global-typography-lineHeight-normal: 1.5;  /* Default body text */
+  --global-typography-lineHeight-relaxed: 1.625;  /* Readable body */
+  --global-typography-lineHeight-loose: 2;  /* Spacious text */
+  --global-typography-letterSpacing-tighter: -0.04em;
+  --global-typography-letterSpacing-tight: -0.02em;
+  --global-typography-letterSpacing-normal: 0em;
+  --global-typography-letterSpacing-wide: 0.025em;
+  --global-typography-letterSpacing-wider: 0.05em;
+  --global-typography-letterSpacing-widest: 0.1em;
+
+  /* — global.zIndex — */
+  --global-zIndex-hide: -1;  /* Hidden behind everything */
+  --global-zIndex-base: 0;  /* Default stacking */
+  --global-zIndex-raised: 1;  /* Slightly above base — cards on hover */
+  --global-zIndex-dropdown: 1000;  /* Dropdown menus, selects */
+  --global-zIndex-sticky: 1100;  /* Sticky headers, table heads */
+  --global-zIndex-fixed: 1200;  /* Fixed navbars, sidebars */
+  --global-zIndex-modal-backdrop: 1300;  /* Dark overlay behind modals */
+  --global-zIndex-modal: 1400;  /* Modal dialogs, drawers */
+  --global-zIndex-popover: 1500;  /* Popovers, dropdowns inside modals */
+  --global-zIndex-tooltip: 1600;  /* Tooltips — above everything */
+  --global-zIndex-toast: 1700;  /* Toast notifications — topmost layer */
+  --global-zIndex-max: 9999;  /* Emergency override — use sparingly */
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Layer 2: Semantic Tokens (Light Mode)
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* — token.color — */
+  --token-color-bg-page: var(--global-color-neutral-50);  /* Main page background */
+  --token-color-bg-surface: var(--global-color-neutral-0);  /* Cards, panels, content areas */
+  --token-color-bg-surface-raised: var(--global-color-neutral-0);  /* Elevated surfaces — popovers, dropdowns */
+  --token-color-bg-surface-overlay: rgba(0, 0, 0, 0.5);  /* Modal backdrop overlay */
+  --token-color-bg-muted: var(--global-color-neutral-100);  /* Subtle backgrounds — code blocks, wells */
+  --token-color-bg-subtle: var(--global-color-neutral-50);  /* Very subtle tint — alternate table rows */
+  --token-color-bg-primary: var(--global-color-primary-700);  /* Primary action backgrounds */
+  --token-color-bg-primary-hover: var(--global-color-primary-800);  /* Primary hover state */
+  --token-color-bg-primary-active: var(--global-color-primary-900);  /* Primary active/pressed state */
+  --token-color-bg-primary-subtle: var(--global-color-primary-50);  /* Light primary tint — selected rows, highlights */
+  --token-color-bg-secondary: var(--global-color-neutral-200);  /* Secondary action backgrounds */
+  --token-color-bg-secondary-hover: var(--global-color-neutral-300);  /* Secondary hover state */
+  --token-color-bg-error: var(--global-color-error-600);  /* Error action backgrounds */
+  --token-color-bg-error-subtle: var(--global-color-error-50);  /* Error tint — validation backgrounds */
+  --token-color-bg-warning: var(--global-color-warning-500);  /* Warning action backgrounds */
+  --token-color-bg-warning-subtle: var(--global-color-warning-50);  /* Warning tint */
+  --token-color-bg-info: var(--global-color-info-600);  /* Info action backgrounds */
+  --token-color-bg-info-subtle: var(--global-color-info-50);  /* Info tint */
+  --token-color-bg-success: var(--global-color-success-600);  /* Success action backgrounds */
+  --token-color-bg-success-subtle: var(--global-color-success-50);  /* Success tint */
+  --token-color-bg-disabled: var(--global-color-neutral-100);  /* Disabled element backgrounds */
+  --token-color-text-primary: var(--global-color-neutral-900);  /* Main body text */
+  --token-color-text-secondary: var(--global-color-neutral-600);  /* Secondary/muted text */
+  --token-color-text-tertiary: var(--global-color-neutral-500);  /* Placeholder text, hints */
+  --token-color-text-disabled: var(--global-color-neutral-400);  /* Disabled text */
+  --token-color-text-inverse: var(--global-color-neutral-0);  /* Text on dark backgrounds */
+  --token-color-text-on-primary: var(--global-color-neutral-0);  /* Text on primary backgrounds */
+  --token-color-text-on-error: var(--global-color-neutral-0);  /* Text on error backgrounds */
+  --token-color-text-on-warning: var(--global-color-neutral-950);  /* Text on warning backgrounds (dark for contrast) */
+  --token-color-text-on-info: var(--global-color-neutral-0);  /* Text on info backgrounds */
+  --token-color-text-on-success: var(--global-color-neutral-0);  /* Text on success backgrounds */
+  --token-color-text-link: var(--global-color-primary-700);  /* Default link color */
+  --token-color-text-link-hover: var(--global-color-primary-800);  /* Hovered link */
+  --token-color-text-link-visited: var(--global-color-primary-900);  /* Visited link */
+  --token-color-text-error: var(--global-color-error-700);  /* Error text — labels, messages */
+  --token-color-text-warning: var(--global-color-warning-800);  /* Warning text */
+  --token-color-text-info: var(--global-color-info-700);  /* Info text */
+  --token-color-text-success: var(--global-color-success-700);  /* Success text */
+  --token-color-text-heading: var(--global-color-neutral-900);  /* Heading text color */
+  --token-color-border-default: var(--global-color-neutral-200);  /* Default borders — cards, inputs */
+  --token-color-border-strong: var(--global-color-neutral-300);  /* Emphasized borders */
+  --token-color-border-subtle: var(--global-color-neutral-100);  /* Subtle dividers */
+  --token-color-border-focus: var(--global-color-primary-500);  /* Focus ring borders */
+  --token-color-border-error: var(--global-color-error-500);  /* Error state borders */
+  --token-color-border-warning: var(--global-color-warning-500);  /* Warning state borders */
+  --token-color-border-info: var(--global-color-info-500);  /* Info state borders */
+  --token-color-border-success: var(--global-color-success-500);  /* Success state borders */
+  --token-color-border-disabled: var(--global-color-neutral-200);  /* Disabled borders */
+  --token-color-border-primary: var(--global-color-primary-700);  /* Primary accent borders */
+  --token-color-icon-primary: var(--global-color-neutral-700);  /* Default icon color */
+  --token-color-icon-secondary: var(--global-color-neutral-500);  /* Secondary/muted icons */
+  --token-color-icon-disabled: var(--global-color-neutral-400);  /* Disabled icons */
+  --token-color-icon-inverse: var(--global-color-neutral-0);  /* Icons on dark backgrounds */
+  --token-color-icon-brand: var(--global-color-primary-700);  /* Brand-colored icons */
+  --token-color-icon-error: var(--global-color-error-600);  /* Error icons */
+  --token-color-icon-warning: var(--global-color-warning-600);  /* Warning icons */
+  --token-color-icon-info: var(--global-color-info-600);  /* Info icons */
+  --token-color-icon-success: var(--global-color-success-600);  /* Success icons */
+
+  /* — token.elevation — */
+  --token-elevation-none: var(--global-elevation-none);  /* Flat — no elevation */
+  --token-elevation-card: var(--global-elevation-sm);  /* Cards, tiles */
+  --token-elevation-dropdown: var(--global-elevation-md);  /* Dropdowns, selects, popovers */
+  --token-elevation-sticky: var(--global-elevation-sm);  /* Sticky headers, fixed bars */
+  --token-elevation-modal: var(--global-elevation-xl);  /* Modals, dialogs */
+  --token-elevation-drawer: var(--global-elevation-lg);  /* Sidebar drawers, sheets */
+  --token-elevation-toast: var(--global-elevation-lg);  /* Toast notifications */
+  --token-elevation-tooltip: var(--global-elevation-md);  /* Tooltips */
+  --token-elevation-button: var(--global-elevation-xs);  /* Buttons at rest */
+  --token-elevation-button-hover: var(--global-elevation-sm);  /* Buttons on hover */
+  --token-elevation-input-focus: var(--global-elevation-focus-ring);  /* Input focus ring */
+  --token-elevation-input-error: var(--global-elevation-focus-ring-error);  /* Input error focus ring */
+  --token-elevation-pressed: var(--global-elevation-inner);  /* Pressed / active states */
+
+  /* — token.radius — */
+  --token-radius-none: var(--global-border-radius-none);  /* No rounding */
+  --token-radius-sm: var(--global-border-radius-sm);  /* Subtle — badges, chips */
+  --token-radius-md: var(--global-border-radius-md);  /* Default — buttons, inputs */
+  --token-radius-lg: var(--global-border-radius-lg);  /* Cards, modals */
+  --token-radius-xl: var(--global-border-radius-xl);  /* Featured cards, banners */
+  --token-radius-full: var(--global-border-radius-full);  /* Pill — avatars, toggles */
+
+  /* — token.spacing — */
+  --token-spacing-page-gutter-default: var(--global-spacing-4);
+  --token-spacing-page-gutter-description: Page edge gutters;
+  --token-spacing-page-section-gap-default: var(--global-spacing-8);
+  --token-spacing-page-section-gap-description: Gap between major page sections;
+  --token-spacing-layout-sidebar-width-default: 260px;
+  --token-spacing-layout-sidebar-width-description: Admin sidebar width;
+  --token-spacing-layout-navbar-height-default: var(--global-spacing-8);
+  --token-spacing-layout-navbar-height-description: Top navbar height (64px);
+  --token-spacing-layout-content-max-width-default: 1280px;
+  --token-spacing-layout-content-max-width-description: Max width for main content area;
+  --token-spacing-component-xs: var(--global-spacing-0-5);  /* 4px — tight internal padding */
+  --token-spacing-component-sm: var(--global-spacing-1);  /* 8px — small padding/gap */
+  --token-spacing-component-md: var(--global-spacing-2);  /* 16px — default padding/gap */
+  --token-spacing-component-lg: var(--global-spacing-3);  /* 24px — spacious padding */
+  --token-spacing-component-xl: var(--global-spacing-4);  /* 32px — large sections */
+  --token-spacing-inline-xs: var(--global-spacing-0-5);  /* 4px — icon-to-label gap */
+  --token-spacing-inline-sm: var(--global-spacing-1);  /* 8px — element gap */
+  --token-spacing-inline-md: var(--global-spacing-1-5);  /* 12px — button group gap */
+  --token-spacing-inline-lg: var(--global-spacing-2);  /* 16px — card content gap */
+  --token-spacing-stack-xs: var(--global-spacing-0-5);  /* 4px — tightly stacked items */
+  --token-spacing-stack-sm: var(--global-spacing-1);  /* 8px — form field gaps */
+  --token-spacing-stack-md: var(--global-spacing-2);  /* 16px — card sections */
+  --token-spacing-stack-lg: var(--global-spacing-3);  /* 24px — content blocks */
+  --token-spacing-stack-xl: var(--global-spacing-5);  /* 40px — major sections */
+
+  /* — token.typography — */
+  --token-typography-heading-xl-fontFamily: var(--global-typography-fontFamily-heading);
+  --token-typography-heading-xl-fontSize: var(--global-typography-fontSize-5xl);
+  --token-typography-heading-xl-fontWeight: var(--global-typography-fontWeight-bold);
+  --token-typography-heading-xl-lineHeight: var(--global-typography-lineHeight-tight);
+  --token-typography-heading-xl-letterSpacing: var(--global-typography-letterSpacing-tight);
+  --token-typography-heading-lg-fontFamily: var(--global-typography-fontFamily-heading);
+  --token-typography-heading-lg-fontSize: var(--global-typography-fontSize-4xl);
+  --token-typography-heading-lg-fontWeight: var(--global-typography-fontWeight-bold);
+  --token-typography-heading-lg-lineHeight: var(--global-typography-lineHeight-tight);
+  --token-typography-heading-lg-letterSpacing: var(--global-typography-letterSpacing-tight);
+  --token-typography-heading-md-fontFamily: var(--global-typography-fontFamily-heading);
+  --token-typography-heading-md-fontSize: var(--global-typography-fontSize-3xl);
+  --token-typography-heading-md-fontWeight: var(--global-typography-fontWeight-semibold);
+  --token-typography-heading-md-lineHeight: var(--global-typography-lineHeight-tight);
+  --token-typography-heading-md-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-heading-sm-fontFamily: var(--global-typography-fontFamily-heading);
+  --token-typography-heading-sm-fontSize: var(--global-typography-fontSize-2xl);
+  --token-typography-heading-sm-fontWeight: var(--global-typography-fontWeight-semibold);
+  --token-typography-heading-sm-lineHeight: var(--global-typography-lineHeight-snug);
+  --token-typography-heading-sm-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-heading-xs-fontFamily: var(--global-typography-fontFamily-heading);
+  --token-typography-heading-xs-fontSize: var(--global-typography-fontSize-xl);
+  --token-typography-heading-xs-fontWeight: var(--global-typography-fontWeight-semibold);
+  --token-typography-heading-xs-lineHeight: var(--global-typography-lineHeight-snug);
+  --token-typography-heading-xs-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-body-lg-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-body-lg-fontSize: var(--global-typography-fontSize-lg);
+  --token-typography-body-lg-fontWeight: var(--global-typography-fontWeight-regular);
+  --token-typography-body-lg-lineHeight: var(--global-typography-lineHeight-relaxed);
+  --token-typography-body-lg-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-body-md-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-body-md-fontSize: var(--global-typography-fontSize-md);
+  --token-typography-body-md-fontWeight: var(--global-typography-fontWeight-regular);
+  --token-typography-body-md-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-body-md-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-body-sm-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-body-sm-fontSize: var(--global-typography-fontSize-sm);
+  --token-typography-body-sm-fontWeight: var(--global-typography-fontWeight-regular);
+  --token-typography-body-sm-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-body-sm-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-label-lg-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-label-lg-fontSize: var(--global-typography-fontSize-md);
+  --token-typography-label-lg-fontWeight: var(--global-typography-fontWeight-medium);
+  --token-typography-label-lg-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-label-lg-letterSpacing: var(--global-typography-letterSpacing-normal);
+  --token-typography-label-md-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-label-md-fontSize: var(--global-typography-fontSize-sm);
+  --token-typography-label-md-fontWeight: var(--global-typography-fontWeight-medium);
+  --token-typography-label-md-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-label-md-letterSpacing: var(--global-typography-letterSpacing-wide);
+  --token-typography-label-sm-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-label-sm-fontSize: var(--global-typography-fontSize-xs);
+  --token-typography-label-sm-fontWeight: var(--global-typography-fontWeight-medium);
+  --token-typography-label-sm-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-label-sm-letterSpacing: var(--global-typography-letterSpacing-wider);
+  --token-typography-caption-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-caption-fontSize: var(--global-typography-fontSize-xs);
+  --token-typography-caption-fontWeight: var(--global-typography-fontWeight-regular);
+  --token-typography-caption-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-caption-letterSpacing: var(--global-typography-letterSpacing-wide);
+  --token-typography-overline-fontFamily: var(--global-typography-fontFamily-body);
+  --token-typography-overline-fontSize: var(--global-typography-fontSize-xs);
+  --token-typography-overline-fontWeight: var(--global-typography-fontWeight-semibold);
+  --token-typography-overline-lineHeight: var(--global-typography-lineHeight-normal);
+  --token-typography-overline-letterSpacing: var(--global-typography-letterSpacing-widest);
+  --token-typography-overline-textTransform: uppercase;
+  --token-typography-code-fontFamily: var(--global-typography-fontFamily-mono);
+  --token-typography-code-fontSize: var(--global-typography-fontSize-sm);
+  --token-typography-code-fontWeight: var(--global-typography-fontWeight-regular);
+  --token-typography-code-lineHeight: var(--global-typography-lineHeight-relaxed);
+  --token-typography-code-letterSpacing: var(--global-typography-letterSpacing-normal);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Layer 2: Dark Mode Overrides
+   ═══════════════════════════════════════════════════════════ */
+
+[data-theme="dark"],
+.dark {
+  --token-color-bg-page: var(--global-color-neutral-950);  /* Dark page background */
+  --token-color-bg-surface: var(--global-color-neutral-900);  /* Dark cards, panels */
+  --token-color-bg-surface-raised: var(--global-color-neutral-800);  /* Elevated dark surfaces */
+  --token-color-bg-surface-overlay: rgba(0, 0, 0, 0.7);  /* Darker modal backdrop */
+  --token-color-bg-muted: var(--global-color-neutral-800);  /* Subtle dark backgrounds */
+  --token-color-bg-subtle: var(--global-color-neutral-900);  /* Alternate row dark */
+  --token-color-bg-primary: var(--global-color-primary-600);  /* Primary slightly lighter in dark mode */
+  --token-color-bg-primary-hover: var(--global-color-primary-500);  /* Primary hover — lighter in dark */
+  --token-color-bg-primary-active: var(--global-color-primary-700);  /* Primary active in dark */
+  --token-color-bg-primary-subtle: rgba(76, 175, 80, 0.15);  /* Transparent primary tint for dark */
+  --token-color-bg-secondary: var(--global-color-neutral-700);  /* Dark secondary bg */
+  --token-color-bg-secondary-hover: var(--global-color-neutral-600);  /* Dark secondary hover */
+  --token-color-bg-error: var(--global-color-error-500);  /* Error bg in dark */
+  --token-color-bg-error-subtle: rgba(229, 57, 53, 0.15);  /* Transparent error tint */
+  --token-color-bg-warning: var(--global-color-warning-600);  /* Warning bg in dark */
+  --token-color-bg-warning-subtle: rgba(255, 152, 0, 0.15);  /* Transparent warning tint */
+  --token-color-bg-info: var(--global-color-info-500);  /* Info bg in dark */
+  --token-color-bg-info-subtle: rgba(33, 150, 243, 0.15);  /* Transparent info tint */
+  --token-color-bg-success: var(--global-color-success-500);  /* Success bg in dark */
+  --token-color-bg-success-subtle: rgba(0, 150, 136, 0.15);  /* Transparent success tint */
+  --token-color-bg-disabled: var(--global-color-neutral-800);  /* Dark disabled bg */
+  --token-color-text-primary: var(--global-color-neutral-50);  /* Light text on dark bg */
+  --token-color-text-secondary: var(--global-color-neutral-400);  /* Muted text on dark bg */
+  --token-color-text-tertiary: var(--global-color-neutral-500);  /* Placeholder on dark bg */
+  --token-color-text-disabled: var(--global-color-neutral-600);  /* Disabled text on dark bg */
+  --token-color-text-inverse: var(--global-color-neutral-900);  /* Text on light surfaces in dark mode */
+  --token-color-text-link: var(--global-color-primary-400);  /* Lighter link in dark mode */
+  --token-color-text-link-hover: var(--global-color-primary-300);  /* Lighter hovered link in dark */
+  --token-color-text-link-visited: var(--global-color-primary-500);  /* Visited link in dark */
+  --token-color-text-error: var(--global-color-error-400);  /* Lighter error text in dark */
+  --token-color-text-warning: var(--global-color-warning-400);  /* Lighter warning text in dark */
+  --token-color-text-info: var(--global-color-info-400);  /* Lighter info text in dark */
+  --token-color-text-success: var(--global-color-success-400);  /* Lighter success text in dark */
+  --token-color-text-heading: var(--global-color-neutral-0);  /* White headings in dark mode */
+  --token-color-border-default: var(--global-color-neutral-700);  /* Dark mode default borders */
+  --token-color-border-strong: var(--global-color-neutral-600);  /* Dark emphasized borders */
+  --token-color-border-subtle: var(--global-color-neutral-800);  /* Dark subtle dividers */
+  --token-color-border-disabled: var(--global-color-neutral-700);  /* Dark disabled borders */
+  --token-color-icon-primary: var(--global-color-neutral-300);  /* Light icons on dark bg */
+  --token-color-icon-secondary: var(--global-color-neutral-500);  /* Muted icons on dark bg */
+  --token-color-icon-disabled: var(--global-color-neutral-600);  /* Disabled icons on dark bg */
+  --token-color-icon-inverse: var(--global-color-neutral-900);  /* Dark icons on light surfaces */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --token-color-bg-page: var(--global-color-neutral-950);
+    --token-color-bg-surface: var(--global-color-neutral-900);
+    --token-color-bg-surface-raised: var(--global-color-neutral-800);
+    --token-color-bg-surface-overlay: rgba(0, 0, 0, 0.7);
+    --token-color-bg-muted: var(--global-color-neutral-800);
+    --token-color-bg-subtle: var(--global-color-neutral-900);
+    --token-color-bg-primary: var(--global-color-primary-600);
+    --token-color-bg-primary-hover: var(--global-color-primary-500);
+    --token-color-bg-primary-active: var(--global-color-primary-700);
+    --token-color-bg-primary-subtle: rgba(76, 175, 80, 0.15);
+    --token-color-bg-secondary: var(--global-color-neutral-700);
+    --token-color-bg-secondary-hover: var(--global-color-neutral-600);
+    --token-color-bg-error: var(--global-color-error-500);
+    --token-color-bg-error-subtle: rgba(229, 57, 53, 0.15);
+    --token-color-bg-warning: var(--global-color-warning-600);
+    --token-color-bg-warning-subtle: rgba(255, 152, 0, 0.15);
+    --token-color-bg-info: var(--global-color-info-500);
+    --token-color-bg-info-subtle: rgba(33, 150, 243, 0.15);
+    --token-color-bg-success: var(--global-color-success-500);
+    --token-color-bg-success-subtle: rgba(0, 150, 136, 0.15);
+    --token-color-bg-disabled: var(--global-color-neutral-800);
+    --token-color-text-primary: var(--global-color-neutral-50);
+    --token-color-text-secondary: var(--global-color-neutral-400);
+    --token-color-text-tertiary: var(--global-color-neutral-500);
+    --token-color-text-disabled: var(--global-color-neutral-600);
+    --token-color-text-inverse: var(--global-color-neutral-900);
+    --token-color-text-link: var(--global-color-primary-400);
+    --token-color-text-link-hover: var(--global-color-primary-300);
+    --token-color-text-link-visited: var(--global-color-primary-500);
+    --token-color-text-error: var(--global-color-error-400);
+    --token-color-text-warning: var(--global-color-warning-400);
+    --token-color-text-info: var(--global-color-info-400);
+    --token-color-text-success: var(--global-color-success-400);
+    --token-color-text-heading: var(--global-color-neutral-0);
+    --token-color-border-default: var(--global-color-neutral-700);
+    --token-color-border-strong: var(--global-color-neutral-600);
+    --token-color-border-subtle: var(--global-color-neutral-800);
+    --token-color-border-disabled: var(--global-color-neutral-700);
+    --token-color-icon-primary: var(--global-color-neutral-300);
+    --token-color-icon-secondary: var(--global-color-neutral-500);
+    --token-color-icon-disabled: var(--global-color-neutral-600);
+    --token-color-icon-inverse: var(--global-color-neutral-900);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Layer 3: Component Tokens
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* — component.alert — */
+  --component-alert-border-radius: var(--token-radius-md);
+  --component-alert-border-width: var(--global-border-width-thin);
+  --component-alert-padding: var(--token-spacing-component-md);
+  --component-alert-gap: var(--token-spacing-inline-sm);
+  --component-alert-font: var(--token-typography-body-sm);
+  --component-alert-icon-size: 20px;
+  --component-alert-transition-duration: var(--global-motion-duration-normal);
+  --component-alert-transition-easing: var(--global-motion-easing-ease-out);
+  --component-alert-variant-info-bg: var(--token-color-bg-info-subtle);
+  --component-alert-variant-info-border: var(--token-color-border-info);
+  --component-alert-variant-info-text: var(--token-color-text-info);
+  --component-alert-variant-info-icon: var(--token-color-icon-info);
+  --component-alert-variant-success-bg: var(--token-color-bg-success-subtle);
+  --component-alert-variant-success-border: var(--token-color-border-success);
+  --component-alert-variant-success-text: var(--token-color-text-success);
+  --component-alert-variant-success-icon: var(--token-color-icon-success);
+  --component-alert-variant-warning-bg: var(--token-color-bg-warning-subtle);
+  --component-alert-variant-warning-border: var(--token-color-border-warning);
+  --component-alert-variant-warning-text: var(--token-color-text-warning);
+  --component-alert-variant-warning-icon: var(--token-color-icon-warning);
+  --component-alert-variant-error-bg: var(--token-color-bg-error-subtle);
+  --component-alert-variant-error-border: var(--token-color-border-error);
+  --component-alert-variant-error-text: var(--token-color-text-error);
+  --component-alert-variant-error-icon: var(--token-color-icon-error);
+  --component-alert-close-button-size: 24px;
+  --component-alert-close-button-color: currentColor;
+  --component-alert-close-button-opacity: var(--global-opacity-60);
+  --component-alert-close-button-opacity-hover: var(--global-opacity-100);
+  --component-alert-close-button-border-radius: var(--token-radius-sm);
+  --component-alert-title-font-weight: var(--global-typography-fontWeight-semibold);
+  --component-alert-title-margin-bottom: var(--token-spacing-inline-xs);
+
+  /* — component.avatar — */
+  --component-avatar-border-radius: var(--token-radius-full);
+  --component-avatar-bg: var(--token-color-bg-primary-subtle);
+  --component-avatar-text: var(--global-color-primary-700);
+  --component-avatar-font-weight: var(--global-typography-fontWeight-semibold);
+  --component-avatar-border: 2px solid var(--token-color-bg-surface);
+  --component-avatar-size-xs: 24px;
+  --component-avatar-size-sm: 32px;
+  --component-avatar-size-md: 40px;
+  --component-avatar-size-lg: 48px;
+  --component-avatar-size-xl: 64px;
+  --component-avatar-size-2xl: 96px;
+  --component-avatar-font-size-xs: var(--global-typography-fontSize-2xs);
+  --component-avatar-font-size-sm: var(--global-typography-fontSize-xs);
+  --component-avatar-font-size-md: var(--global-typography-fontSize-sm);
+  --component-avatar-font-size-lg: var(--global-typography-fontSize-md);
+  --component-avatar-font-size-xl: var(--global-typography-fontSize-lg);
+  --component-avatar-font-size-2xl: var(--global-typography-fontSize-xl);
+  --component-avatar-status-size: 10px;
+  --component-avatar-status-border: 2px solid var(--token-color-bg-surface);
+  --component-avatar-status-online: var(--token-color-bg-success);
+  --component-avatar-status-offline: var(--token-color-bg-secondary);
+  --component-avatar-status-away: var(--token-color-bg-warning);
+  --component-avatar-status-busy: var(--token-color-bg-error);
+  --component-avatar-group-overlap: -8px;
+  --component-avatar-group-border: 2px solid var(--token-color-bg-surface);
+  --component-avatar-group-max-count-bg: var(--token-color-bg-muted);
+  --component-avatar-group-max-count-text: var(--token-color-text-secondary);
+
+  /* — component.badge — */
+  --component-badge-font: var(--token-typography-label-sm);
+  --component-badge-font-weight: var(--global-typography-fontWeight-medium);
+  --component-badge-border-radius: var(--token-radius-full);
+  --component-badge-padding-x: var(--token-spacing-component-sm);
+  --component-badge-padding-y: 2px;
+  --component-badge-variant-default-bg: var(--token-color-bg-muted);
+  --component-badge-variant-default-text: var(--token-color-text-secondary);
+  --component-badge-variant-primary-bg: var(--token-color-bg-primary-subtle);
+  --component-badge-variant-primary-text: var(--global-color-primary-700);
+  --component-badge-variant-success-bg: var(--token-color-bg-success-subtle);
+  --component-badge-variant-success-text: var(--token-color-text-success);
+  --component-badge-variant-warning-bg: var(--token-color-bg-warning-subtle);
+  --component-badge-variant-warning-text: var(--token-color-text-warning);
+  --component-badge-variant-error-bg: var(--token-color-bg-error-subtle);
+  --component-badge-variant-error-text: var(--token-color-text-error);
+  --component-badge-variant-info-bg: var(--token-color-bg-info-subtle);
+  --component-badge-variant-info-text: var(--token-color-text-info);
+  --component-badge-dot-size: 8px;
+  --component-badge-dot-border-radius: var(--token-radius-full);
+  --component-badge-count-min-width: 20px;
+  --component-badge-count-height: 20px;
+  --component-badge-count-font-size: var(--global-typography-fontSize-xs);
+  --component-badge-count-bg: var(--token-color-bg-error);
+  --component-badge-count-text: var(--token-color-text-on-error);
+
+  /* — component.breadcrumb — */
+  --component-breadcrumb-gap: var(--token-spacing-inline-xs);
+  --component-breadcrumb-font: var(--token-typography-body-sm);
+  --component-breadcrumb-item-color: var(--token-color-text-secondary);
+  --component-breadcrumb-item-color-hover: var(--token-color-text-primary);
+  --component-breadcrumb-item-color-current: var(--token-color-text-primary);
+  --component-breadcrumb-item-font-weight-current: var(--global-typography-fontWeight-medium);
+  --component-breadcrumb-item-transition-duration: var(--global-motion-duration-fast);
+  --component-breadcrumb-item-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-breadcrumb-separator-color: var(--token-color-text-tertiary);
+  --component-breadcrumb-separator-content: /;
+  --component-breadcrumb-separator-margin-x: var(--token-spacing-inline-xs);
+  --component-breadcrumb-icon-size: 16px;
+  --component-breadcrumb-icon-color: var(--token-color-icon-secondary);
+  --component-breadcrumb-icon-gap: var(--token-spacing-inline-xs);
+  --component-breadcrumb-truncation-max-items: 4;
+  --component-breadcrumb-truncation-ellipsis-bg: var(--token-color-bg-muted);
+  --component-breadcrumb-truncation-ellipsis-radius: var(--token-radius-sm);
+
+  /* — component.button — */
+  --component-button-variant-primary-bg: var(--token-color-bg-primary);
+  --component-button-variant-primary-bg-hover: var(--token-color-bg-primary-hover);
+  --component-button-variant-primary-bg-active: var(--token-color-bg-primary-active);
+  --component-button-variant-primary-text: var(--token-color-text-on-primary);
+  --component-button-variant-primary-border: transparent;
+  --component-button-variant-primary-shadow: var(--token-elevation-button);
+  --component-button-variant-primary-shadow-hover: var(--token-elevation-button-hover);
+  --component-button-variant-secondary-bg: var(--token-color-bg-surface);
+  --component-button-variant-secondary-bg-hover: var(--token-color-bg-secondary-hover);
+  --component-button-variant-secondary-bg-active: var(--token-color-bg-secondary);
+  --component-button-variant-secondary-text: var(--token-color-text-primary);
+  --component-button-variant-secondary-border: var(--token-color-border-default);
+  --component-button-variant-secondary-shadow: var(--token-elevation-none);
+  --component-button-variant-secondary-shadow-hover: var(--token-elevation-button);
+  --component-button-variant-ghost-bg: transparent;
+  --component-button-variant-ghost-bg-hover: var(--token-color-bg-muted);
+  --component-button-variant-ghost-bg-active: var(--token-color-bg-secondary);
+  --component-button-variant-ghost-text: var(--token-color-text-primary);
+  --component-button-variant-ghost-border: transparent;
+  --component-button-variant-ghost-shadow: var(--token-elevation-none);
+  --component-button-variant-ghost-shadow-hover: var(--token-elevation-none);
+  --component-button-variant-danger-bg: var(--token-color-bg-error);
+  --component-button-variant-danger-bg-hover: var(--global-color-error-700);
+  --component-button-variant-danger-bg-active: var(--global-color-error-800);
+  --component-button-variant-danger-text: var(--token-color-text-on-error);
+  --component-button-variant-danger-border: transparent;
+  --component-button-variant-danger-shadow: var(--token-elevation-button);
+  --component-button-variant-danger-shadow-hover: var(--token-elevation-button-hover);
+  --component-button-variant-link-bg: transparent;
+  --component-button-variant-link-bg-hover: transparent;
+  --component-button-variant-link-text: var(--token-color-text-link);
+  --component-button-variant-link-text-hover: var(--token-color-text-link-hover);
+  --component-button-variant-link-border: transparent;
+  --component-button-variant-link-shadow: var(--token-elevation-none);
+  --component-button-size-sm-height: 32px;
+  --component-button-size-sm-padding-x: var(--token-spacing-component-sm);
+  --component-button-size-sm-padding-y: var(--token-spacing-component-xs);
+  --component-button-size-sm-font-size: var(--global-typography-fontSize-sm);
+  --component-button-size-sm-border-radius: var(--token-radius-md);
+  --component-button-size-sm-icon-size: 16px;
+  --component-button-size-sm-gap: var(--token-spacing-inline-xs);
+  --component-button-size-md-height: 40px;
+  --component-button-size-md-padding-x: var(--token-spacing-component-md);
+  --component-button-size-md-padding-y: var(--token-spacing-component-sm);
+  --component-button-size-md-font-size: var(--global-typography-fontSize-md);
+  --component-button-size-md-border-radius: var(--token-radius-md);
+  --component-button-size-md-icon-size: 20px;
+  --component-button-size-md-gap: var(--token-spacing-inline-sm);
+  --component-button-size-lg-height: 48px;
+  --component-button-size-lg-padding-x: var(--token-spacing-component-lg);
+  --component-button-size-lg-padding-y: var(--token-spacing-component-sm);
+  --component-button-size-lg-font-size: var(--global-typography-fontSize-lg);
+  --component-button-size-lg-border-radius: var(--token-radius-md);
+  --component-button-size-lg-icon-size: 24px;
+  --component-button-size-lg-gap: var(--token-spacing-inline-sm);
+  --component-button-state-disabled-bg: var(--token-color-bg-disabled);
+  --component-button-state-disabled-text: var(--token-color-text-disabled);
+  --component-button-state-disabled-border: var(--token-color-border-disabled);
+  --component-button-state-disabled-opacity: var(--global-opacity-50);
+  --component-button-state-disabled-cursor: not-allowed;
+  --component-button-state-loading-opacity: var(--global-opacity-70);
+  --component-button-state-loading-cursor: wait;
+  --component-button-transition-duration: var(--global-motion-duration-fast);
+  --component-button-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-button-font-weight: var(--global-typography-fontWeight-semibold);
+
+  /* — component.card — */
+  --component-card-bg: var(--token-color-bg-surface);
+  --component-card-border: var(--token-color-border-default);
+  --component-card-border-width: var(--global-border-width-thin);
+  --component-card-border-radius: var(--token-radius-lg);
+  --component-card-shadow: var(--token-elevation-card);
+  --component-card-shadow-hover: var(--token-elevation-dropdown);
+  --component-card-transition-duration: var(--global-motion-duration-normal);
+  --component-card-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-card-padding-default: var(--token-spacing-component-lg);
+  --component-card-header-font: var(--token-typography-heading-xs);
+  --component-card-header-color: var(--token-color-text-heading);
+  --component-card-header-padding-bottom: var(--token-spacing-component-sm);
+  --component-card-header-border-bottom: var(--token-color-border-subtle);
+  --component-card-body-font: var(--token-typography-body-md);
+  --component-card-body-color: var(--token-color-text-primary);
+  --component-card-body-gap: var(--token-spacing-stack-md);
+  --component-card-footer-padding-top: var(--token-spacing-component-sm);
+  --component-card-footer-border-top: var(--token-color-border-subtle);
+  --component-card-variant-interactive-cursor: pointer;
+  --component-card-variant-interactive-hover-transform: translateY(-2px);
+  --component-card-variant-outlined-shadow: var(--token-elevation-none);
+  --component-card-variant-outlined-border: var(--token-color-border-strong);
+  --component-card-variant-filled-bg: var(--token-color-bg-muted);
+  --component-card-variant-filled-border: transparent;
+  --component-card-variant-filled-shadow: var(--token-elevation-none);
+
+  /* — component.dropdown — */
+  --component-dropdown-trigger-font: var(--token-typography-body-md);
+  --component-dropdown-trigger-color: var(--token-color-text-primary);
+  --component-dropdown-trigger-bg: var(--token-color-bg-surface);
+  --component-dropdown-trigger-border: var(--token-color-border-default);
+  --component-dropdown-trigger-border-focus: var(--token-color-border-focus);
+  --component-dropdown-trigger-border-error: var(--token-color-border-error);
+  --component-dropdown-trigger-border-radius: var(--token-radius-md);
+  --component-dropdown-trigger-padding-x: var(--token-spacing-component-md);
+  --component-dropdown-trigger-padding-y: var(--token-spacing-component-sm);
+  --component-dropdown-trigger-height: 40px;
+  --component-dropdown-trigger-placeholder: var(--token-color-text-tertiary);
+  --component-dropdown-trigger-icon-color: var(--token-color-icon-secondary);
+  --component-dropdown-trigger-icon-size: 20px;
+  --component-dropdown-trigger-shadow: var(--token-elevation-none);
+  --component-dropdown-trigger-shadow-focus: 0 0 0 3px var(--global-color-primary-100);
+  --component-dropdown-trigger-transition-duration: var(--global-motion-duration-fast);
+  --component-dropdown-trigger-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-dropdown-menu-bg: var(--token-color-bg-surface-raised);
+  --component-dropdown-menu-border: var(--token-color-border-default);
+  --component-dropdown-menu-border-radius: var(--token-radius-lg);
+  --component-dropdown-menu-shadow: var(--token-elevation-dropdown);
+  --component-dropdown-menu-padding-y: var(--token-spacing-component-xs);
+  --component-dropdown-menu-max-height: 280px;
+  --component-dropdown-menu-z-index: var(--global-zIndex-dropdown);
+  --component-dropdown-menu-transition-duration: var(--global-motion-duration-fast);
+  --component-dropdown-menu-transition-easing: var(--global-motion-easing-ease-out);
+  --component-dropdown-option-font: var(--token-typography-body-md);
+  --component-dropdown-option-color: var(--token-color-text-primary);
+  --component-dropdown-option-bg-hover: var(--token-color-bg-muted);
+  --component-dropdown-option-bg-selected: var(--token-color-bg-primary-subtle);
+  --component-dropdown-option-color-selected: var(--global-color-primary-700);
+  --component-dropdown-option-padding-x: var(--token-spacing-component-md);
+  --component-dropdown-option-padding-y: var(--token-spacing-component-sm);
+  --component-dropdown-option-check-icon: var(--global-color-primary-700);
+  --component-dropdown-option-disabled-color: var(--token-color-text-disabled);
+  --component-dropdown-group-label-font: var(--token-typography-label-sm);
+  --component-dropdown-group-label-color: var(--token-color-text-tertiary);
+  --component-dropdown-group-label-padding-x: var(--token-spacing-component-md);
+  --component-dropdown-group-label-padding-y: var(--token-spacing-component-xs);
+  --component-dropdown-group-label-text-transform: uppercase;
+  --component-dropdown-group-label-letter-spacing: 0.05em;
+  --component-dropdown-divider-color: var(--token-color-border-subtle);
+  --component-dropdown-divider-margin-y: var(--token-spacing-component-xs);
+
+  /* — component.empty-state — */
+  --component-empty-state-padding: var(--token-spacing-layout-2xl);
+  --component-empty-state-text-align: center;
+  --component-empty-state-max-width: 480px;
+  --component-empty-state-illustration-size: 120px;
+  --component-empty-state-illustration-margin-bottom: var(--token-spacing-stack-md);
+  --component-empty-state-illustration-opacity: var(--global-opacity-60);
+  --component-empty-state-title-font: var(--token-typography-heading-sm);
+  --component-empty-state-title-color: var(--token-color-text-heading);
+  --component-empty-state-title-margin-bottom: var(--token-spacing-stack-xs);
+  --component-empty-state-description-font: var(--token-typography-body-md);
+  --component-empty-state-description-color: var(--token-color-text-secondary);
+  --component-empty-state-description-margin-bottom: var(--token-spacing-stack-lg);
+  --component-empty-state-action-margin-top: var(--token-spacing-stack-md);
+  --component-empty-state-variant-no-data-icon-color: var(--token-color-icon-secondary);
+  --component-empty-state-variant-no-results-icon-color: var(--token-color-icon-secondary);
+  --component-empty-state-variant-error-icon-color: var(--token-color-icon-error);
+  --component-empty-state-variant-error-title-color: var(--token-color-text-error);
+
+  /* — component.file-upload — */
+  --component-file-upload-dropzone-bg: var(--token-color-bg-surface);
+  --component-file-upload-dropzone-bg-hover: var(--token-color-bg-muted);
+  --component-file-upload-dropzone-bg-active: var(--token-color-bg-primary-subtle);
+  --component-file-upload-dropzone-border: var(--token-color-border-default);
+  --component-file-upload-dropzone-border-active: var(--token-color-border-primary);
+  --component-file-upload-dropzone-border-style: dashed;
+  --component-file-upload-dropzone-border-width: 2px;
+  --component-file-upload-dropzone-border-radius: var(--token-radius-lg);
+  --component-file-upload-dropzone-padding: var(--token-spacing-layout-lg);
+  --component-file-upload-dropzone-text-color: var(--token-color-text-secondary);
+  --component-file-upload-dropzone-icon-color: var(--token-color-icon-secondary);
+  --component-file-upload-dropzone-icon-size: 48px;
+  --component-file-upload-dropzone-transition-duration: var(--global-motion-duration-fast);
+  --component-file-upload-dropzone-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-file-upload-label-font: var(--token-typography-body-md);
+  --component-file-upload-label-color: var(--token-color-text-primary);
+  --component-file-upload-label-link-color: var(--token-color-text-link);
+  --component-file-upload-hint-font: var(--token-typography-body-sm);
+  --component-file-upload-hint-color: var(--token-color-text-tertiary);
+  --component-file-upload-file-item-bg: var(--token-color-bg-muted);
+  --component-file-upload-file-item-border-radius: var(--token-radius-md);
+  --component-file-upload-file-item-padding: var(--token-spacing-component-sm) var(--token-spacing-component-md);
+  --component-file-upload-file-item-gap: var(--token-spacing-inline-sm);
+  --component-file-upload-file-item-icon-size: 24px;
+  --component-file-upload-file-item-name-font: var(--token-typography-body-sm);
+  --component-file-upload-file-item-name-color: var(--token-color-text-primary);
+  --component-file-upload-file-item-size-font: var(--token-typography-body-sm);
+  --component-file-upload-file-item-size-color: var(--token-color-text-tertiary);
+  --component-file-upload-file-item-remove-color: var(--token-color-icon-secondary);
+  --component-file-upload-file-item-remove-hover: var(--token-color-icon-error);
+  --component-file-upload-progress-height: 4px;
+  --component-file-upload-progress-bg: var(--token-color-bg-secondary);
+  --component-file-upload-progress-fill: var(--token-color-bg-primary);
+  --component-file-upload-progress-border-radius: var(--token-radius-full);
+  --component-file-upload-error-border: var(--token-color-border-error);
+  --component-file-upload-error-text: var(--token-color-text-error);
+  --component-file-upload-error-icon: var(--token-color-icon-error);
+
+  /* — component.form-field — */
+  --component-form-field-gap: var(--token-spacing-stack-xs);
+  --component-form-field-label-font: var(--token-typography-label-md);
+  --component-form-field-label-color: var(--token-color-text-primary);
+  --component-form-field-label-font-weight: var(--global-typography-fontWeight-medium);
+  --component-form-field-label-required-color: var(--token-color-text-error);
+  --component-form-field-label-required-marker:  *;
+  --component-form-field-helper-font: var(--token-typography-body-sm);
+  --component-form-field-helper-color: var(--token-color-text-tertiary);
+  --component-form-field-helper-margin-top: var(--token-spacing-inline-xs);
+  --component-form-field-error-font: var(--token-typography-body-sm);
+  --component-form-field-error-color: var(--token-color-text-error);
+  --component-form-field-error-icon-size: 16px;
+  --component-form-field-error-icon-gap: var(--token-spacing-inline-xs);
+  --component-form-field-error-margin-top: var(--token-spacing-inline-xs);
+  --component-form-field-counter-font: var(--token-typography-body-sm);
+  --component-form-field-counter-color: var(--token-color-text-tertiary);
+  --component-form-field-counter-color-limit: var(--token-color-text-error);
+  --component-form-field-optional-label-font: var(--token-typography-body-sm);
+  --component-form-field-optional-label-color: var(--token-color-text-tertiary);
+  --component-form-field-disabled-label-color: var(--token-color-text-disabled);
+  --component-form-field-disabled-opacity: var(--global-opacity-60);
+
+  /* — component.input — */
+  --component-input-bg: var(--token-color-bg-surface);
+  --component-input-text: var(--token-color-text-primary);
+  --component-input-placeholder: var(--token-color-text-tertiary);
+  --component-input-border: var(--token-color-border-default);
+  --component-input-border-width: var(--global-border-width-thin);
+  --component-input-border-radius: var(--token-radius-md);
+  --component-input-font-family: var(--global-typography-fontFamily-body);
+  --component-input-font-weight: var(--global-typography-fontWeight-regular);
+  --component-input-transition-duration: var(--global-motion-duration-fast);
+  --component-input-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-input-size-sm-height: 32px;
+  --component-input-size-sm-padding-x: var(--token-spacing-component-sm);
+  --component-input-size-sm-padding-y: var(--token-spacing-component-xs);
+  --component-input-size-sm-font-size: var(--global-typography-fontSize-sm);
+  --component-input-size-md-height: 40px;
+  --component-input-size-md-padding-x: var(--token-spacing-component-sm);
+  --component-input-size-md-padding-y: var(--token-spacing-component-xs);
+  --component-input-size-md-font-size: var(--global-typography-fontSize-md);
+  --component-input-size-lg-height: 48px;
+  --component-input-size-lg-padding-x: var(--token-spacing-component-md);
+  --component-input-size-lg-padding-y: var(--token-spacing-component-sm);
+  --component-input-size-lg-font-size: var(--global-typography-fontSize-md);
+  --component-input-state-hover-border: var(--token-color-border-strong);
+  --component-input-state-focus-border: var(--token-color-border-focus);
+  --component-input-state-focus-shadow: var(--token-elevation-input-focus);
+  --component-input-state-focus-outline: none;
+  --component-input-state-error-border: var(--token-color-border-error);
+  --component-input-state-error-shadow: var(--token-elevation-input-error);
+  --component-input-state-error-text: var(--token-color-text-error);
+  --component-input-state-disabled-bg: var(--token-color-bg-disabled);
+  --component-input-state-disabled-text: var(--token-color-text-disabled);
+  --component-input-state-disabled-border: var(--token-color-border-disabled);
+  --component-input-state-disabled-cursor: not-allowed;
+  --component-input-state-readonly-bg: var(--token-color-bg-muted);
+  --component-input-state-readonly-cursor: default;
+  --component-input-label-font: var(--token-typography-label-md);
+  --component-input-label-color: var(--token-color-text-primary);
+  --component-input-label-margin-bottom: var(--token-spacing-inline-xs);
+  --component-input-helper-text-font: var(--token-typography-caption);
+  --component-input-helper-text-color: var(--token-color-text-secondary);
+  --component-input-helper-text-margin-top: var(--token-spacing-inline-xs);
+  --component-input-error-text-font: var(--token-typography-caption);
+  --component-input-error-text-color: var(--token-color-text-error);
+  --component-input-error-text-margin-top: var(--token-spacing-inline-xs);
+  --component-input-icon-color: var(--token-color-icon-secondary);
+  --component-input-icon-size: 20px;
+  --component-input-icon-gap: var(--token-spacing-inline-sm);
+
+  /* — component.modal — */
+  --component-modal-backdrop-bg: var(--token-color-bg-surface-overlay);
+  --component-modal-backdrop-z-index: var(--global-zIndex-modal-backdrop);
+  --component-modal-container-bg: var(--token-color-bg-surface);
+  --component-modal-container-border-radius: var(--token-radius-lg);
+  --component-modal-container-shadow: var(--token-elevation-modal);
+  --component-modal-container-z-index: var(--global-zIndex-modal);
+  --component-modal-container-border: var(--token-color-border-subtle);
+  --component-modal-container-border-width: var(--global-border-width-thin);
+  --component-modal-size-sm-width: 400px;
+  --component-modal-size-sm-max-height: 80vh;
+  --component-modal-size-md-width: 560px;
+  --component-modal-size-md-max-height: 85vh;
+  --component-modal-size-lg-width: 720px;
+  --component-modal-size-lg-max-height: 90vh;
+  --component-modal-size-xl-width: 960px;
+  --component-modal-size-xl-max-height: 90vh;
+  --component-modal-size-full-width: 100vw;
+  --component-modal-size-full-height: 100vh;
+  --component-modal-size-full-border-radius: 0;
+  --component-modal-header-padding: var(--token-spacing-component-lg);
+  --component-modal-header-padding-bottom: var(--token-spacing-component-md);
+  --component-modal-header-title-font: var(--token-typography-heading-xs);
+  --component-modal-header-title-color: var(--token-color-text-heading);
+  --component-modal-header-border-bottom: var(--token-color-border-subtle);
+  --component-modal-header-close-button-size: 32px;
+  --component-modal-header-close-button-color: var(--token-color-icon-secondary);
+  --component-modal-header-close-button-color-hover: var(--token-color-icon-primary);
+  --component-modal-header-close-button-bg-hover: var(--token-color-bg-muted);
+  --component-modal-header-close-button-border-radius: var(--token-radius-md);
+  --component-modal-body-padding: var(--token-spacing-component-lg);
+  --component-modal-body-font: var(--token-typography-body-md);
+  --component-modal-body-color: var(--token-color-text-primary);
+  --component-modal-body-overflow: auto;
+  --component-modal-footer-padding: var(--token-spacing-component-lg);
+  --component-modal-footer-padding-top: var(--token-spacing-component-md);
+  --component-modal-footer-border-top: var(--token-color-border-subtle);
+  --component-modal-footer-gap: var(--token-spacing-inline-sm);
+  --component-modal-footer-justify: flex-end;
+  --component-modal-transition-duration: var(--global-motion-duration-normal);
+  --component-modal-transition-easing: var(--global-motion-easing-ease-out);
+
+  /* — component.navbar — */
+  --component-navbar-bg: var(--token-color-bg-surface);
+  --component-navbar-border-bottom: var(--token-color-border-subtle);
+  --component-navbar-border-width: var(--global-border-width-thin);
+  --component-navbar-height: var(--token-spacing-layout-navbar-height);
+  --component-navbar-padding-x: var(--token-spacing-component-lg);
+  --component-navbar-shadow: var(--token-elevation-sticky);
+  --component-navbar-z-index: var(--global-zIndex-fixed);
+  --component-navbar-logo-height: 32px;
+  --component-navbar-logo-gap: var(--token-spacing-inline-sm);
+  --component-navbar-nav-item-font: var(--token-typography-label-md);
+  --component-navbar-nav-item-color: var(--token-color-text-secondary);
+  --component-navbar-nav-item-color-hover: var(--token-color-text-primary);
+  --component-navbar-nav-item-color-active: var(--token-color-text-link);
+  --component-navbar-nav-item-padding-x: var(--token-spacing-component-sm);
+  --component-navbar-nav-item-padding-y: var(--token-spacing-component-xs);
+  --component-navbar-nav-item-border-radius: var(--token-radius-md);
+  --component-navbar-nav-item-bg-hover: var(--token-color-bg-muted);
+  --component-navbar-actions-gap: var(--token-spacing-inline-sm);
+  --component-navbar-actions-icon-color: var(--token-color-icon-secondary);
+  --component-navbar-actions-icon-size: 24px;
+  --component-navbar-mobile-menu-bg: var(--token-color-bg-surface);
+  --component-navbar-mobile-menu-shadow: var(--token-elevation-drawer);
+  --component-navbar-mobile-menu-z-index: var(--global-zIndex-modal);
+
+  /* — component.pagination — */
+  --component-pagination-gap: var(--token-spacing-inline-xs);
+  --component-pagination-item-size: 36px;
+  --component-pagination-item-font: var(--token-typography-label-sm);
+  --component-pagination-item-border-radius: var(--token-radius-md);
+  --component-pagination-item-bg: transparent;
+  --component-pagination-item-bg-hover: var(--token-color-bg-muted);
+  --component-pagination-item-bg-active: var(--token-color-bg-primary);
+  --component-pagination-item-text: var(--token-color-text-primary);
+  --component-pagination-item-text-hover: var(--token-color-text-primary);
+  --component-pagination-item-text-active: var(--token-color-text-on-primary);
+  --component-pagination-item-border: transparent;
+  --component-pagination-item-border-hover: var(--token-color-border-default);
+  --component-pagination-item-transition-duration: var(--global-motion-duration-fast);
+  --component-pagination-item-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-pagination-ellipsis-color: var(--token-color-text-tertiary);
+  --component-pagination-nav-button-color: var(--token-color-icon-primary);
+  --component-pagination-nav-button-color-disabled: var(--token-color-icon-disabled);
+  --component-pagination-nav-button-size: 36px;
+  --component-pagination-info-font: var(--token-typography-body-sm);
+  --component-pagination-info-color: var(--token-color-text-secondary);
+
+  /* — component.progress — */
+  --component-progress-linear-height: 8px;
+  --component-progress-linear-bg: var(--token-color-bg-muted);
+  --component-progress-linear-border-radius: var(--token-radius-full);
+  --component-progress-linear-fill-bg: var(--token-color-bg-primary);
+  --component-progress-linear-fill-border-radius: var(--token-radius-full);
+  --component-progress-linear-fill-transition-duration: var(--global-motion-duration-normal);
+  --component-progress-linear-fill-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-progress-linear-size-xs: 4px;
+  --component-progress-linear-size-sm: 6px;
+  --component-progress-linear-size-md: 8px;
+  --component-progress-linear-size-lg: 12px;
+  --component-progress-circular-size: 48px;
+  --component-progress-circular-stroke-width: 4px;
+  --component-progress-circular-bg-stroke: var(--token-color-bg-muted);
+  --component-progress-circular-fill-stroke: var(--token-color-bg-primary);
+  --component-progress-circular-rotation: -90deg;
+  --component-progress-label-font: var(--token-typography-label-sm);
+  --component-progress-label-color: var(--token-color-text-secondary);
+  --component-progress-label-gap: var(--token-spacing-inline-sm);
+  --component-progress-variant-success: var(--token-color-bg-success);
+  --component-progress-variant-warning: var(--token-color-bg-warning);
+  --component-progress-variant-error: var(--token-color-bg-error);
+  --component-progress-variant-info: var(--token-color-bg-info);
+  --component-progress-indeterminate-animation-duration: 1.5s;
+  --component-progress-indeterminate-animation-easing: linear;
+
+  /* — component.search — */
+  --component-search-bg: var(--token-color-bg-surface);
+  --component-search-border: var(--token-color-border-default);
+  --component-search-border-focus: var(--token-color-border-focus);
+  --component-search-border-radius: var(--token-radius-lg);
+  --component-search-height: 40px;
+  --component-search-padding-x: var(--token-spacing-component-md);
+  --component-search-font: var(--token-typography-body-md);
+  --component-search-color: var(--token-color-text-primary);
+  --component-search-placeholder: var(--token-color-text-tertiary);
+  --component-search-shadow-focus: 0 0 0 3px var(--global-color-primary-100);
+  --component-search-transition-duration: var(--global-motion-duration-fast);
+  --component-search-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-search-icon-size: 20px;
+  --component-search-icon-color: var(--token-color-icon-secondary);
+  --component-search-icon-gap: var(--token-spacing-inline-sm);
+  --component-search-clear-button-size: 20px;
+  --component-search-clear-button-color: var(--token-color-icon-secondary);
+  --component-search-clear-button-color-hover: var(--token-color-icon-primary);
+  --component-search-clear-button-border-radius: var(--token-radius-full);
+  --component-search-shortcut-badge-font: var(--token-typography-label-sm);
+  --component-search-shortcut-badge-color: var(--token-color-text-tertiary);
+  --component-search-shortcut-badge-bg: var(--token-color-bg-muted);
+  --component-search-shortcut-badge-border: var(--token-color-border-subtle);
+  --component-search-shortcut-badge-border-radius: var(--token-radius-sm);
+  --component-search-shortcut-badge-padding: 2px 6px;
+  --component-search-results-bg: var(--token-color-bg-surface-raised);
+  --component-search-results-border: var(--token-color-border-default);
+  --component-search-results-border-radius: var(--token-radius-lg);
+  --component-search-results-shadow: var(--token-elevation-dropdown);
+  --component-search-results-max-height: 400px;
+  --component-search-results-z-index: var(--global-zIndex-dropdown);
+  --component-search-results-item-padding: var(--token-spacing-component-sm) var(--token-spacing-component-md);
+  --component-search-results-item-hover-bg: var(--token-color-bg-muted);
+  --component-search-results-highlight-bg: var(--token-color-bg-primary-subtle);
+  --component-search-results-highlight-text: var(--global-color-primary-700);
+
+  /* — component.sidebar — */
+  --component-sidebar-bg: var(--token-color-bg-surface);
+  --component-sidebar-border-right: var(--token-color-border-subtle);
+  --component-sidebar-border-width: var(--global-border-width-thin);
+  --component-sidebar-width: var(--token-spacing-layout-sidebar-width);
+  --component-sidebar-width-collapsed: 72px;
+  --component-sidebar-padding: var(--token-spacing-component-sm);
+  --component-sidebar-z-index: var(--global-zIndex-fixed);
+  --component-sidebar-shadow: var(--token-elevation-none);
+  --component-sidebar-transition-duration: var(--global-motion-duration-normal);
+  --component-sidebar-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-sidebar-logo-height: 40px;
+  --component-sidebar-logo-padding: var(--token-spacing-component-md);
+  --component-sidebar-logo-margin-bottom: var(--token-spacing-component-md);
+  --component-sidebar-section-title-font: var(--token-typography-overline);
+  --component-sidebar-section-title-color: var(--token-color-text-tertiary);
+  --component-sidebar-section-title-padding-x: var(--token-spacing-component-sm);
+  --component-sidebar-section-title-margin-top: var(--token-spacing-component-md);
+  --component-sidebar-section-title-margin-bottom: var(--token-spacing-component-xs);
+  --component-sidebar-nav-item-font: var(--token-typography-label-md);
+  --component-sidebar-nav-item-color: var(--token-color-text-secondary);
+  --component-sidebar-nav-item-color-hover: var(--token-color-text-primary);
+  --component-sidebar-nav-item-color-active: var(--token-color-text-link);
+  --component-sidebar-nav-item-bg-hover: var(--token-color-bg-muted);
+  --component-sidebar-nav-item-bg-active: var(--token-color-bg-primary-subtle);
+  --component-sidebar-nav-item-border-radius: var(--token-radius-md);
+  --component-sidebar-nav-item-padding: var(--token-spacing-component-sm);
+  --component-sidebar-nav-item-gap: var(--token-spacing-inline-sm);
+  --component-sidebar-nav-item-icon-size: 20px;
+  --component-sidebar-nav-item-active-indicator-width: var(--global-border-width-thick);
+  --component-sidebar-nav-item-active-indicator-color: var(--token-color-border-primary);
+  --component-sidebar-nav-item-active-indicator-border-radius: var(--token-radius-full);
+  --component-sidebar-footer-padding: var(--token-spacing-component-md);
+  --component-sidebar-footer-border-top: var(--token-color-border-subtle);
+
+  /* — component.skeleton — */
+  --component-skeleton-bg: var(--token-color-bg-muted);
+  --component-skeleton-shimmer: linear-gradient(90deg, transparent 0%, var(--global-color-neutral-200) 50%, transparent 100%);
+  --component-skeleton-border-radius: var(--token-radius-md);
+  --component-skeleton-animation-duration: 1.5s;
+  --component-skeleton-animation-easing: ease-in-out;
+  --component-skeleton-animation-iteration: infinite;
+  --component-skeleton-variant-text-height: 16px;
+  --component-skeleton-variant-text-width: 100%;
+  --component-skeleton-variant-text-border-radius: var(--token-radius-sm);
+  --component-skeleton-variant-heading-height: 24px;
+  --component-skeleton-variant-heading-width: 60%;
+  --component-skeleton-variant-heading-border-radius: var(--token-radius-sm);
+  --component-skeleton-variant-avatar-size: 40px;
+  --component-skeleton-variant-avatar-border-radius: var(--token-radius-full);
+  --component-skeleton-variant-thumbnail-width: 100%;
+  --component-skeleton-variant-thumbnail-height: 200px;
+  --component-skeleton-variant-thumbnail-border-radius: var(--token-radius-md);
+  --component-skeleton-variant-button-height: 40px;
+  --component-skeleton-variant-button-width: 120px;
+  --component-skeleton-variant-button-border-radius: var(--token-radius-md);
+  --component-skeleton-gap: var(--token-spacing-stack-sm);
+
+  /* — component.stat-card — */
+  --component-stat-card: [object Object];
+
+  /* — component.stepper — */
+  --component-stepper-gap: var(--token-spacing-inline-md);
+  --component-stepper-connector-height: 2px;
+  --component-stepper-connector-bg: var(--token-color-bg-secondary);
+  --component-stepper-connector-bg-complete: var(--token-color-bg-primary);
+  --component-stepper-connector-transition-duration: var(--global-motion-duration-normal);
+  --component-stepper-connector-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-stepper-step-size: 32px;
+  --component-stepper-step-border-radius: var(--token-radius-full);
+  --component-stepper-step-font: var(--token-typography-label-sm);
+  --component-stepper-step-font-weight: var(--global-typography-fontWeight-semibold);
+  --component-stepper-step-incomplete-bg: var(--token-color-bg-surface);
+  --component-stepper-step-incomplete-border: var(--token-color-border-default);
+  --component-stepper-step-incomplete-text: var(--token-color-text-secondary);
+  --component-stepper-step-active-bg: var(--token-color-bg-primary);
+  --component-stepper-step-active-border: var(--token-color-bg-primary);
+  --component-stepper-step-active-text: var(--token-color-text-on-primary);
+  --component-stepper-step-active-shadow: 0 0 0 4px var(--global-color-primary-100);
+  --component-stepper-step-complete-bg: var(--token-color-bg-primary);
+  --component-stepper-step-complete-border: var(--token-color-bg-primary);
+  --component-stepper-step-complete-text: var(--token-color-text-on-primary);
+  --component-stepper-step-complete-icon: ✓;
+  --component-stepper-step-error-bg: var(--token-color-bg-error);
+  --component-stepper-step-error-border: var(--token-color-bg-error);
+  --component-stepper-step-error-text: var(--token-color-text-on-error);
+  --component-stepper-step-error-icon: ✕;
+  --component-stepper-label-font: var(--token-typography-label-sm);
+  --component-stepper-label-color: var(--token-color-text-secondary);
+  --component-stepper-label-color-active: var(--token-color-text-primary);
+  --component-stepper-label-margin-top: var(--token-spacing-inline-xs);
+  --component-stepper-description-font: var(--token-typography-body-sm);
+  --component-stepper-description-color: var(--token-color-text-tertiary);
+  --component-stepper-orientation-vertical-connector-width: 2px;
+  --component-stepper-orientation-vertical-connector-height: 24px;
+  --component-stepper-orientation-vertical-margin-left: 15px;
+
+  /* — component.table — */
+  --component-table-bg: var(--token-color-bg-surface);
+  --component-table-border: var(--token-color-border-default);
+  --component-table-border-width: var(--global-border-width-thin);
+  --component-table-border-radius: var(--token-radius-lg);
+  --component-table-overflow: hidden;
+  --component-table-header-bg: var(--token-color-bg-muted);
+  --component-table-header-font: var(--token-typography-label-sm);
+  --component-table-header-color: var(--token-color-text-secondary);
+  --component-table-header-font-weight: var(--global-typography-fontWeight-semibold);
+  --component-table-header-padding-x: var(--token-spacing-component-md);
+  --component-table-header-padding-y: var(--token-spacing-component-sm);
+  --component-table-header-border-bottom: var(--token-color-border-default);
+  --component-table-header-sort-icon-color: var(--token-color-icon-secondary);
+  --component-table-header-sort-icon-color-active: var(--token-color-icon-brand);
+  --component-table-header-sort-icon-size: 16px;
+  --component-table-row-font: var(--token-typography-body-sm);
+  --component-table-row-color: var(--token-color-text-primary);
+  --component-table-row-padding-x: var(--token-spacing-component-md);
+  --component-table-row-padding-y: var(--token-spacing-component-sm);
+  --component-table-row-border-bottom: var(--token-color-border-subtle);
+  --component-table-row-bg-hover: var(--token-color-bg-subtle);
+  --component-table-row-bg-selected: var(--token-color-bg-primary-subtle);
+  --component-table-row-bg-striped: var(--token-color-bg-subtle);
+  --component-table-row-transition-duration: var(--global-motion-duration-fast);
+  --component-table-row-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-table-cell-padding-x: var(--token-spacing-component-md);
+  --component-table-cell-padding-y: var(--token-spacing-component-sm);
+  --component-table-cell-min-width: 120px;
+  --component-table-checkbox-size: 18px;
+  --component-table-checkbox-color: var(--token-color-bg-primary);
+  --component-table-checkbox-border-radius: var(--token-radius-sm);
+  --component-table-empty-padding: var(--token-spacing-component-xl);
+  --component-table-empty-icon-size: 48px;
+  --component-table-empty-icon-color: var(--token-color-icon-secondary);
+  --component-table-empty-text-font: var(--token-typography-body-md);
+  --component-table-empty-text-color: var(--token-color-text-tertiary);
+  --component-table-toolbar-padding: var(--token-spacing-component-md);
+  --component-table-toolbar-gap: var(--token-spacing-inline-sm);
+  --component-table-toolbar-border-bottom: var(--token-color-border-subtle);
+
+  /* — component.tabs — */
+  --component-tabs-list-border-bottom: var(--token-color-border-subtle);
+  --component-tabs-list-gap: 0;
+  --component-tabs-trigger-font: var(--token-typography-label-md);
+  --component-tabs-trigger-color: var(--token-color-text-secondary);
+  --component-tabs-trigger-color-hover: var(--token-color-text-primary);
+  --component-tabs-trigger-color-active: var(--token-color-text-primary);
+  --component-tabs-trigger-padding-x: var(--token-spacing-component-md);
+  --component-tabs-trigger-padding-y: var(--token-spacing-component-sm);
+  --component-tabs-trigger-border-bottom: 2px solid transparent;
+  --component-tabs-trigger-border-active: 2px solid var(--token-color-border-primary);
+  --component-tabs-trigger-bg: transparent;
+  --component-tabs-trigger-bg-hover: var(--token-color-bg-muted);
+  --component-tabs-trigger-border-radius: var(--token-radius-sm) var(--token-radius-sm) 0 0;
+  --component-tabs-trigger-transition-duration: var(--global-motion-duration-fast);
+  --component-tabs-trigger-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-tabs-panel-padding-top: var(--token-spacing-component-lg);
+  --component-tabs-variant-pills-trigger-bg-active: var(--token-color-bg-primary-subtle);
+  --component-tabs-variant-pills-trigger-color-active: var(--global-color-primary-700);
+  --component-tabs-variant-pills-trigger-border-radius: var(--token-radius-full);
+  --component-tabs-variant-pills-trigger-border: none;
+  --component-tabs-variant-enclosed-trigger-bg-active: var(--token-color-bg-surface);
+  --component-tabs-variant-enclosed-trigger-border: var(--token-color-border-default);
+  --component-tabs-variant-enclosed-trigger-border-bottom: transparent;
+
+  /* — component.toast — */
+  --component-toast-bg: var(--token-color-bg-surface);
+  --component-toast-border: var(--token-color-border-default);
+  --component-toast-border-radius: var(--token-radius-lg);
+  --component-toast-shadow: var(--token-elevation-modal);
+  --component-toast-padding: var(--token-spacing-component-md);
+  --component-toast-gap: var(--token-spacing-inline-sm);
+  --component-toast-min-width: 320px;
+  --component-toast-max-width: 480px;
+  --component-toast-z-index: var(--global-zIndex-toast);
+  --component-toast-font: var(--token-typography-body-sm);
+  --component-toast-title-font: var(--token-typography-label-md);
+  --component-toast-transition-duration: var(--global-motion-duration-normal);
+  --component-toast-transition-easing: var(--global-motion-easing-ease-out);
+  --component-toast-variant-success-accent: var(--token-color-bg-success);
+  --component-toast-variant-success-icon: var(--token-color-icon-success);
+  --component-toast-variant-error-accent: var(--token-color-bg-error);
+  --component-toast-variant-error-icon: var(--token-color-icon-error);
+  --component-toast-variant-warning-accent: var(--token-color-bg-warning);
+  --component-toast-variant-warning-icon: var(--token-color-icon-warning);
+  --component-toast-variant-info-accent: var(--token-color-bg-info);
+  --component-toast-variant-info-icon: var(--token-color-icon-info);
+  --component-toast-close-button-size: 20px;
+  --component-toast-close-button-color: var(--token-color-icon-secondary);
+  --component-toast-close-button-color-hover: var(--token-color-icon-primary);
+  --component-toast-progress-bar-height: 3px;
+  --component-toast-progress-bar-bg: var(--token-color-bg-muted);
+  --component-toast-progress-bar-fill: currentAccentColor;
+  --component-toast-position-offset: var(--token-spacing-layout-md);
+  --component-toast-position-stack-gap: var(--token-spacing-stack-sm);
+
+  /* — component.toggle — */
+  --component-toggle-width: 44px;
+  --component-toggle-height: 24px;
+  --component-toggle-border-radius: var(--token-radius-full);
+  --component-toggle-transition-duration: var(--global-motion-duration-fast);
+  --component-toggle-transition-easing: var(--global-motion-easing-ease-in-out);
+  --component-toggle-track-bg-off: var(--token-color-bg-secondary);
+  --component-toggle-track-bg-on: var(--token-color-bg-primary);
+  --component-toggle-track-bg-disabled: var(--token-color-bg-disabled);
+  --component-toggle-track-border: transparent;
+  --component-toggle-track-border-focus: 0 0 0 3px var(--global-color-primary-100);
+  --component-toggle-thumb-size: 20px;
+  --component-toggle-thumb-bg: var(--global-color-neutral-0);
+  --component-toggle-thumb-shadow: var(--token-elevation-button);
+  --component-toggle-thumb-offset: 2px;
+  --component-toggle-thumb-translate-on: 20px;
+  --component-toggle-label-font: var(--token-typography-body-md);
+  --component-toggle-label-color: var(--token-color-text-primary);
+  --component-toggle-label-gap: var(--token-spacing-inline-sm);
+  --component-toggle-size-sm-width: 36px;
+  --component-toggle-size-sm-height: 20px;
+  --component-toggle-size-sm-thumb-size: 16px;
+  --component-toggle-size-sm-translate-on: 16px;
+  --component-toggle-size-lg-width: 52px;
+  --component-toggle-size-lg-height: 28px;
+  --component-toggle-size-lg-thumb-size: 24px;
+  --component-toggle-size-lg-translate-on: 24px;
+
+  /* — component.tooltip — */
+  --component-tooltip-bg: var(--global-color-neutral-800);
+  --component-tooltip-text: var(--global-color-neutral-0);
+  --component-tooltip-font: var(--token-typography-body-sm);
+  --component-tooltip-padding-x: var(--token-spacing-component-sm);
+  --component-tooltip-padding-y: 6px;
+  --component-tooltip-border-radius: var(--token-radius-md);
+  --component-tooltip-max-width: 240px;
+  --component-tooltip-z-index: var(--global-zIndex-tooltip);
+  --component-tooltip-shadow: var(--token-elevation-tooltip);
+  --component-tooltip-arrow-size: 6px;
+  --component-tooltip-transition-duration: var(--global-motion-duration-fast);
+  --component-tooltip-transition-easing: var(--global-motion-easing-ease-out);
+  --component-tooltip-offset: 8px;
+  --component-tooltip-delay-show: 300ms;
+  --component-tooltip-delay-hide: 100ms;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Responsive Overrides
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 639px) {
+  :root {
+    --token-spacing-page-gutter: var(--global-spacing-2);
+    --token-spacing-page-section-gap: var(--global-spacing-5);
+    --token-typography-heading-xl-fontSize: var(--global-typography-fontSize-3xl);
+    --token-typography-heading-lg-fontSize: var(--global-typography-fontSize-2xl);
+    --token-typography-heading-md-fontSize: var(--global-typography-fontSize-xl);
+    --token-typography-heading-sm-fontSize: var(--global-typography-fontSize-lg);
+    --token-typography-heading-xs-fontSize: var(--global-typography-fontSize-md);
+    --component-card-padding: var(--token-spacing-component-md);
+    --component-modal-width: calc(100vw - 32px);
+    --component-modal-margin: var(--token-spacing-component-md);
+    --component-navbar-padding-x: var(--token-spacing-component-md);
+    --component-sidebar-position: fixed;
+    --component-sidebar-shadow: var(--token-elevation-drawer);
+    --component-sidebar-backdrop: var(--token-color-bg-surface-overlay);
+    --component-table-font-size: var(--global-typography-fontSize-xs);
+    --component-table-padding-x: var(--token-spacing-component-sm);
+    --component-table-padding-y: var(--token-spacing-component-xs);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  :root {
+    --token-spacing-page-gutter: var(--global-spacing-3);
+    --token-spacing-layout-sidebar-width: 240px;
+    --token-typography-heading-xl-fontSize: var(--global-typography-fontSize-4xl);
+    --token-typography-heading-lg-fontSize: var(--global-typography-fontSize-3xl);
+    --token-typography-heading-md-fontSize: var(--global-typography-fontSize-2xl);
+    --component-sidebar-width: 72px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Utility Classes
+   ═══════════════════════════════════════════════════════════ */
+
+/* Typography */
+.heading-xl { font: var(--token-typography-heading-xl-fontWeight) var(--token-typography-heading-xl-fontSize)/var(--token-typography-heading-xl-lineHeight) var(--token-typography-heading-xl-fontFamily); letter-spacing: var(--token-typography-heading-xl-letterSpacing); }
+.heading-lg { font: var(--token-typography-heading-lg-fontWeight) var(--token-typography-heading-lg-fontSize)/var(--token-typography-heading-lg-lineHeight) var(--token-typography-heading-lg-fontFamily); letter-spacing: var(--token-typography-heading-lg-letterSpacing); }
+.heading-md { font: var(--token-typography-heading-md-fontWeight) var(--token-typography-heading-md-fontSize)/var(--token-typography-heading-md-lineHeight) var(--token-typography-heading-md-fontFamily); letter-spacing: var(--token-typography-heading-md-letterSpacing); }
+.heading-sm { font: var(--token-typography-heading-sm-fontWeight) var(--token-typography-heading-sm-fontSize)/var(--token-typography-heading-sm-lineHeight) var(--token-typography-heading-sm-fontFamily); letter-spacing: var(--token-typography-heading-sm-letterSpacing); }
+.heading-xs { font: var(--token-typography-heading-xs-fontWeight) var(--token-typography-heading-xs-fontSize)/var(--token-typography-heading-xs-lineHeight) var(--token-typography-heading-xs-fontFamily); letter-spacing: var(--token-typography-heading-xs-letterSpacing); }
+.body-lg   { font: var(--token-typography-body-lg-fontWeight) var(--token-typography-body-lg-fontSize)/var(--token-typography-body-lg-lineHeight) var(--token-typography-body-lg-fontFamily); }
+.body-md   { font: var(--token-typography-body-md-fontWeight) var(--token-typography-body-md-fontSize)/var(--token-typography-body-md-lineHeight) var(--token-typography-body-md-fontFamily); }
+.body-sm   { font: var(--token-typography-body-sm-fontWeight) var(--token-typography-body-sm-fontSize)/var(--token-typography-body-sm-lineHeight) var(--token-typography-body-sm-fontFamily); }
+.label-lg  { font: var(--token-typography-label-lg-fontWeight) var(--token-typography-label-lg-fontSize)/var(--token-typography-label-lg-lineHeight) var(--token-typography-label-lg-fontFamily); }
+.label-md  { font: var(--token-typography-label-md-fontWeight) var(--token-typography-label-md-fontSize)/var(--token-typography-label-md-lineHeight) var(--token-typography-label-md-fontFamily); }
+.label-sm  { font: var(--token-typography-label-sm-fontWeight) var(--token-typography-label-sm-fontSize)/var(--token-typography-label-sm-lineHeight) var(--token-typography-label-sm-fontFamily); }
+
+/* Text Colors */
+.text-primary   { color: var(--token-color-text-primary); }
+.text-secondary { color: var(--token-color-text-secondary); }
+.text-tertiary  { color: var(--token-color-text-tertiary); }
+.text-heading   { color: var(--token-color-text-heading); }
+.text-link      { color: var(--token-color-text-link); }
+.text-error     { color: var(--token-color-text-error); }
+.text-success   { color: var(--token-color-text-success); }
+.text-warning   { color: var(--token-color-text-warning); }
+.text-info      { color: var(--token-color-text-info); }
+
+/* Background Colors */
+.bg-page     { background-color: var(--token-color-bg-page); }
+.bg-surface  { background-color: var(--token-color-bg-surface); }
+.bg-muted    { background-color: var(--token-color-bg-muted); }
+.bg-primary  { background-color: var(--token-color-bg-primary); }
+.bg-error    { background-color: var(--token-color-bg-error); }
+.bg-success  { background-color: var(--token-color-bg-success); }
+.bg-warning  { background-color: var(--token-color-bg-warning); }
+.bg-info     { background-color: var(--token-color-bg-info); }
+
+/* Border Radius */
+.rounded-none { border-radius: var(--token-radius-none); }
+.rounded-sm   { border-radius: var(--token-radius-sm); }
+.rounded-md   { border-radius: var(--token-radius-md); }
+.rounded-lg   { border-radius: var(--token-radius-lg); }
+.rounded-xl   { border-radius: var(--token-radius-xl); }
+.rounded-full { border-radius: var(--token-radius-full); }
+
+/* Elevation */
+.shadow-none     { box-shadow: var(--token-elevation-none); }
+.shadow-card     { box-shadow: var(--token-elevation-card); }
+.shadow-dropdown { box-shadow: var(--token-elevation-dropdown); }
+.shadow-modal    { box-shadow: var(--token-elevation-modal); }
+.shadow-toast    { box-shadow: var(--token-elevation-toast); }
+
+/* ═══════════════════════════════════════════════════════════
+   Base Reset & Defaults
+   ═══════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--global-typography-fontFamily-body);
+  font-size: var(--global-typography-fontSize-md);
+  line-height: var(--global-typography-lineHeight-normal);
+  color: var(--token-color-text-primary);
+  background-color: var(--token-color-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--global-typography-fontFamily-heading);
+  color: var(--token-color-text-heading);
+  font-weight: var(--global-typography-fontWeight-bold);
+}
+
+a {
+  color: var(--token-color-text-link);
+  text-decoration: none;
+  transition: color var(--global-motion-duration-fast) var(--global-motion-easing-ease-in-out);
+}
+
+a:hover {
+  color: var(--token-color-text-link-hover);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--token-elevation-input-focus);
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}

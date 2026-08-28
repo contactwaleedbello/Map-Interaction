@@ -1,0 +1,30 @@
+{
+  "global": {
+    "spacing": {
+      "_meta": {
+        "baseUnit": "8px",
+        "description": "8px base unit spacing scale. Usage: spacing-1 = 8px, spacing-2 = 16px, etc."
+      },
+      "0":    { "value": "0px" },
+      "px":   { "value": "1px", "description": "Hairline — borders only" },
+      "0.5":  { "value": "4px", "description": "Half step — tight padding" },
+      "1":    { "value": "8px" },
+      "1.5":  { "value": "12px" },
+      "2":    { "value": "16px" },
+      "2.5":  { "value": "20px" },
+      "3":    { "value": "24px" },
+      "4":    { "value": "32px" },
+      "5":    { "value": "40px" },
+      "6":    { "value": "48px" },
+      "7":    { "value": "56px" },
+      "8":    { "value": "64px" },
+      "9":    { "value": "72px" },
+      "10":   { "value": "80px" },
+      "12":   { "value": "96px" },
+      "14":   { "value": "112px" },
+      "16":   { "value": "128px" },
+      "20":   { "value": "160px" },
+      "24":   { "value": "192px" }
+    }
+  }
+}

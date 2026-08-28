@@ -1,0 +1,51 @@
+{
+  "component": {
+    "stat-card": {
+      "_meta": { "description": "Stat/KPI Card component — key performance indicators for admin dashboards" },
+      "bg":              "{token.color.bg.surface}",
+      "border":          "{token.color.border.default}",
+      "border-radius":   "{token.radius.lg}",
+      "shadow":          "{token.elevation.card}",
+      "padding":         "{token.spacing.component.lg}",
+      "gap":             "{token.spacing.stack.sm}",
+      "value": {
+        "font":          "{token.typography.heading.lg}",
+        "color":         "{token.color.text.heading}"
+      },
+      "label": {
+        "font":          "{token.typography.body.sm}",
+        "color":         "{token.color.text.secondary}",
+        "text-transform": "uppercase",
+        "letter-spacing": "0.05em"
+      },
+      "trend": {
+        "font":          "{token.typography.label.sm}",
+        "font-weight":   "{global.typography.fontWeight.medium}",
+        "up": {
+          "color":       "{token.color.text.success}",
+          "icon":        "↑"
+        },
+        "down": {
+          "color":       "{token.color.text.error}",
+          "icon":        "↓"
+        },
+        "neutral": {
+          "color":       "{token.color.text.tertiary}",
+          "icon":        "→"
+        }
+      },
+      "icon": {
+        "size":          "48px",
+        "padding":       "{token.spacing.component.sm}",
+        "border-radius": "{token.radius.lg}",
+        "bg":            "{token.color.bg.primary-subtle}",
+        "color":         "{global.color.primary.700}"
+      },
+      "sparkline": {
+        "height":        "40px",
+        "stroke-width":  "2px",
+        "color":         "{global.color.primary.500}"
+      }
+    }
+  }
+}

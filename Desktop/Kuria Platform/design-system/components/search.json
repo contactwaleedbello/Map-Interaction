@@ -1,0 +1,52 @@
+{
+  "component": {
+    "search": {
+      "_meta": { "description": "Search input component — global search bar for admin dashboards" },
+      "bg":              "{token.color.bg.surface}",
+      "border":          "{token.color.border.default}",
+      "border-focus":    "{token.color.border.focus}",
+      "border-radius":   "{token.radius.lg}",
+      "height":          "40px",
+      "padding-x":       "{token.spacing.component.md}",
+      "font":            "{token.typography.body.md}",
+      "color":           "{token.color.text.primary}",
+      "placeholder":     "{token.color.text.tertiary}",
+      "shadow-focus":    "0 0 0 3px {global.color.primary.100}",
+      "transition": {
+        "duration":      "{global.motion.duration.fast}",
+        "easing":        "{global.motion.easing.ease-in-out}"
+      },
+      "icon": {
+        "size":          "20px",
+        "color":         "{token.color.icon.secondary}",
+        "gap":           "{token.spacing.inline.sm}"
+      },
+      "clear-button": {
+        "size":          "20px",
+        "color":         "{token.color.icon.secondary}",
+        "color-hover":   "{token.color.icon.primary}",
+        "border-radius": "{token.radius.full}"
+      },
+      "shortcut-badge": {
+        "font":          "{token.typography.label.sm}",
+        "color":         "{token.color.text.tertiary}",
+        "bg":            "{token.color.bg.muted}",
+        "border":        "{token.color.border.subtle}",
+        "border-radius": "{token.radius.sm}",
+        "padding":       "2px 6px"
+      },
+      "results": {
+        "bg":            "{token.color.bg.surface-raised}",
+        "border":        "{token.color.border.default}",
+        "border-radius": "{token.radius.lg}",
+        "shadow":        "{token.elevation.dropdown}",
+        "max-height":    "400px",
+        "z-index":       "{global.zIndex.dropdown}",
+        "item-padding":  "{token.spacing.component.sm} {token.spacing.component.md}",
+        "item-hover-bg": "{token.color.bg.muted}",
+        "highlight-bg":  "{token.color.bg.primary-subtle}",
+        "highlight-text": "{global.color.primary.700}"
+      }
+    }
+  }
+}

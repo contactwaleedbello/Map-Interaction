@@ -1,0 +1,47 @@
+{
+  "component": {
+    "toggle": {
+      "_meta": { "description": "Toggle/Switch component — binary on/off control" },
+      "width":             "44px",
+      "height":            "24px",
+      "border-radius":     "{token.radius.full}",
+      "transition": {
+        "duration":        "{global.motion.duration.fast}",
+        "easing":          "{global.motion.easing.ease-in-out}"
+      },
+      "track": {
+        "bg-off":          "{token.color.bg.secondary}",
+        "bg-on":           "{token.color.bg.primary}",
+        "bg-disabled":     "{token.color.bg.disabled}",
+        "border":          "transparent",
+        "border-focus":    "0 0 0 3px {global.color.primary.100}"
+      },
+      "thumb": {
+        "size":            "20px",
+        "bg":              "{global.color.neutral.0}",
+        "shadow":          "{token.elevation.button}",
+        "offset":          "2px",
+        "translate-on":    "20px"
+      },
+      "label": {
+        "font":            "{token.typography.body.md}",
+        "color":           "{token.color.text.primary}",
+        "gap":             "{token.spacing.inline.sm}"
+      },
+      "size": {
+        "sm": {
+          "width":         "36px",
+          "height":        "20px",
+          "thumb-size":    "16px",
+          "translate-on":  "16px"
+        },
+        "lg": {
+          "width":         "52px",
+          "height":        "28px",
+          "thumb-size":    "24px",
+          "translate-on":  "24px"
+        }
+      }
+    }
+  }
+}

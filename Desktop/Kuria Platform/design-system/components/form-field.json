@@ -1,0 +1,40 @@
+{
+  "component": {
+    "form-field": {
+      "_meta": { "description": "Form field wrapper — label, input slot, helper text, error message" },
+      "gap":               "{token.spacing.stack.xs}",
+      "label": {
+        "font":            "{token.typography.label.md}",
+        "color":           "{token.color.text.primary}",
+        "font-weight":     "{global.typography.fontWeight.medium}",
+        "required-color":  "{token.color.text.error}",
+        "required-marker": " *"
+      },
+      "helper": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.tertiary}",
+        "margin-top":      "{token.spacing.inline.xs}"
+      },
+      "error": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.error}",
+        "icon-size":       "16px",
+        "icon-gap":        "{token.spacing.inline.xs}",
+        "margin-top":      "{token.spacing.inline.xs}"
+      },
+      "counter": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.tertiary}",
+        "color-limit":     "{token.color.text.error}"
+      },
+      "optional-label": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.tertiary}"
+      },
+      "disabled": {
+        "label-color":     "{token.color.text.disabled}",
+        "opacity":         "{global.opacity.60}"
+      }
+    }
+  }
+}

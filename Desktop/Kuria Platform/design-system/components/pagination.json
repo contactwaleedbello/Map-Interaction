@@ -1,0 +1,37 @@
+{
+  "component": {
+    "pagination": {
+      "_meta": { "description": "Pagination component — page navigation for tables and lists" },
+      "gap":             "{token.spacing.inline.xs}",
+      "item": {
+        "size":          "36px",
+        "font":          "{token.typography.label.sm}",
+        "border-radius": "{token.radius.md}",
+        "bg":            "transparent",
+        "bg-hover":      "{token.color.bg.muted}",
+        "bg-active":     "{token.color.bg.primary}",
+        "text":          "{token.color.text.primary}",
+        "text-hover":    "{token.color.text.primary}",
+        "text-active":   "{token.color.text.on-primary}",
+        "border":        "transparent",
+        "border-hover":  "{token.color.border.default}",
+        "transition": {
+          "duration":    "{global.motion.duration.fast}",
+          "easing":      "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "ellipsis": {
+        "color":         "{token.color.text.tertiary}"
+      },
+      "nav-button": {
+        "color":         "{token.color.icon.primary}",
+        "color-disabled": "{token.color.icon.disabled}",
+        "size":          "36px"
+      },
+      "info": {
+        "font":          "{token.typography.body.sm}",
+        "color":         "{token.color.text.secondary}"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "global": {
+    "motion": {
+      "duration": {
+        "instant":  { "value": "0ms",   "description": "No transition" },
+        "fastest":  { "value": "50ms",  "description": "Micro-interactions — toggles, checkboxes" },
+        "fast":     { "value": "150ms", "description": "Quick feedback — hover, focus" },
+        "normal":   { "value": "300ms", "description": "Standard transitions — menus, accordions" },
+        "slow":     { "value": "500ms", "description": "Deliberate motion — modals, drawers" },
+        "slower":   { "value": "700ms", "description": "Emphasized motion — page transitions" },
+        "slowest":  { "value": "1000ms","description": "Dramatic — skeleton loading loops" }
+      },
+      "easing": {
+        "linear":      { "value": "linear" },
+        "ease-in":     { "value": "cubic-bezier(0.4, 0, 1, 1)",   "description": "Accelerate — elements leaving" },
+        "ease-out":    { "value": "cubic-bezier(0, 0, 0.2, 1)",   "description": "Decelerate — elements entering" },
+        "ease-in-out": { "value": "cubic-bezier(0.4, 0, 0.2, 1)", "description": "Standard — most transitions" },
+        "spring":      { "value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "description": "Bouncy — playful emphasis" },
+        "sharp":       { "value": "cubic-bezier(0.4, 0, 0.6, 1)", "description": "Snappy — admin interactions" }
+      }
+    }
+  }
+}

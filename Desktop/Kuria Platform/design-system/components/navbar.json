@@ -1,0 +1,43 @@
+{
+  "component": {
+    "navbar": {
+      "_meta": { "description": "Top navigation bar for admin dashboard" },
+      "bg":              "{token.color.bg.surface}",
+      "border-bottom":   "{token.color.border.subtle}",
+      "border-width":    "{global.border.width.thin}",
+      "height":          "{token.spacing.layout.navbar-height}",
+      "padding-x":       "{token.spacing.component.lg}",
+      "shadow":          "{token.elevation.sticky}",
+      "z-index":         "{global.zIndex.fixed}",
+      "responsive": {
+        "mobile": {
+          "padding-x":   "{token.spacing.component.md}"
+        }
+      },
+      "logo": {
+        "height":        "32px",
+        "gap":           "{token.spacing.inline.sm}"
+      },
+      "nav-item": {
+        "font":          "{token.typography.label.md}",
+        "color":         "{token.color.text.secondary}",
+        "color-hover":   "{token.color.text.primary}",
+        "color-active":  "{token.color.text.link}",
+        "padding-x":     "{token.spacing.component.sm}",
+        "padding-y":     "{token.spacing.component.xs}",
+        "border-radius": "{token.radius.md}",
+        "bg-hover":      "{token.color.bg.muted}"
+      },
+      "actions": {
+        "gap":           "{token.spacing.inline.sm}",
+        "icon-color":    "{token.color.icon.secondary}",
+        "icon-size":     "24px"
+      },
+      "mobile-menu": {
+        "bg":            "{token.color.bg.surface}",
+        "shadow":        "{token.elevation.drawer}",
+        "z-index":       "{global.zIndex.modal}"
+      }
+    }
+  }
+}

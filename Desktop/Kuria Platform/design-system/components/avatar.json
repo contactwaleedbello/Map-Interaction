@@ -1,0 +1,42 @@
+{
+  "component": {
+    "avatar": {
+      "_meta": { "description": "Avatar component — user profile images, initials fallback, status indicators" },
+      "border-radius":   "{token.radius.full}",
+      "bg":              "{token.color.bg.primary-subtle}",
+      "text":            "{global.color.primary.700}",
+      "font-weight":     "{global.typography.fontWeight.semibold}",
+      "border":          "2px solid {token.color.bg.surface}",
+      "size": {
+        "xs":            "24px",
+        "sm":            "32px",
+        "md":            "40px",
+        "lg":            "48px",
+        "xl":            "64px",
+        "2xl":           "96px"
+      },
+      "font-size": {
+        "xs":            "{global.typography.fontSize.2xs}",
+        "sm":            "{global.typography.fontSize.xs}",
+        "md":            "{global.typography.fontSize.sm}",
+        "lg":            "{global.typography.fontSize.md}",
+        "xl":            "{global.typography.fontSize.lg}",
+        "2xl":           "{global.typography.fontSize.xl}"
+      },
+      "status": {
+        "size":          "10px",
+        "border":        "2px solid {token.color.bg.surface}",
+        "online":        "{token.color.bg.success}",
+        "offline":       "{token.color.bg.secondary}",
+        "away":          "{token.color.bg.warning}",
+        "busy":          "{token.color.bg.error}"
+      },
+      "group": {
+        "overlap":       "-8px",
+        "border":        "2px solid {token.color.bg.surface}",
+        "max-count-bg":  "{token.color.bg.muted}",
+        "max-count-text": "{token.color.text.secondary}"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "global": {
+    "border": {
+      "radius": {
+        "none": { "value": "0px" },
+        "sm":   { "value": "4px",    "description": "Subtle rounding — badges, chips" },
+        "md":   { "value": "8px",    "description": "Default rounding — buttons, inputs, cards" },
+        "lg":   { "value": "12px",   "description": "Prominent rounding — modals, panels" },
+        "xl":   { "value": "16px",   "description": "Large rounding — featured cards" },
+        "2xl":  { "value": "24px",   "description": "Extra large rounding — banners" },
+        "full": { "value": "9999px", "description": "Pill shape — avatars, toggles, tags" }
+      },
+      "width": {
+        "none":   { "value": "0px" },
+        "thin":   { "value": "1px",  "description": "Default border — inputs, cards, dividers" },
+        "medium": { "value": "2px",  "description": "Emphasized border — active tabs, focus" },
+        "thick":  { "value": "4px",  "description": "Heavy border — sidebar indicators" }
+      },
+      "style": {
+        "solid":  { "value": "solid" },
+        "dashed": { "value": "dashed", "description": "Upload zones, optional borders" },
+        "dotted": { "value": "dotted" }
+      }
+    }
+  }
+}

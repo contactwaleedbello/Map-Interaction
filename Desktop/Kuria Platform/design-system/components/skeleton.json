@@ -1,0 +1,42 @@
+{
+  "component": {
+    "skeleton": {
+      "_meta": { "description": "Skeleton/Shimmer loading placeholder component" },
+      "bg":              "{token.color.bg.muted}",
+      "shimmer":         "linear-gradient(90deg, transparent 0%, {global.color.neutral.200} 50%, transparent 100%)",
+      "border-radius":   "{token.radius.md}",
+      "animation": {
+        "duration":      "1.5s",
+        "easing":        "ease-in-out",
+        "iteration":     "infinite"
+      },
+      "variant": {
+        "text": {
+          "height":      "16px",
+          "width":       "100%",
+          "border-radius": "{token.radius.sm}"
+        },
+        "heading": {
+          "height":      "24px",
+          "width":       "60%",
+          "border-radius": "{token.radius.sm}"
+        },
+        "avatar": {
+          "size":        "40px",
+          "border-radius": "{token.radius.full}"
+        },
+        "thumbnail": {
+          "width":       "100%",
+          "height":      "200px",
+          "border-radius": "{token.radius.md}"
+        },
+        "button": {
+          "height":      "40px",
+          "width":       "120px",
+          "border-radius": "{token.radius.md}"
+        }
+      },
+      "gap":             "{token.spacing.stack.sm}"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "component": {
+    "sidebar": {
+      "_meta": { "description": "Admin sidebar navigation — collapsible with responsive behavior" },
+      "bg":               "{token.color.bg.surface}",
+      "border-right":     "{token.color.border.subtle}",
+      "border-width":     "{global.border.width.thin}",
+      "width":            "{token.spacing.layout.sidebar-width}",
+      "width-collapsed":  "72px",
+      "padding":          "{token.spacing.component.sm}",
+      "z-index":          "{global.zIndex.fixed}",
+      "shadow":           "{token.elevation.none}",
+      "transition": {
+        "duration":       "{global.motion.duration.normal}",
+        "easing":         "{global.motion.easing.ease-in-out}"
+      },
+      "responsive": {
+        "mobile": {
+          "position":     "fixed",
+          "shadow":       "{token.elevation.drawer}",
+          "backdrop":     "{token.color.bg.surface-overlay}"
+        },
+        "tablet": {
+          "width":        "72px"
+        }
+      },
+      "logo": {
+        "height":         "40px",
+        "padding":        "{token.spacing.component.md}",
+        "margin-bottom":  "{token.spacing.component.md}"
+      },
+      "section": {
+        "title": {
+          "font":         "{token.typography.overline}",
+          "color":        "{token.color.text.tertiary}",
+          "padding-x":    "{token.spacing.component.sm}",
+          "margin-top":   "{token.spacing.component.md}",
+          "margin-bottom": "{token.spacing.component.xs}"
+        }
+      },
+      "nav-item": {
+        "font":           "{token.typography.label.md}",
+        "color":          "{token.color.text.secondary}",
+        "color-hover":    "{token.color.text.primary}",
+        "color-active":   "{token.color.text.link}",
+        "bg-hover":       "{token.color.bg.muted}",
+        "bg-active":      "{token.color.bg.primary-subtle}",
+        "border-radius":  "{token.radius.md}",
+        "padding":        "{token.spacing.component.sm}",
+        "gap":            "{token.spacing.inline.sm}",
+        "icon-size":      "20px",
+        "active-indicator": {
+          "width":        "{global.border.width.thick}",
+          "color":        "{token.color.border.primary}",
+          "border-radius": "{token.radius.full}"
+        }
+      },
+      "footer": {
+        "padding":        "{token.spacing.component.md}",
+        "border-top":     "{token.color.border.subtle}"
+      }
+    }
+  }
+}

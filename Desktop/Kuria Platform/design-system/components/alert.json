@@ -1,0 +1,54 @@
+{
+  "component": {
+    "alert": {
+      "_meta": { "description": "Alert/Banner component — informational, success, warning, error messages" },
+      "border-radius":   "{token.radius.md}",
+      "border-width":    "{global.border.width.thin}",
+      "padding":         "{token.spacing.component.md}",
+      "gap":             "{token.spacing.inline.sm}",
+      "font":            "{token.typography.body.sm}",
+      "icon-size":       "20px",
+      "transition": {
+        "duration":      "{global.motion.duration.normal}",
+        "easing":        "{global.motion.easing.ease-out}"
+      },
+      "variant": {
+        "info": {
+          "bg":          "{token.color.bg.info-subtle}",
+          "border":      "{token.color.border.info}",
+          "text":        "{token.color.text.info}",
+          "icon":        "{token.color.icon.info}"
+        },
+        "success": {
+          "bg":          "{token.color.bg.success-subtle}",
+          "border":      "{token.color.border.success}",
+          "text":        "{token.color.text.success}",
+          "icon":        "{token.color.icon.success}"
+        },
+        "warning": {
+          "bg":          "{token.color.bg.warning-subtle}",
+          "border":      "{token.color.border.warning}",
+          "text":        "{token.color.text.warning}",
+          "icon":        "{token.color.icon.warning}"
+        },
+        "error": {
+          "bg":          "{token.color.bg.error-subtle}",
+          "border":      "{token.color.border.error}",
+          "text":        "{token.color.text.error}",
+          "icon":        "{token.color.icon.error}"
+        }
+      },
+      "close-button": {
+        "size":          "24px",
+        "color":         "currentColor",
+        "opacity":       "{global.opacity.60}",
+        "opacity-hover": "{global.opacity.100}",
+        "border-radius": "{token.radius.sm}"
+      },
+      "title": {
+        "font-weight":   "{global.typography.fontWeight.semibold}",
+        "margin-bottom": "{token.spacing.inline.xs}"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "component": {
+    "tooltip": {
+      "_meta": { "description": "Tooltip component — contextual information on hover/focus" },
+      "bg":              "{global.color.neutral.800}",
+      "text":            "{global.color.neutral.0}",
+      "font":            "{token.typography.body.sm}",
+      "padding-x":       "{token.spacing.component.sm}",
+      "padding-y":       "6px",
+      "border-radius":   "{token.radius.md}",
+      "max-width":       "240px",
+      "z-index":         "{global.zIndex.tooltip}",
+      "shadow":          "{token.elevation.tooltip}",
+      "arrow-size":      "6px",
+      "transition": {
+        "duration":      "{global.motion.duration.fast}",
+        "easing":        "{global.motion.easing.ease-out}"
+      },
+      "offset":          "8px",
+      "delay": {
+        "show":          "300ms",
+        "hide":          "100ms"
+      }
+    }
+  }
+}

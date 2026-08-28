@@ -1,0 +1,46 @@
+{
+  "global": {
+    "typography": {
+      "fontFamily": {
+        "heading": { "value": "'Outfit', sans-serif", "description": "Headings and display text" },
+        "body":    { "value": "'Inter', sans-serif", "description": "Body text and UI elements" },
+        "mono":    { "value": "'JetBrains Mono', 'Fira Code', monospace", "description": "Code and data" }
+      },
+      "fontSize": {
+        "xs":   { "value": "0.75rem",  "px": 12, "description": "Extra small — captions, badges" },
+        "sm":   { "value": "0.875rem", "px": 14, "description": "Small — secondary text, labels" },
+        "md":   { "value": "1rem",     "px": 16, "description": "Medium — base body text" },
+        "lg":   { "value": "1.125rem", "px": 18, "description": "Large — emphasized body" },
+        "xl":   { "value": "1.25rem",  "px": 20, "description": "Extra large — subheadings" },
+        "2xl":  { "value": "1.5rem",   "px": 24, "description": "Heading 4" },
+        "3xl":  { "value": "1.875rem", "px": 30, "description": "Heading 3" },
+        "4xl":  { "value": "2.25rem",  "px": 36, "description": "Heading 2" },
+        "5xl":  { "value": "3rem",     "px": 48, "description": "Heading 1" },
+        "6xl":  { "value": "3.75rem",  "px": 60, "description": "Display / Hero" }
+      },
+      "fontWeight": {
+        "regular":  { "value": "400" },
+        "medium":   { "value": "500" },
+        "semibold": { "value": "600" },
+        "bold":     { "value": "700" },
+        "extrabold": { "value": "800" }
+      },
+      "lineHeight": {
+        "none":    { "value": "1",    "description": "No extra leading" },
+        "tight":   { "value": "1.25", "description": "Headings" },
+        "snug":    { "value": "1.375","description": "Compact body" },
+        "normal":  { "value": "1.5",  "description": "Default body text" },
+        "relaxed": { "value": "1.625","description": "Readable body" },
+        "loose":   { "value": "2",    "description": "Spacious text" }
+      },
+      "letterSpacing": {
+        "tighter": { "value": "-0.04em" },
+        "tight":   { "value": "-0.02em" },
+        "normal":  { "value": "0em" },
+        "wide":    { "value": "0.025em" },
+        "wider":   { "value": "0.05em" },
+        "widest":  { "value": "0.1em" }
+      }
+    }
+  }
+}

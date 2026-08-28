@@ -1,0 +1,44 @@
+{
+  "component": {
+    "tabs": {
+      "_meta": { "description": "Tabs component — horizontal navigation between content panels" },
+      "list": {
+        "border-bottom":   "{token.color.border.subtle}",
+        "gap":             "0"
+      },
+      "trigger": {
+        "font":            "{token.typography.label.md}",
+        "color":           "{token.color.text.secondary}",
+        "color-hover":     "{token.color.text.primary}",
+        "color-active":    "{token.color.text.primary}",
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.sm}",
+        "border-bottom":   "2px solid transparent",
+        "border-active":   "2px solid {token.color.border.primary}",
+        "bg":              "transparent",
+        "bg-hover":        "{token.color.bg.muted}",
+        "border-radius":   "{token.radius.sm} {token.radius.sm} 0 0",
+        "transition": {
+          "duration":      "{global.motion.duration.fast}",
+          "easing":        "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "panel": {
+        "padding-top":     "{token.spacing.component.lg}"
+      },
+      "variant": {
+        "pills": {
+          "trigger-bg-active":     "{token.color.bg.primary-subtle}",
+          "trigger-color-active":  "{global.color.primary.700}",
+          "trigger-border-radius": "{token.radius.full}",
+          "trigger-border":        "none"
+        },
+        "enclosed": {
+          "trigger-bg-active":     "{token.color.bg.surface}",
+          "trigger-border":        "{token.color.border.default}",
+          "trigger-border-bottom": "transparent"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "component": {
+    "dropdown": {
+      "_meta": { "description": "Dropdown/Select component — option selection menus" },
+      "trigger": {
+        "font":            "{token.typography.body.md}",
+        "color":           "{token.color.text.primary}",
+        "bg":              "{token.color.bg.surface}",
+        "border":          "{token.color.border.default}",
+        "border-focus":    "{token.color.border.focus}",
+        "border-error":    "{token.color.border.error}",
+        "border-radius":   "{token.radius.md}",
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.sm}",
+        "height":          "40px",
+        "placeholder":     "{token.color.text.tertiary}",
+        "icon-color":      "{token.color.icon.secondary}",
+        "icon-size":       "20px",
+        "shadow":          "{token.elevation.none}",
+        "shadow-focus":    "0 0 0 3px {global.color.primary.100}",
+        "transition": {
+          "duration":      "{global.motion.duration.fast}",
+          "easing":        "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "menu": {
+        "bg":              "{token.color.bg.surface-raised}",
+        "border":          "{token.color.border.default}",
+        "border-radius":   "{token.radius.lg}",
+        "shadow":          "{token.elevation.dropdown}",
+        "padding-y":       "{token.spacing.component.xs}",
+        "max-height":      "280px",
+        "z-index":         "{global.zIndex.dropdown}",
+        "transition": {
+          "duration":      "{global.motion.duration.fast}",
+          "easing":        "{global.motion.easing.ease-out}"
+        }
+      },
+      "option": {
+        "font":            "{token.typography.body.md}",
+        "color":           "{token.color.text.primary}",
+        "bg-hover":        "{token.color.bg.muted}",
+        "bg-selected":     "{token.color.bg.primary-subtle}",
+        "color-selected":  "{global.color.primary.700}",
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.sm}",
+        "check-icon":      "{global.color.primary.700}",
+        "disabled-color":  "{token.color.text.disabled}"
+      },
+      "group-label": {
+        "font":            "{token.typography.label.sm}",
+        "color":           "{token.color.text.tertiary}",
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.xs}",
+        "text-transform":  "uppercase",
+        "letter-spacing":  "0.05em"
+      },
+      "divider": {
+        "color":           "{token.color.border.subtle}",
+        "margin-y":        "{token.spacing.component.xs}"
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "component": {
+    "table": {
+      "_meta": { "description": "Data table component for admin — sortable, selectable, paginated" },
+      "bg":                "{token.color.bg.surface}",
+      "border":            "{token.color.border.default}",
+      "border-width":      "{global.border.width.thin}",
+      "border-radius":     "{token.radius.lg}",
+      "overflow":          "hidden",
+      "header": {
+        "bg":              "{token.color.bg.muted}",
+        "font":            "{token.typography.label.sm}",
+        "color":           "{token.color.text.secondary}",
+        "font-weight":     "{global.typography.fontWeight.semibold}",
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.sm}",
+        "border-bottom":   "{token.color.border.default}",
+        "sort-icon": {
+          "color":         "{token.color.icon.secondary}",
+          "color-active":  "{token.color.icon.brand}",
+          "size":          "16px"
+        }
+      },
+      "row": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.primary}",
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.sm}",
+        "border-bottom":   "{token.color.border.subtle}",
+        "bg-hover":        "{token.color.bg.subtle}",
+        "bg-selected":     "{token.color.bg.primary-subtle}",
+        "bg-striped":      "{token.color.bg.subtle}",
+        "transition": {
+          "duration":      "{global.motion.duration.fast}",
+          "easing":        "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "cell": {
+        "padding-x":       "{token.spacing.component.md}",
+        "padding-y":       "{token.spacing.component.sm}",
+        "min-width":       "120px"
+      },
+      "checkbox": {
+        "size":            "18px",
+        "color":           "{token.color.bg.primary}",
+        "border-radius":   "{token.radius.sm}"
+      },
+      "empty": {
+        "padding":         "{token.spacing.component.xl}",
+        "icon-size":       "48px",
+        "icon-color":      "{token.color.icon.secondary}",
+        "text-font":       "{token.typography.body.md}",
+        "text-color":      "{token.color.text.tertiary}"
+      },
+      "toolbar": {
+        "padding":         "{token.spacing.component.md}",
+        "gap":             "{token.spacing.inline.sm}",
+        "border-bottom":   "{token.color.border.subtle}"
+      },
+      "responsive": {
+        "mobile": {
+          "font-size":     "{global.typography.fontSize.xs}",
+          "padding-x":     "{token.spacing.component.sm}",
+          "padding-y":     "{token.spacing.component.xs}"
+        }
+      }
+    }
+  }
+}

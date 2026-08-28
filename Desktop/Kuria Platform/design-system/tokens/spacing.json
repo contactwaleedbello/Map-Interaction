@@ -1,0 +1,60 @@
+{
+  "token": {
+    "spacing": {
+      "page": {
+        "gutter": {
+          "default": "{global.spacing.4}",
+          "responsive": {
+            "mobile":  "{global.spacing.2}",
+            "tablet":  "{global.spacing.3}"
+          },
+          "description": "Page edge gutters"
+        },
+        "section-gap": {
+          "default": "{global.spacing.8}",
+          "responsive": {
+            "mobile": "{global.spacing.5}"
+          },
+          "description": "Gap between major page sections"
+        }
+      },
+      "layout": {
+        "sidebar-width": {
+          "default": "260px",
+          "responsive": {
+            "tablet": "240px"
+          },
+          "description": "Admin sidebar width"
+        },
+        "navbar-height": {
+          "default": "{global.spacing.8}",
+          "description": "Top navbar height (64px)"
+        },
+        "content-max-width": {
+          "default": "1280px",
+          "description": "Max width for main content area"
+        }
+      },
+      "component": {
+        "xs": { "value": "{global.spacing.0.5}", "description": "4px — tight internal padding" },
+        "sm": { "value": "{global.spacing.1}",   "description": "8px — small padding/gap" },
+        "md": { "value": "{global.spacing.2}",   "description": "16px — default padding/gap" },
+        "lg": { "value": "{global.spacing.3}",   "description": "24px — spacious padding" },
+        "xl": { "value": "{global.spacing.4}",   "description": "32px — large sections" }
+      },
+      "inline": {
+        "xs": { "value": "{global.spacing.0.5}", "description": "4px — icon-to-label gap" },
+        "sm": { "value": "{global.spacing.1}",   "description": "8px — element gap" },
+        "md": { "value": "{global.spacing.1.5}", "description": "12px — button group gap" },
+        "lg": { "value": "{global.spacing.2}",   "description": "16px — card content gap" }
+      },
+      "stack": {
+        "xs": { "value": "{global.spacing.0.5}", "description": "4px — tightly stacked items" },
+        "sm": { "value": "{global.spacing.1}",   "description": "8px — form field gaps" },
+        "md": { "value": "{global.spacing.2}",   "description": "16px — card sections" },
+        "lg": { "value": "{global.spacing.3}",   "description": "24px — content blocks" },
+        "xl": { "value": "{global.spacing.5}",   "description": "40px — major sections" }
+      }
+    }
+  }
+}

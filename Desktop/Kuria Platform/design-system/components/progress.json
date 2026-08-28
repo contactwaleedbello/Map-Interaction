@@ -1,0 +1,48 @@
+{
+  "component": {
+    "progress": {
+      "_meta": { "description": "Progress bar component — linear and circular progress indicators" },
+      "linear": {
+        "height":          "8px",
+        "bg":              "{token.color.bg.muted}",
+        "border-radius":   "{token.radius.full}",
+        "fill": {
+          "bg":            "{token.color.bg.primary}",
+          "border-radius": "{token.radius.full}",
+          "transition": {
+            "duration":    "{global.motion.duration.normal}",
+            "easing":      "{global.motion.easing.ease-in-out}"
+          }
+        },
+        "size": {
+          "xs":            "4px",
+          "sm":            "6px",
+          "md":            "8px",
+          "lg":            "12px"
+        }
+      },
+      "circular": {
+        "size":            "48px",
+        "stroke-width":    "4px",
+        "bg-stroke":       "{token.color.bg.muted}",
+        "fill-stroke":     "{token.color.bg.primary}",
+        "rotation":        "-90deg"
+      },
+      "label": {
+        "font":            "{token.typography.label.sm}",
+        "color":           "{token.color.text.secondary}",
+        "gap":             "{token.spacing.inline.sm}"
+      },
+      "variant": {
+        "success":         "{token.color.bg.success}",
+        "warning":         "{token.color.bg.warning}",
+        "error":           "{token.color.bg.error}",
+        "info":            "{token.color.bg.info}"
+      },
+      "indeterminate": {
+        "animation-duration": "1.5s",
+        "animation-easing":   "linear"
+      }
+    }
+  }
+}

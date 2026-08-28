@@ -1,0 +1,58 @@
+{
+  "component": {
+    "file-upload": {
+      "_meta": { "description": "File upload component — drag-and-drop zone and file list" },
+      "dropzone": {
+        "bg":              "{token.color.bg.surface}",
+        "bg-hover":        "{token.color.bg.muted}",
+        "bg-active":       "{token.color.bg.primary-subtle}",
+        "border":          "{token.color.border.default}",
+        "border-active":   "{token.color.border.primary}",
+        "border-style":    "dashed",
+        "border-width":    "2px",
+        "border-radius":   "{token.radius.lg}",
+        "padding":         "{token.spacing.layout.lg}",
+        "text-color":      "{token.color.text.secondary}",
+        "icon-color":      "{token.color.icon.secondary}",
+        "icon-size":       "48px",
+        "transition": {
+          "duration":      "{global.motion.duration.fast}",
+          "easing":        "{global.motion.easing.ease-in-out}"
+        }
+      },
+      "label": {
+        "font":            "{token.typography.body.md}",
+        "color":           "{token.color.text.primary}",
+        "link-color":      "{token.color.text.link}"
+      },
+      "hint": {
+        "font":            "{token.typography.body.sm}",
+        "color":           "{token.color.text.tertiary}"
+      },
+      "file-item": {
+        "bg":              "{token.color.bg.muted}",
+        "border-radius":   "{token.radius.md}",
+        "padding":         "{token.spacing.component.sm} {token.spacing.component.md}",
+        "gap":             "{token.spacing.inline.sm}",
+        "icon-size":       "24px",
+        "name-font":       "{token.typography.body.sm}",
+        "name-color":      "{token.color.text.primary}",
+        "size-font":       "{token.typography.body.sm}",
+        "size-color":      "{token.color.text.tertiary}",
+        "remove-color":    "{token.color.icon.secondary}",
+        "remove-hover":    "{token.color.icon.error}"
+      },
+      "progress": {
+        "height":          "4px",
+        "bg":              "{token.color.bg.secondary}",
+        "fill":            "{token.color.bg.primary}",
+        "border-radius":   "{token.radius.full}"
+      },
+      "error": {
+        "border":          "{token.color.border.error}",
+        "text":            "{token.color.text.error}",
+        "icon":            "{token.color.icon.error}"
+      }
+    }
+  }
+}
